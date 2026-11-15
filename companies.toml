@@ -1,0 +1,238 @@
+# Internship Radar company list.
+#
+# tier = "S"  -> instant phone push + its own email for EVERY matching role (SWE included)
+# tier = "A"  -> logged with a fit score for the daily Radar digest
+# not listed  -> Tier B, logged only if it passes the filters
+#
+# names = how the company shows up in the Simplify / vanshb03 trackers
+#         (case-insensitive prefix match). Used for companies without a direct source.
+#
+# Direct sources (checked every run, usually hours ahead of the trackers):
+#   greenhouse = "<board token>"      lever = "<company>"      ashby = "<org>"
+#   workday    = ["<tenant>", "<wdN>", "<Site>"]
+#   eightfold  = ["<host>", "<domain>"]
+#   amazon     = true
+#
+# To add a company: copy a block, set name + tier, add names and a direct source if it has one.
+
+[alerts]
+tiers = ["S"]
+max_per_run = 8
+
+[trackers]
+simplify = "https://raw.githubusercontent.com/SimplifyJobs/Summer2027-Internships/dev/.github/scripts/listings.json"
+vanshb03 = "https://raw.githubusercontent.com/vanshb03/Summer2027-Internships/dev/.github/scripts/listings.json"
+
+# ------------------------------------------------------------------ Tier S --
+
+[[company]]
+name = "Google"
+tier = "S"
+names = ["Google", "YouTube", "DeepMind", "Google DeepMind", "Alphabet"]
+
+[[company]]
+name = "Meta"
+tier = "S"
+names = ["Meta", "Facebook", "Instagram", "WhatsApp"]
+
+[[company]]
+name = "Apple"
+tier = "S"
+
+[[company]]
+name = "Amazon"
+tier = "S"
+names = ["Amazon", "AWS", "Amazon Web Services", "Twitch"]
+amazon = true
+
+[[company]]
+name = "Microsoft"
+tier = "S"
+names = ["Microsoft", "LinkedIn", "GitHub"]
+eightfold = ["apply.careers.microsoft.com", "microsoft.com"]
+
+[[company]]
+name = "Netflix"
+tier = "S"
+eightfold = ["explore.jobs.netflix.net", "netflix.com"]
+
+[[company]]
+name = "NVIDIA"
+tier = "S"
+workday = ["nvidia", "wd5", "NVIDIAExternalCareerSite"]
+
+[[company]]
+name = "OpenAI"
+tier = "S"
+ashby = "openai"
+
+[[company]]
+name = "Anthropic"
+tier = "S"
+greenhouse = "anthropic"
+
+[[company]]
+name = "Spotify"
+tier = "S"
+lever = "spotify"
+
+[[company]]
+name = "Airbnb"
+tier = "S"
+greenhouse = "airbnb"
+
+[[company]]
+name = "Stripe"
+tier = "S"
+greenhouse = "stripe"
+
+[[company]]
+name = "Uber"
+tier = "S"
+
+[[company]]
+name = "TikTok"
+tier = "S"
+names = ["TikTok", "ByteDance"]
+
+[[company]]
+name = "Databricks"
+tier = "S"
+greenhouse = "databricks"
+
+[[company]]
+name = "Salesforce"
+tier = "S"
+workday = ["salesforce", "wd12", "External_Career_Site"]
+
+[[company]]
+name = "Adobe"
+tier = "S"
+workday = ["adobe", "wd5", "external_experienced"]
+
+[[company]]
+name = "Jane Street"
+tier = "S"
+
+[[company]]
+name = "Citadel"
+tier = "S"
+names = ["Citadel", "Citadel Securities"]
+
+[[company]]
+name = "Two Sigma"
+tier = "S"
+
+# ------------------------------------------------------------------ Tier A --
+
+[[company]]
+name = "Pinterest"
+tier = "A"
+greenhouse = "pinterest"
+
+[[company]]
+name = "Lyft"
+tier = "A"
+greenhouse = "lyft"
+
+[[company]]
+name = "DoorDash"
+tier = "A"
+greenhouse = "doordashusa"
+
+[[company]]
+name = "Instacart"
+tier = "A"
+greenhouse = "instacart"
+
+[[company]]
+name = "Snap"
+tier = "A"
+names = ["Snap", "Snapchat"]
+
+[[company]]
+name = "Roblox"
+tier = "A"
+greenhouse = "roblox"
+
+[[company]]
+name = "Figma"
+tier = "A"
+greenhouse = "figma"
+
+[[company]]
+name = "Duolingo"
+tier = "A"
+greenhouse = "duolingo"
+
+[[company]]
+name = "Robinhood"
+tier = "A"
+greenhouse = "robinhood"
+
+[[company]]
+name = "Coinbase"
+tier = "A"
+greenhouse = "coinbase"
+
+[[company]]
+name = "Reddit"
+tier = "A"
+greenhouse = "reddit"
+
+[[company]]
+name = "Discord"
+tier = "A"
+greenhouse = "discord"
+
+[[company]]
+name = "Datadog"
+tier = "A"
+greenhouse = "datadog"
+
+[[company]]
+name = "Scale AI"
+tier = "A"
+greenhouse = "scaleai"
+
+[[company]]
+name = "Ramp"
+tier = "A"
+ashby = "ramp"
+
+[[company]]
+name = "Palantir"
+tier = "A"
+lever = "palantir"
+
+[[company]]
+name = "Bloomberg"
+tier = "A"
+
+[[company]]
+name = "Capital One"
+tier = "A"
+
+[[company]]
+name = "IBM"
+tier = "A"
+
+[[company]]
+name = "Walmart"
+tier = "A"
+names = ["Walmart", "Walmart Global Tech"]
+workday = ["walmart", "wd5", "WalmartExternal"]
+
+[[company]]
+name = "Hudson River Trading"
+tier = "A"
+names = ["Hudson River Trading", "HRT"]
+
+[[company]]
+name = "Etsy"
+tier = "A"
+
+[[company]]
+name = "Dropbox"
+tier = "A"
+greenhouse = "dropbox"
