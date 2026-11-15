@@ -235,3 +235,92 @@ tier = "A"
 name = "Dropbox"
 tier = "A"
 greenhouse = "dropbox"
+
+# Big names whose data roles tend to open late (Nov to May last cycle).
+# Tracker-matched only (no direct source yet).
+
+[[company]]
+name = "Disney"
+tier = "A"
+names = ["The Walt Disney Company", "Disney", "ESPN", "Hulu"]
+
+[[company]]
+name = "NBCUniversal"
+tier = "A"
+names = ["NBCUniversal", "Comcast", "Peacock"]
+
+[[company]]
+name = "Warner Bros. Discovery"
+tier = "A"
+names = ["Warner Bros", "HBO"]
+
+[[company]]
+name = "Paramount"
+tier = "A"
+names = ["Paramount", "Paramount Global"]
+
+[[company]]
+name = "The New York Times"
+tier = "A"
+names = ["The New York Times", "New York Times"]
+
+[[company]]
+name = "Expedia"
+tier = "A"
+names = ["Expedia", "Expedia Group"]
+
+[[company]]
+name = "SoFi"
+tier = "A"
+
+[[company]]
+name = "Cloudflare"
+tier = "A"
+
+[[company]]
+name = "PayPal"
+tier = "A"
+names = ["PayPal", "Venmo"]
+
+[[company]]
+name = "Intuit"
+tier = "A"
+
+[[company]]
+name = "Visa"
+tier = "A"
+
+[[company]]
+name = "Mastercard"
+tier = "A"
+
+[[company]]
+name = "American Express"
+tier = "A"
+
+[[company]]
+name = "Goldman Sachs"
+tier = "A"
+
+[[company]]
+name = "DraftKings"
+tier = "A"
+
+[[company]]
+name = "Zillow"
+tier = "A"
+
+[[company]]
+name = "Nike"
+tier = "A"
+
+# Prefix guards: names are prefix-matched, so these stop look-alikes from
+# inheriting a real company's tier (e.g. "Intuitive Surgical" -> Intuit).
+
+[[company]]
+name = "Intuitive Surgical"
+tier = "B"
+
+[[company]]
+name = "Snap Finance"
+tier = "B"
