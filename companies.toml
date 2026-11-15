@@ -49,7 +49,7 @@ amazon = true
 name = "Microsoft"
 tier = "S"
 names = ["Microsoft", "LinkedIn", "GitHub"]
-eightfold = ["apply.careers.microsoft.com", "microsoft.com"]
+# no public feed (403); covered by the trackers
 
 [[company]]
 name = "Netflix"
@@ -221,7 +221,6 @@ tier = "A"
 name = "Walmart"
 tier = "A"
 names = ["Walmart", "Walmart Global Tech"]
-workday = ["walmart", "wd5", "WalmartExternal"]
 
 [[company]]
 name = "Hudson River Trading"

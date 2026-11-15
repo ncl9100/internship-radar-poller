@@ -112,6 +112,8 @@ def passes_filters(title, location):
         return False
     if OFF_SEASON.search(title) and not re.search(r"summer\s*2027", title, re.I):
         return False
+    if re.search(r"\b2026\b", title) and not re.search(r"\b2027\b", title):
+        return False
     loc = location or ""
     if loc and NON_US.search(loc) and not US_HINT.search(loc):
         return False
@@ -485,6 +487,14 @@ def main():
     alert_tiers = set(cfg.get("alerts", {}).get("tiers", ["S"]))
     to_alert = [r for r in new_roles if r["tier"] in alert_tiers]
     failures = send_alerts(to_alert, int(cfg.get("alerts", {}).get("max_per_run", 8)))
+
+    if os.environ.get("TEST_ALERT") == "1":
+        tier_s = [r for r in snapshot if r["tier"] == "S"]
+        tier_s.sort(key=lambda r: -r["score"])
+        if tier_s:
+            t = dict(tier_s[0], title="TEST " + tier_s[0]["title"])
+            failures += [f"test: {f}" for f in send_alerts([t], 1)]
+            print("Sent test alert:", t["company"], t["title"])
 
     if new_roles:
         log = DATA / "new_roles.jsonl"
