@@ -18,6 +18,7 @@ import ssl
 import sys
 import time
 import tomllib
+import urllib.error
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor
 from email.message import EmailMessage
@@ -320,7 +321,16 @@ def send_ntfy(r, topic, email=None):
     if os.environ.get("NTFY_TOKEN"):
         headers["Authorization"] = f"Bearer {os.environ['NTFY_TOKEN']}"
     base = os.environ.get("NTFY_SERVER", "https://ntfy.sh").rstrip("/")
-    http_json(base + "/", payload, headers)
+    try:
+        http_json(base + "/", payload, headers)
+    except urllib.error.HTTPError as e:
+        detail = e.read().decode("utf-8", "replace")[:200]
+        if "email" in payload:
+            # push first, even if ntfy refuses the email part
+            payload.pop("email")
+            http_json(base + "/", payload, headers)
+            raise RuntimeError(f"push sent, but email refused: {e.code} {detail}")
+        raise RuntimeError(f"{e.code} {detail}")
 
 
 def send_smtp(r, to):
