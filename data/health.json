@@ -1,7 +1,7 @@
 {
- "written_at": "Nov 14, 07:36 PM ET",
- "event": "push",
- "new_roles": 0,
+ "written_at": "Nov 15, 02:13 AM ET",
+ "event": "schedule",
+ "new_roles": 8,
  "alerted": 0,
  "alert_failures": [],
  "failing_sources": [],
@@ -10,37 +10,37 @@
    "ok": true,
    "fetched": 95,
    "matched": 29,
-   "secs": 1.4
+   "secs": 1.9
   },
   "eightfold:netflix": {
    "ok": true,
    "fetched": 6,
    "matched": 1,
-   "secs": 0.3
+   "secs": 0.4
   },
   "workday:nvidia": {
    "ok": true,
    "fetched": 60,
    "matched": 8,
-   "secs": 3.0
+   "secs": 3.1
   },
   "ashby:openai": {
    "ok": true,
-   "fetched": 839,
+   "fetched": 840,
    "matched": 0,
    "secs": 0.2
   },
   "greenhouse:anthropic": {
    "ok": true,
-   "fetched": 670,
+   "fetched": 669,
    "matched": 0,
-   "secs": 0.3
+   "secs": 0.2
   },
   "lever:spotify": {
    "ok": true,
    "fetched": 87,
    "matched": 0,
-   "secs": 5.4
+   "secs": 0.7
   },
   "greenhouse:airbnb": {
    "ok": true,
@@ -50,21 +50,21 @@
   },
   "greenhouse:stripe": {
    "ok": true,
-   "fetched": 786,
+   "fetched": 785,
    "matched": 2,
-   "secs": 0.3
+   "secs": 0.2
   },
   "greenhouse:databricks": {
    "ok": true,
-   "fetched": 896,
+   "fetched": 895,
    "matched": 3,
-   "secs": 0.3
+   "secs": 0.2
   },
   "workday:salesforce": {
    "ok": true,
    "fetched": 60,
    "matched": 0,
-   "secs": 1.5
+   "secs": 1.4
   },
   "workday:adobe": {
    "ok": true,
@@ -86,7 +86,7 @@
   },
   "greenhouse:doordashusa": {
    "ok": true,
-   "fetched": 427,
+   "fetched": 428,
    "matched": 2,
    "secs": 0.3
   },
@@ -106,7 +106,7 @@
    "ok": true,
    "fetched": 139,
    "matched": 2,
-   "secs": 0.1
+   "secs": 0.2
   },
   "greenhouse:duolingo": {
    "ok": true,
@@ -160,7 +160,7 @@
    "ok": true,
    "fetched": 302,
    "matched": 31,
-   "secs": 0.7
+   "secs": 0.8
   },
   "greenhouse:dropbox": {
    "ok": true,
@@ -170,15 +170,15 @@
   },
   "tracker:simplify": {
    "ok": true,
-   "fetched": 1926,
-   "matched": 1124,
-   "secs": 0.3
+   "fetched": 1942,
+   "matched": 1133,
+   "secs": 0.2
   },
   "tracker:vanshb03": {
    "ok": true,
-   "fetched": 1976,
-   "matched": 1468,
-   "secs": 0.2
+   "fetched": 1972,
+   "matched": 1463,
+   "secs": 0.1
   }
  }
 }
