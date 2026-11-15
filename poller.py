@@ -334,7 +334,8 @@ def send_ntfy(r, topic, email=None):
 
 
 def send_smtp(r, to):
-    user, pw = os.environ["SMTP_USER"], os.environ["SMTP_PASS"]
+    user = os.environ["SMTP_USER"].strip()
+    pw = os.environ["SMTP_PASS"].replace(" ", "").strip()
     msg = EmailMessage()
     msg["Subject"] = f"[Tier S] {r['title']} at {r['company']} (fit {r['score']})"
     msg["From"] = user
