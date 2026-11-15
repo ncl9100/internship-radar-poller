@@ -1,6 +1,6 @@
 # Internship Radar poller
 
-Checks company job boards directly every ~15 minutes (hourly overnight) plus the
+Checks company job boards directly every ~10 minutes (every 30 overnight) plus the
 Simplify and vanshb03 trackers. Every new matching Summer 2027 role gets a fit score.
 New **Tier S** roles send an instant phone push and their own email.
 

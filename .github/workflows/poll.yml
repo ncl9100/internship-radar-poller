@@ -3,11 +3,11 @@ name: Internship Radar poller
 on:
   schedule:
     # GitHub cron is UTC. Times below are for Eastern Standard Time.
-    # Every 15 min from 7am to midnight ET, then hourly overnight.
-    # About 75 runs a day, roughly 2,300 Actions minutes a month,
-    # which fits GitHub Pro's 3,000 minutes for private repos.
-    - cron: "*/15 0-4,12-23 * * *"
-    - cron: "0 5-11 * * *"
+    # Every 10 min from 7am to midnight ET, every 30 min overnight.
+    # Public repo, so Actions minutes are free and unlimited.
+    # (GitHub may delay scheduled runs a few minutes under load.)
+    - cron: "*/10 0-4,12-23 * * *"
+    - cron: "*/30 5-11 * * *"
   workflow_dispatch:
     inputs:
       test_alert:
