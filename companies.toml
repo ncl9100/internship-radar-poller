@@ -241,7 +241,7 @@ greenhouse = "dropbox"
 
 [[company]]
 name = "Disney"
-tier = "A"
+tier = "S"
 names = ["The Walt Disney Company", "Disney", "ESPN", "Hulu"]
 
 [[company]]
@@ -261,7 +261,7 @@ names = ["Paramount", "Paramount Global"]
 
 [[company]]
 name = "The New York Times"
-tier = "A"
+tier = "S"
 names = ["The New York Times", "New York Times"]
 
 [[company]]
