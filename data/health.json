@@ -1,55 +1,54 @@
 {
- "written_at": "Nov 15, 01:42 PM ET",
+ "written_at": "Nov 15, 06:13 PM ET",
  "event": "schedule",
- "new_roles": 1,
+ "new_roles": 2,
  "alerted": 0,
  "alert_failures": [],
  "failing_sources": [
-  "lever:spotify"
+  "workday:salesforce"
  ],
  "sources": {
   "amazon": {
    "ok": true,
    "fetched": 95,
    "matched": 29,
-   "secs": 0.8
+   "secs": 0.9
   },
   "eightfold:netflix": {
    "ok": true,
    "fetched": 6,
    "matched": 1,
-   "secs": 0.4
+   "secs": 0.5
   },
   "workday:nvidia": {
    "ok": true,
    "fetched": 60,
    "matched": 8,
-   "secs": 2.8
+   "secs": 3.3
   },
   "ashby:openai": {
    "ok": true,
-   "fetched": 837,
+   "fetched": 838,
    "matched": 0,
    "secs": 0.2
   },
   "greenhouse:anthropic": {
    "ok": true,
-   "fetched": 667,
+   "fetched": 665,
    "matched": 0,
    "secs": 0.3
   },
   "lever:spotify": {
-   "ok": false,
-   "fetched": 0,
+   "ok": true,
+   "fetched": 87,
    "matched": 0,
-   "secs": 25.3,
-   "error": "TimeoutError: The read operation timed out"
+   "secs": 0.9
   },
   "greenhouse:airbnb": {
    "ok": true,
    "fetched": 213,
    "matched": 1,
-   "secs": 0.4
+   "secs": 0.2
   },
   "greenhouse:stripe": {
    "ok": true,
@@ -64,16 +63,17 @@
    "secs": 0.3
   },
   "workday:salesforce": {
-   "ok": true,
-   "fetched": 60,
+   "ok": false,
+   "fetched": 0,
    "matched": 0,
-   "secs": 1.4
+   "secs": 0.1,
+   "error": "HTTPError: HTTP Error 429: Too Many Requests"
   },
   "workday:adobe": {
    "ok": true,
    "fetched": 60,
    "matched": 8,
-   "secs": 2.0
+   "secs": 2.1
   },
   "greenhouse:pinterest": {
    "ok": true,
@@ -97,7 +97,7 @@
    "ok": true,
    "fetched": 85,
    "matched": 0,
-   "secs": 0.2
+   "secs": 0.3
   },
   "greenhouse:roblox": {
    "ok": true,
@@ -109,31 +109,31 @@
    "ok": true,
    "fetched": 139,
    "matched": 2,
-   "secs": 0.0
+   "secs": 0.2
   },
   "greenhouse:duolingo": {
    "ok": true,
    "fetched": 59,
    "matched": 0,
-   "secs": 0.0
+   "secs": 0.2
   },
   "greenhouse:robinhood": {
    "ok": true,
    "fetched": 165,
    "matched": 0,
-   "secs": 0.1
+   "secs": 0.2
   },
   "greenhouse:coinbase": {
    "ok": true,
    "fetched": 265,
    "matched": 5,
-   "secs": 0.1
+   "secs": 0.2
   },
   "greenhouse:reddit": {
    "ok": true,
    "fetched": 145,
    "matched": 0,
-   "secs": 0.1
+   "secs": 0.2
   },
   "greenhouse:discord": {
    "ok": true,
@@ -145,17 +145,17 @@
    "ok": true,
    "fetched": 384,
    "matched": 1,
-   "secs": 0.1
+   "secs": 0.2
   },
   "greenhouse:scaleai": {
    "ok": true,
    "fetched": 170,
    "matched": 3,
-   "secs": 0.0
+   "secs": 0.2
   },
   "ashby:ramp": {
    "ok": true,
-   "fetched": 180,
+   "fetched": 179,
    "matched": 5,
    "secs": 0.1
   },
@@ -163,7 +163,7 @@
    "ok": true,
    "fetched": 302,
    "matched": 31,
-   "secs": 1.1
+   "secs": 1.2
   },
   "greenhouse:dropbox": {
    "ok": true,
@@ -173,14 +173,14 @@
   },
   "tracker:simplify": {
    "ok": true,
-   "fetched": 1930,
-   "matched": 1122,
+   "fetched": 1928,
+   "matched": 1121,
    "secs": 0.2
   },
   "tracker:vanshb03": {
    "ok": true,
-   "fetched": 1973,
-   "matched": 1466,
+   "fetched": 1976,
+   "matched": 1468,
    "secs": 0.1
   }
  }
