@@ -4,7 +4,7 @@
  "new_roles": 0,
  "alerted": 0,
  "alert_failures": [
-  "test: TikTok TEST Data Science Intern - TikTok Product: HTTP Error 400: Bad Request"
+  "test: TikTok TEST Data Science Intern - TikTok Product: push sent, but email refused: 400 {\"code\":40053,\"http\":400,\"error\":\"invalid request: anonymous email sending is not allowed\",\"link\":\"https://ntfy.sh/docs/publish/#e-mail-notifications\"}\n"
  ],
  "failing_sources": [],
  "sources": {
@@ -12,7 +12,7 @@
    "ok": true,
    "fetched": 95,
    "matched": 29,
-   "secs": 1.0
+   "secs": 1.9
   },
   "eightfold:netflix": {
    "ok": true,
@@ -24,7 +24,7 @@
    "ok": true,
    "fetched": 60,
    "matched": 8,
-   "secs": 3.1
+   "secs": 2.9
   },
   "ashby:openai": {
    "ok": true,
@@ -36,43 +36,43 @@
    "ok": true,
    "fetched": 670,
    "matched": 0,
-   "secs": 0.3
+   "secs": 0.4
   },
   "lever:spotify": {
    "ok": true,
    "fetched": 87,
    "matched": 0,
-   "secs": 1.0
+   "secs": 0.7
   },
   "greenhouse:airbnb": {
    "ok": true,
    "fetched": 214,
    "matched": 1,
-   "secs": 0.3
+   "secs": 0.4
   },
   "greenhouse:stripe": {
    "ok": true,
    "fetched": 786,
    "matched": 2,
-   "secs": 0.3
+   "secs": 0.4
   },
   "greenhouse:databricks": {
    "ok": true,
    "fetched": 896,
    "matched": 3,
-   "secs": 0.3
+   "secs": 0.4
   },
   "workday:salesforce": {
    "ok": true,
    "fetched": 60,
    "matched": 0,
-   "secs": 1.3
+   "secs": 1.5
   },
   "workday:adobe": {
    "ok": true,
    "fetched": 60,
    "matched": 8,
-   "secs": 2.2
+   "secs": 2.3
   },
   "greenhouse:pinterest": {
    "ok": true,
@@ -84,25 +84,25 @@
    "ok": true,
    "fetched": 148,
    "matched": 3,
-   "secs": 0.3
+   "secs": 0.4
   },
   "greenhouse:doordashusa": {
    "ok": true,
    "fetched": 427,
    "matched": 2,
-   "secs": 0.3
+   "secs": 0.4
   },
   "greenhouse:instacart": {
    "ok": true,
    "fetched": 85,
    "matched": 0,
-   "secs": 0.2
+   "secs": 0.3
   },
   "greenhouse:roblox": {
    "ok": true,
    "fetched": 271,
    "matched": 1,
-   "secs": 0.3
+   "secs": 0.4
   },
   "greenhouse:figma": {
    "ok": true,
@@ -120,31 +120,31 @@
    "ok": true,
    "fetched": 165,
    "matched": 0,
-   "secs": 0.1
+   "secs": 0.2
   },
   "greenhouse:coinbase": {
    "ok": true,
    "fetched": 265,
    "matched": 5,
-   "secs": 0.1
+   "secs": 0.2
   },
   "greenhouse:reddit": {
    "ok": true,
    "fetched": 145,
    "matched": 0,
-   "secs": 0.1
+   "secs": 0.2
   },
   "greenhouse:discord": {
    "ok": true,
    "fetched": 26,
    "matched": 0,
-   "secs": 0.0
+   "secs": 0.1
   },
   "greenhouse:datadog": {
    "ok": true,
    "fetched": 384,
    "matched": 1,
-   "secs": 0.1
+   "secs": 0.2
   },
   "greenhouse:scaleai": {
    "ok": true,
@@ -156,19 +156,19 @@
    "ok": true,
    "fetched": 180,
    "matched": 5,
-   "secs": 0.1
+   "secs": 0.2
   },
   "lever:palantir": {
    "ok": true,
    "fetched": 302,
    "matched": 31,
-   "secs": 1.5
+   "secs": 0.8
   },
   "greenhouse:dropbox": {
    "ok": true,
    "fetched": 44,
    "matched": 0,
-   "secs": 0.1
+   "secs": 0.2
   },
   "tracker:simplify": {
    "ok": true,
@@ -180,7 +180,7 @@
    "ok": true,
    "fetched": 1976,
    "matched": 1468,
-   "secs": 0.1
+   "secs": 0.2
   }
  }
 }
