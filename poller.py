@@ -138,7 +138,7 @@ def fit_score(title, location, tier):
 
 # ------------------------------------------------------------------- http ---
 
-def http_json(url, payload=None, headers=None, timeout=25):
+def http_json(url, payload=None, headers=None, timeout=20):
     h = {"User-Agent": UA, "Accept": "application/json"}
     if headers:
         h.update(headers)
@@ -147,8 +147,25 @@ def http_json(url, payload=None, headers=None, timeout=25):
         body = json.dumps(payload).encode("utf-8")
         h["Content-Type"] = "application/json"
     req = urllib.request.Request(url, data=body, headers=h, method="POST" if body else "GET")
-    with urllib.request.urlopen(req, timeout=timeout) as r:
-        return json.loads(r.read().decode("utf-8"))
+    # Retry transient failures (timeouts, connection resets, 429 and 5xx) so a
+    # single blip doesn't mark the source as failing in the digest.
+    delays = [3, 8]
+    for attempt in range(len(delays) + 1):
+        try:
+            with urllib.request.urlopen(req, timeout=timeout) as r:
+                return json.loads(r.read().decode("utf-8"))
+        except urllib.error.HTTPError as e:
+            if e.code != 429 and e.code < 500 or attempt == len(delays):
+                raise
+            wait = delays[attempt]
+            ra = e.headers.get("Retry-After") if e.headers else None
+            if ra and ra.strip().isdigit():
+                wait = min(max(wait, int(ra.strip())), 15)
+        except (TimeoutError, urllib.error.URLError, ConnectionError) as e:
+            if attempt == len(delays):
+                raise
+            wait = delays[attempt]
+        time.sleep(wait)
 
 
 def iso_ts(s):
