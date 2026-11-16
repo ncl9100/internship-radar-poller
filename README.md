@@ -21,6 +21,14 @@ so if it is more than an hour or two old, the poller has stopped.
 - `data/health.json`: which sources work. Check this if alerts go quiet.
 - `data/snapshot.json`: current Tier S/A matches (written on manual runs and pushes).
 
+## Coverage
+
+Direct feeds (fast): Google, Amazon, Apple, Microsoft, Meta (job sitemap), Netflix, NVIDIA,
+OpenAI, Anthropic, Spotify, Airbnb, Stripe, TikTok, Databricks, Salesforce, Adobe,
+Jane Street, Two Sigma, plus most Tier A companies.
+Trackers only (slower, hours after posting): Uber (no public feed), Citadel (blocks bots),
+Walmart, Etsy, Shopify, and anything not listed.
+
 ## Secrets (Settings > Secrets and variables > Actions)
 
 | Secret | What |

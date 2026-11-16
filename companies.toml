@@ -12,7 +12,7 @@
 #   greenhouse = "<board token>"      lever = "<company>"      ashby = "<org>"
 #   workday    = ["<tenant>", "<wdN>", "<Site>"]
 #   eightfold  = ["<host>", "<domain>"]
-#   amazon / google / tiktok / janestreet / apple / ibm / bloomberg = true (custom feeds)
+#   amazon / google / tiktok / janestreet / apple / ibm / bloomberg / microsoft / meta / twosigma = true (custom feeds)
 #
 # To add a company: copy a block, set name + tier, add names and a direct source if it has one.
 
@@ -36,6 +36,7 @@ google = true
 name = "Meta"
 tier = "S"
 names = ["Meta", "Facebook", "Instagram", "WhatsApp"]
+meta = true
 
 [[company]]
 name = "Apple"
@@ -52,7 +53,7 @@ amazon = true
 name = "Microsoft"
 tier = "S"
 names = ["Microsoft", "LinkedIn", "GitHub"]
-# no public feed (403, and its Eightfold API rate-limits GitHub); covered by the trackers
+microsoft = true
 
 [[company]]
 name = "Netflix"
@@ -127,6 +128,7 @@ names = ["Citadel", "Citadel Securities"]
 [[company]]
 name = "Two Sigma"
 tier = "S"
+twosigma = true
 
 # ------------------------------------------------------------------ Tier A --
 
