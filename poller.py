@@ -897,13 +897,19 @@ def main():
     to_alert = [r for r in new_roles if r["tier"] in alert_tiers]
     failures = send_alerts(to_alert, int(cfg.get("alerts", {}).get("max_per_run", 8)))
 
-    if os.environ.get("TEST_ALERT") == "1":
+    test_result = None
+    if os.environ.get("TEST_ALERT") == "1" or (ROOT / ".test-alert").exists():
         tier_s = [r for r in snapshot if r["tier"] in alert_tiers]
         tier_s.sort(key=lambda r: -r["score"])
         if tier_s:
             t = dict(tier_s[0], title="TEST " + tier_s[0]["title"])
-            failures += [f"test: {f}" for f in send_alerts([t], 1)]
-            print("Sent test alert:", t["company"], t["title"])
+            test_fail = send_alerts([t], 1)
+            failures += [f"test: {f}" for f in test_fail]
+            test_result = f"sent {fmt_et(time.time())}: {t['company']} {t['title']}" + (
+                f" (failed: {test_fail})" if test_fail else "")
+        else:
+            test_result = "no Tier S/A role in snapshot to use for a test"
+        print("Test alert:", test_result)
 
     if new_roles:
         log = DATA / "new_roles.jsonl"
@@ -917,9 +923,10 @@ def main():
     failing = sorted(k for k, v in health.items() if not v["ok"])
     prev_failing = sorted(k for k, v in prev_health.get("sources", {}).items() if not v.get("ok"))
     stale = NOW - prev_health.get("written_ts", 0) > 3600  # hourly heartbeat
-    if new_roles or failures or stale or failing != prev_failing or event in ("push", "workflow_dispatch", "local"):
+    if new_roles or failures or stale or test_result or failing != prev_failing or event in ("push", "workflow_dispatch", "local"):
         (DATA / "health.json").write_text(json.dumps({
-            "written_at": fmt_et(NOW), "written_ts": round(NOW), "event": event, "new_roles": len(new_roles),
+            "written_at": fmt_et(NOW), "written_ts": round(NOW), "event": event,
+            **({"test_alert": test_result} if test_result else {}), "new_roles": len(new_roles),
             "alerted": len(to_alert), "alert_failures": failures,
             "failing_sources": failing, "sources": health}, indent=1))
     if event in ("push", "workflow_dispatch", "local"):
@@ -933,4 +940,11 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+        (DATA / "crash.json").unlink(missing_ok=True)
+    except Exception:
+        import traceback
+        (DATA / "crash.json").write_text(json.dumps(
+            {"at": fmt_et(time.time()), "error": traceback.format_exc()[-3000:]}, indent=1))
+        raise
