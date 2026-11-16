@@ -1,0 +1,32 @@
+{
+ "nvidia": {
+  "workerSubType": [
+   "0c40f6bd1d8f10adf6dae42e46d44a17"
+  ],
+  "locationHierarchy1": [
+   "2fcb99c455831013ea52fb338f2932d8"
+  ]
+ },
+ "salesforce": {
+  "CF_-_REC_-_LRV_-_Job_Posting_Anchor_-_Country_from_Job_Posting_Location_Extended": [
+   "bc33aa3152ec42d4995f4791a106ed09"
+  ],
+  "workerSubType": [
+   "3a910852b2c31010f48d2cefdccd0000"
+  ]
+ },
+ "adobe": {
+  "workerSubType": [
+   "3ba4ecdf4893100b2f8d08d56d8d6c8e"
+  ],
+  "locationCountry": [
+   "bc33aa3152ec42d4995f4791a106ed09"
+  ]
+ },
+ "snapchat": {},
+ "capitalone": {
+  "workerSubType": [
+   "a12c70bf789e10572aab83c4780919ad"
+  ]
+ }
+}
