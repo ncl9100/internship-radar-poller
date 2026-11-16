@@ -24,25 +24,18 @@ def show(name, res, pats=()):
 BROWSER = {"sec-ch-ua": '"Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"', "sec-ch-ua-mobile": "?0",
            "sec-ch-ua-platform": '"Windows"', "sec-fetch-dest": "document", "sec-fetch-mode": "navigate",
            "sec-fetch-site": "none", "sec-fetch-user": "?1", "upgrade-insecure-requests": "1"}
-op = mk()
-show("meta browser hdrs", req("https://www.metacareers.com/jobs?q=intern", op=op, headers=BROWSER,
-     accept="text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"), [r'/jobs/(\d{6,})', r'"lsd"\s*,\s*\[\]\s*,\s*\{"token":"([^"]+)"', r'"LSD",\[\],\{"token":"([^"]+)"'])
-show("meta root", req("https://www.metacareers.com/", op=op, headers=BROWSER, accept="text/html"), [r'"LSD",\[\],\{"token":"([^"]+)"'])
-op = mk()
-show("ms pcsx p0", req("https://apply.careers.microsoft.com/careers?query=intern", op=op, accept="text/html"))
-for q in ["intern", "internship"]:
-    code, txt = req(f"https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com&query={q}&location=United%20States&start=0&sort_by=timestamp", op=op, headers={"Referer":"https://apply.careers.microsoft.com/careers?query=intern"})
-    try:
-        d = json.loads(txt)["data"]; pos = d["positions"]
-        print(f"\nMS {q}: count={d.get('count')} n={len(pos)} keys={list(d.keys())}")
-        for p in pos[:12]: print("   ", p["name"], "|", p["locations"][:2], "|", p["postedTs"], "|", p["positionUrl"])
-    except Exception as e: print("MS", q, code, txt[:200])
-code, txt = req("https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com&query=intern&location=United%20States&start=10&sort_by=timestamp", op=op, headers={"Referer":"https://apply.careers.microsoft.com/careers?query=intern"})
-print("MS page2", code, [p["name"] for p in json.loads(txt)["data"]["positions"]][:5] if code==200 else txt[:100])
-for u in ["https://www.uber.com/api/loadSearchJobsResults?localeCode=en-US", "https://www.uber.com/us/en/careers/api/loadSearchJobsResults", "https://www.uber.com/api/careers/loadSearchJobsResults?localeCode=en"]:
-    show("uber "+u[22:70], req(u, {"limit": 10, "page": 0, "params": {"query": "intern", "location": [{"country": "USA"}]}}, {"x-csrf-token": "x", "Origin": "https://www.uber.com"}))
-show("uber careers html", req("https://www.uber.com/us/en/careers/list/?query=intern", headers=BROWSER, accept="text/html"), [r'/careers/list/(\d{5,})', r'"(/api/[A-Za-z/]+)"'])
-code, txt = req("https://www.twosigma.com/careers/students/", accept="text/html")
-print("\ntwosigma hrefs", sorted(set(re.findall(r'href="(https?://[^"]*(?:career|job|greenhouse|lever|workday|avature|icims|taleo)[^"]*)"', txt)))[:25])
-code, txt = req("https://www.twosigma.com/careers/", accept="text/html")
-print("twosigma careers hrefs", sorted(set(re.findall(r'href="(https?://[^"]*(?:career|job|greenhouse|lever|workday|avature|icims|taleo)[^"]*)"', txt)))[:25])
+
+H = dict(BROWSER)
+for u in ["https://www.metacareers.com/jobs/sitemap.xml", "https://www.metacareers.com/jobsearch/sitemap.xml", "https://www.metacareers.com/sitemap.xml"]:
+    show("meta "+u[28:], req(u, headers=H, accept="text/html,application/xml;q=0.9,*/*;q=0.8"), [r'<loc>([^<]+)</loc>'])
+code, txt = req("https://www.metacareers.com/jobs?q=intern", headers=H, accept="text/html")
+for kw in ["CareersJobSearch", "JobSearch", "doc_id", "queryID", "intern"]:
+    idx = [m.start() for m in re.finditer(kw, txt)][:3]
+    print("META", kw, len(re.findall(kw, txt)), [txt[max(0,i-120):i+160].replace("\n"," ") for i in idx[:2]])
+code, txt = req("https://www.uber.com/us/en/careers/list/?query=intern", headers=H, accept="text/html")
+print("\nUBER next data:", "__NEXT_DATA__" in txt, "self.__next_f" in txt)
+for kw in ["intern", "Intern", "jobId", "/careers/list/", "api"]:
+    idx = [m.start() for m in re.finditer(kw, txt)][:3]
+    print("UBER", kw, len(re.findall(kw, txt)), [txt[max(0,i-100):i+140].replace("\n"," ") for i in idx[:2]])
+code, txt = req("https://careers.twosigma.com/", headers=H, accept="text/html")
+print("\nTWOSIGMA root", code, len(txt), sorted(set(re.findall(r'(?:href|src|action)="([^"]{5,140})"', txt)))[:40])
