@@ -25,17 +25,26 @@ BROWSER = {"sec-ch-ua": '"Chromium";v="130", "Google Chrome";v="130", "Not?A_Bra
            "sec-ch-ua-platform": '"Windows"', "sec-fetch-dest": "document", "sec-fetch-mode": "navigate",
            "sec-fetch-site": "none", "sec-fetch-user": "?1", "upgrade-insecure-requests": "1"}
 
+
 H = dict(BROWSER)
-for u in ["https://www.metacareers.com/jobs/sitemap.xml", "https://www.metacareers.com/jobsearch/sitemap.xml", "https://www.metacareers.com/sitemap.xml"]:
-    show("meta "+u[28:], req(u, headers=H, accept="text/html,application/xml;q=0.9,*/*;q=0.8"), [r'<loc>([^<]+)</loc>'])
-code, txt = req("https://www.metacareers.com/jobs?q=intern", headers=H, accept="text/html")
-for kw in ["CareersJobSearch", "JobSearch", "doc_id", "queryID", "intern"]:
-    idx = [m.start() for m in re.finditer(kw, txt)][:3]
-    print("META", kw, len(re.findall(kw, txt)), [txt[max(0,i-120):i+160].replace("\n"," ") for i in idx[:2]])
+code, sm = req("https://www.metacareers.com/jobs/sitemap.xml", headers=H, accept="text/html,application/xml;q=0.9,*/*;q=0.8")
+urls = re.findall(r'<loc>([^<]+)</loc><lastmod>([^<]+)</lastmod>', sm)
+urls.sort(key=lambda x: x[1], reverse=True)
+print("META newest lastmods:", [u[1] for u in urls[:5]], "oldest:", [u[1] for u in urls[-3:]])
+for u, lm in urls[:4]:
+    code, t = req(u, headers=H, accept="text/html")
+    title = re.findall(r'<title[^>]*>([^<]*)</title>', t)
+    og = re.findall(r'property="og:title" content="([^"]*)"', t)
+    loc = re.findall(r'"locations?":\s*\[?"?([^"\]]{3,80})', t)[:3]
+    jt = re.findall(r'"title":"([^"]{5,140})"', t)[:4]
+    print("META job", code, len(t), u[-20:], "| title:", title[:1], "| og:", og[:1], "| jsontitle:", jt, "| loc:", loc)
 code, txt = req("https://www.uber.com/us/en/careers/list/?query=intern", headers=H, accept="text/html")
-print("\nUBER next data:", "__NEXT_DATA__" in txt, "self.__next_f" in txt)
-for kw in ["intern", "Intern", "jobId", "/careers/list/", "api"]:
-    idx = [m.start() for m in re.finditer(kw, txt)][:3]
-    print("UBER", kw, len(re.findall(kw, txt)), [txt[max(0,i-100):i+140].replace("\n"," ") for i in idx[:2]])
+blob = txt.replace('\\"', '"')
+for pat in [r'"id":(\d{5,}),"title":"([^"]{5,140})"', r'"title":"([^"]{5,140})","id":(\d{5,})', r'"jobId":"?(\d+)', r'"(?:title|name)":"([^"]*Intern[^"]*)"']:
+    m = re.findall(pat, blob); print("UBER", pat[:40], len(m), m[:6])
+i = blob.find('"title":"'); print("UBER ctx", blob[max(0,i-300):i+300])
 code, txt = req("https://careers.twosigma.com/", headers=H, accept="text/html")
-print("\nTWOSIGMA root", code, len(txt), sorted(set(re.findall(r'(?:href|src|action)="([^"]{5,140})"', txt)))[:40])
+print("TS links", sorted(set(re.findall(r'href="([^"]*(?:Search|Job|job|Career|careers)[^"]*)"', txt)))[:30])
+for u in ["https://careers.twosigma.com/careers/SearchJobs", "https://careers.twosigma.com/careers/SearchJobs/?listFilterMode=1", "https://careers.twosigma.com/en_US/careers/SearchJobs"]:
+    code, t = req(u, headers=H, accept="text/html")
+    print("TS", u, code, len(t), re.findall(r'href="([^"]*JobDetail[^"]*)"[^>]*>\s*([^<]{3,120})', t)[:5])
