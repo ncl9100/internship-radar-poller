@@ -29,6 +29,7 @@ vanshb03 = "https://raw.githubusercontent.com/vanshb03/Summer2027-Internships/de
 name = "Google"
 tier = "S"
 names = ["Google", "YouTube", "DeepMind", "Google DeepMind", "Alphabet"]
+google = true
 
 [[company]]
 name = "Meta"
@@ -94,6 +95,7 @@ tier = "S"
 name = "TikTok"
 tier = "S"
 names = ["TikTok", "ByteDance"]
+tiktok = true
 
 [[company]]
 name = "Databricks"
@@ -113,6 +115,7 @@ workday = ["adobe", "wd5", "external_experienced"]
 [[company]]
 name = "Jane Street"
 tier = "S"
+janestreet = true
 
 [[company]]
 name = "Citadel"
