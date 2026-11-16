@@ -1,6 +1,19 @@
 [
  {
   "company": "TikTok",
+  "title": "Data Science Intern (TikTok Product) - 2027 Summer",
+  "location": "San Jose, California, United States of America",
+  "url": "https://lifeattiktok.com/search/7669683639101884725",
+  "tier": "S",
+  "score": 90,
+  "category": "Data Science",
+  "source": "tiktok",
+  "posted_ts": null,
+  "detected_ts": 1794791359.8136823,
+  "opened": "time not listed"
+ },
+ {
+  "company": "TikTok",
   "title": "Data Science Intern - TikTok Product",
   "location": "San Jose, CA",
   "url": "https://lifeattiktok.com/search/7669683639101884725",
@@ -9,9 +22,9 @@
   "category": "Data Science",
   "source": "tracker:simplify",
   "posted_ts": 1785893052,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Aug 04, 09:24 PM ET",
-  "lag_min": 148292
+  "lag_min": 148305
  },
  {
   "company": "Meta",
@@ -23,9 +36,9 @@
   "category": "Data Science",
   "source": "tracker:simplify",
   "posted_ts": 1791325529,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Oct 06, 06:25 PM ET",
-  "lag_min": 57751
+  "lag_min": 57764
  },
  {
   "company": "TikTok",
@@ -37,9 +50,22 @@
   "category": "ML/AI",
   "source": "tracker:simplify",
   "posted_ts": 1785835212,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Aug 04, 05:20 AM ET",
-  "lag_min": 149256
+  "lag_min": 149269
+ },
+ {
+  "company": "TikTok",
+  "title": "Data Scientist Intern (VOD Data) - 2027 Summer",
+  "location": "San Jose, California, United States of America",
+  "url": "https://lifeattiktok.com/search/7670287013157095733",
+  "tier": "S",
+  "score": 85,
+  "category": "Data Science",
+  "source": "tiktok",
+  "posted_ts": null,
+  "detected_ts": 1794791359.8136823,
+  "opened": "time not listed"
  },
  {
   "company": "Databricks",
@@ -51,9 +77,9 @@
   "category": "Data Science",
   "source": "greenhouse:databricks",
   "posted_ts": 1692308494.0,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Aug 17, 05:41 PM ET",
-  "lag_min": 1708035
+  "lag_min": 1708048
  },
  {
   "company": "TikTok",
@@ -65,9 +91,9 @@
   "category": "Data Science",
   "source": "tracker:simplify",
   "posted_ts": 1785835210,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Aug 04, 05:20 AM ET",
-  "lag_min": 149256
+  "lag_min": 149269
  },
  {
   "company": "TikTok",
@@ -79,9 +105,9 @@
   "category": "Data Science",
   "source": "tracker:simplify",
   "posted_ts": 1785835211,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Aug 04, 05:20 AM ET",
-  "lag_min": 149256
+  "lag_min": 149269
  },
  {
   "company": "TikTok",
@@ -93,9 +119,9 @@
   "category": "Data Science",
   "source": "tracker:simplify",
   "posted_ts": 1785921474,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Aug 05, 05:17 AM ET",
-  "lag_min": 147819
+  "lag_min": 147831
  },
  {
   "company": "Citadel",
@@ -107,9 +133,9 @@
   "category": "Data Science",
   "source": "tracker:simplify",
   "posted_ts": 1786401263,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Aug 10, 06:34 PM ET",
-  "lag_min": 139822
+  "lag_min": 139835
  },
  {
   "company": "TikTok",
@@ -121,9 +147,9 @@
   "category": "Data Science",
   "source": "tracker:vanshb03",
   "posted_ts": 1793525855,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Nov 01, 04:37 AM ET",
-  "lag_min": 21079
+  "lag_min": 21092
  },
  {
   "company": "TikTok",
@@ -135,9 +161,9 @@
   "category": "Data Science",
   "source": "tracker:vanshb03",
   "posted_ts": 1793525855,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Nov 01, 04:37 AM ET",
-  "lag_min": 21079
+  "lag_min": 21092
  },
  {
   "company": "TikTok",
@@ -149,9 +175,9 @@
   "category": "Data Science",
   "source": "tracker:vanshb03",
   "posted_ts": 1793525855,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Nov 01, 04:37 AM ET",
-  "lag_min": 21079
+  "lag_min": 21092
  },
  {
   "company": "Amazon",
@@ -163,8 +189,73 @@
   "category": "ML/AI",
   "source": "amazon",
   "posted_ts": null,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "posted September 30, 2026"
+ },
+ {
+  "company": "NVIDIA",
+  "title": "VLSI CAD Timing Intern, Applied AI - Summer 2027",
+  "location": "US, CA, Santa Clara",
+  "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/VLSI-CAD-Timing-Intern--Applied-AI---Summer-2027_JR2026799",
+  "tier": "S",
+  "score": 82,
+  "category": "ML/AI",
+  "source": "workday:nvidia",
+  "posted_ts": null,
+  "detected_ts": 1794791359.8136823,
+  "opened": "Posted 16 Days Ago"
+ },
+ {
+  "company": "NVIDIA",
+  "title": "Deep Learning Scientist Intern, LLM, Multimodal and Agentic AI - Summer 2027",
+  "location": "US, CA, Santa Clara",
+  "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Deep-Learning-Scientist-Intern--LLM--Multimodal-and-Agentic-AI---Summer-2027_JR2027548",
+  "tier": "S",
+  "score": 82,
+  "category": "ML/AI",
+  "source": "workday:nvidia",
+  "posted_ts": null,
+  "detected_ts": 1794791359.8136823,
+  "opened": "Posted 11 Days Ago"
+ },
+ {
+  "company": "TikTok",
+  "title": "Machine Learning Engineer Intern (Ads Signal & Measurement) - 2027 Summer",
+  "location": "San Jose, California, United States of America",
+  "url": "https://lifeattiktok.com/search/7669700361976809733",
+  "tier": "S",
+  "score": 82,
+  "category": "ML/AI",
+  "source": "tiktok",
+  "posted_ts": null,
+  "detected_ts": 1794791359.8136823,
+  "opened": "time not listed"
+ },
+ {
+  "company": "TikTok",
+  "title": "ML Infra Engineer Intern (Ads Infra) - 2027 Summer",
+  "location": "San Jose, California, United States of America",
+  "url": "https://lifeattiktok.com/search/7668881813744191749",
+  "tier": "S",
+  "score": 82,
+  "category": "ML/AI",
+  "source": "tiktok",
+  "posted_ts": null,
+  "detected_ts": 1794791359.8136823,
+  "opened": "time not listed"
+ },
+ {
+  "company": "TikTok",
+  "title": "LLM Post-training Engineer Intern (Research & Product) - 2027 Summer",
+  "location": "San Jose, California, United States of America",
+  "url": "https://lifeattiktok.com/search/7670285031018432773",
+  "tier": "S",
+  "score": 82,
+  "category": "ML/AI",
+  "source": "tiktok",
+  "posted_ts": null,
+  "detected_ts": 1794791359.8136823,
+  "opened": "time not listed"
  },
  {
   "company": "TikTok",
@@ -176,9 +267,9 @@
   "category": "ML/AI",
   "source": "tracker:simplify",
   "posted_ts": 1785824410,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Aug 04, 02:20 AM ET",
-  "lag_min": 149436
+  "lag_min": 149449
  },
  {
   "company": "TikTok",
@@ -190,9 +281,9 @@
   "category": "ML/AI",
   "source": "tracker:simplify",
   "posted_ts": 1785835211,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Aug 04, 05:20 AM ET",
-  "lag_min": 149256
+  "lag_min": 149269
  },
  {
   "company": "TikTok",
@@ -204,9 +295,9 @@
   "category": "ML/AI",
   "source": "tracker:simplify",
   "posted_ts": 1785835207,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Aug 04, 05:20 AM ET",
-  "lag_min": 149256
+  "lag_min": 149269
  },
  {
   "company": "TikTok",
@@ -218,9 +309,9 @@
   "category": "ML/AI",
   "source": "tracker:simplify",
   "posted_ts": 1785835209,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Aug 04, 05:20 AM ET",
-  "lag_min": 149256
+  "lag_min": 149269
  },
  {
   "company": "TikTok",
@@ -232,9 +323,9 @@
   "category": "ML/AI",
   "source": "tracker:simplify",
   "posted_ts": 1785835208,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Aug 04, 05:20 AM ET",
-  "lag_min": 149256
+  "lag_min": 149269
  },
  {
   "company": "TikTok",
@@ -246,9 +337,9 @@
   "category": "ML/AI",
   "source": "tracker:simplify",
   "posted_ts": 1785979104,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Aug 05, 09:18 PM ET",
-  "lag_min": 146858
+  "lag_min": 146871
  },
  {
   "company": "TikTok",
@@ -260,9 +351,9 @@
   "category": "ML/AI",
   "source": "tracker:simplify",
   "posted_ts": 1785824409,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Aug 04, 02:20 AM ET",
-  "lag_min": 149436
+  "lag_min": 149449
  },
  {
   "company": "TikTok",
@@ -274,9 +365,9 @@
   "category": "ML/AI",
   "source": "tracker:simplify",
   "posted_ts": 1791450861,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Oct 08, 05:14 AM ET",
-  "lag_min": 55662
+  "lag_min": 55675
  },
  {
   "company": "ByteDance",
@@ -288,9 +379,9 @@
   "category": "ML/AI",
   "source": "tracker:vanshb03",
   "posted_ts": 1786024264,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Aug 06, 09:51 AM ET",
-  "lag_min": 146106
+  "lag_min": 146118
  },
  {
   "company": "ByteDance",
@@ -302,9 +393,9 @@
   "category": "ML/AI",
   "source": "tracker:vanshb03",
   "posted_ts": 1793519707,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Nov 01, 02:55 AM ET",
-  "lag_min": 21181
+  "lag_min": 21194
  },
  {
   "company": "ByteDance",
@@ -316,9 +407,9 @@
   "category": "ML/AI",
   "source": "tracker:vanshb03",
   "posted_ts": 1793519707,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Nov 01, 02:55 AM ET",
-  "lag_min": 21181
+  "lag_min": 21194
  },
  {
   "company": "TikTok",
@@ -330,9 +421,9 @@
   "category": "ML/AI",
   "source": "tracker:vanshb03",
   "posted_ts": 1793525855,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Nov 01, 04:37 AM ET",
-  "lag_min": 21079
+  "lag_min": 21092
  },
  {
   "company": "Microsoft",
@@ -344,9 +435,22 @@
   "category": "Data Science",
   "source": "tracker:simplify",
   "posted_ts": 1794478846,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Nov 12, 05:20 AM ET",
-  "lag_min": 5196
+  "lag_min": 5209
+ },
+ {
+  "company": "TikTok",
+  "title": "Data Engineering Project Intern  (Ads Targeting) - 2027 Start",
+  "location": "San Jose, California, United States of America",
+  "url": "https://lifeattiktok.com/search/7668533140146817333",
+  "tier": "S",
+  "score": 78,
+  "category": "Analytics/Data",
+  "source": "tiktok",
+  "posted_ts": null,
+  "detected_ts": 1794791359.8136823,
+  "opened": "time not listed"
  },
  {
   "company": "TikTok",
@@ -358,9 +462,9 @@
   "category": "Analytics/Data",
   "source": "tracker:simplify",
   "posted_ts": 1785921432,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Aug 05, 05:17 AM ET",
-  "lag_min": 147819
+  "lag_min": 147832
  },
  {
   "company": "TikTok",
@@ -372,9 +476,9 @@
   "category": "Analytics/Data",
   "source": "tracker:vanshb03",
   "posted_ts": 1793525855,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Nov 01, 04:37 AM ET",
-  "lag_min": 21079
+  "lag_min": 21092
  },
  {
   "company": "NVIDIA",
@@ -386,7 +490,7 @@
   "category": "ML/AI",
   "source": "workday:nvidia",
   "posted_ts": null,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Posted 16 Days Ago"
  },
  {
@@ -399,8 +503,86 @@
   "category": "ML/AI",
   "source": "workday:nvidia",
   "posted_ts": null,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Posted 16 Days Ago"
+ },
+ {
+  "company": "TikTok",
+  "title": "Machine Learning MLOps Intern (Global SRE) - 2027 Summer",
+  "location": "San Jose, California, United States of America",
+  "url": "https://lifeattiktok.com/search/7670875283026053381",
+  "tier": "S",
+  "score": 77,
+  "category": "ML/AI",
+  "source": "tiktok",
+  "posted_ts": null,
+  "detected_ts": 1794791359.8136823,
+  "opened": "time not listed"
+ },
+ {
+  "company": "TikTok",
+  "title": "Machine Learning Engineer Intern (E-Commerce Recommendation Mall) - 2027 Start",
+  "location": "San Jose, California, United States of America",
+  "url": "https://lifeattiktok.com/search/7706693387932633397",
+  "tier": "S",
+  "score": 77,
+  "category": "ML/AI",
+  "source": "tiktok",
+  "posted_ts": null,
+  "detected_ts": 1794791359.8136823,
+  "opened": "time not listed"
+ },
+ {
+  "company": "TikTok",
+  "title": "AI Infra Engineer Intern (Recommendation & LLM) - 2027 Summer",
+  "location": "San Jose, California, United States of America",
+  "url": "https://lifeattiktok.com/search/7672671220798818613",
+  "tier": "S",
+  "score": 77,
+  "category": "ML/AI",
+  "source": "tiktok",
+  "posted_ts": null,
+  "detected_ts": 1794791359.8136823,
+  "opened": "time not listed"
+ },
+ {
+  "company": "TikTok",
+  "title": "Research Scientist Intern (Monetization Technology - Business Integrity) - 2027 Summer",
+  "location": "San Jose, California, United States of America",
+  "url": "https://lifeattiktok.com/search/7668202600147552517",
+  "tier": "S",
+  "score": 77,
+  "category": "ML/AI",
+  "source": "tiktok",
+  "posted_ts": null,
+  "detected_ts": 1794791359.8136823,
+  "opened": "time not listed"
+ },
+ {
+  "company": "TikTok",
+  "title": "Recommendation Architecture AI/ML Infrastructure Engineer Intern (Data-Arch-TikTok Live) - 2027 Summer",
+  "location": "San Jose, California, United States of America",
+  "url": "https://lifeattiktok.com/search/7670876223732762933",
+  "tier": "S",
+  "score": 77,
+  "category": "ML/AI",
+  "source": "tiktok",
+  "posted_ts": null,
+  "detected_ts": 1794791359.8136823,
+  "opened": "time not listed"
+ },
+ {
+  "company": "TikTok",
+  "title": "Machine Learning Scientist Intern (TikTok-Local Services) - 2027 Start",
+  "location": "San Jose, California, United States of America",
+  "url": "https://lifeattiktok.com/search/7703925583541979445",
+  "tier": "S",
+  "score": 77,
+  "category": "ML/AI",
+  "source": "tiktok",
+  "posted_ts": null,
+  "detected_ts": 1794791359.8136823,
+  "opened": "time not listed"
  },
  {
   "company": "Adobe",
@@ -412,8 +594,34 @@
   "category": "ML/AI",
   "source": "workday:adobe",
   "posted_ts": null,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Posted 27 Days Ago"
+ },
+ {
+  "company": "Jane Street",
+  "title": "Machine Learning Engineer Intern",
+  "location": "New York, NY",
+  "url": "https://www.janestreet.com/join-jane-street/position/8611307002/",
+  "tier": "S",
+  "score": 77,
+  "category": "ML/AI",
+  "source": "janestreet",
+  "posted_ts": null,
+  "detected_ts": 1794791359.8136823,
+  "opened": "time not listed"
+ },
+ {
+  "company": "Jane Street",
+  "title": "Machine Learning Researcher Intern",
+  "location": "New York, NY",
+  "url": "https://www.janestreet.com/join-jane-street/position/8384490002/",
+  "tier": "S",
+  "score": 77,
+  "category": "ML/AI",
+  "source": "janestreet",
+  "posted_ts": null,
+  "detected_ts": 1794791359.8136823,
+  "opened": "time not listed"
  },
  {
   "company": "Lyft",
@@ -425,9 +633,9 @@
   "category": "Data Science",
   "source": "greenhouse:lyft",
   "posted_ts": 1789145227.0,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Sep 11, 12:47 PM ET",
-  "lag_min": 94089
+  "lag_min": 94102
  },
  {
   "company": "Two Sigma",
@@ -439,23 +647,9 @@
   "category": "ML/AI",
   "source": "tracker:simplify",
   "posted_ts": 1785633715,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Aug 01, 09:21 PM ET",
-  "lag_min": 152615
- },
- {
-  "company": "TikTok",
-  "title": "Machine Learning Engineer Intern",
-  "location": "San Jose, CA",
-  "url": "https://lifeattiktok.com/search/7667338938890930437",
-  "tier": "S",
-  "score": 77,
-  "category": "ML/AI",
-  "source": "tracker:simplify",
-  "posted_ts": 1785737710,
-  "detected_ts": 1794790594.5313363,
-  "opened": "Aug 03, 02:15 AM ET",
-  "lag_min": 150881
+  "lag_min": 152627
  },
  {
   "company": "TikTok",
@@ -467,9 +661,9 @@
   "category": "ML/AI",
   "source": "tracker:simplify",
   "posted_ts": 1785737710,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Aug 03, 02:15 AM ET",
-  "lag_min": 150881
+  "lag_min": 150894
  },
  {
   "company": "TikTok",
@@ -481,9 +675,9 @@
   "category": "ML/AI",
   "source": "tracker:simplify",
   "posted_ts": 1785766813,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Aug 03, 10:20 AM ET",
-  "lag_min": 150396
+  "lag_min": 150409
  },
  {
   "company": "TikTok",
@@ -495,9 +689,9 @@
   "category": "ML/AI",
   "source": "tracker:simplify",
   "posted_ts": 1785835206,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Aug 04, 05:20 AM ET",
-  "lag_min": 149256
+  "lag_min": 149269
  },
  {
   "company": "ByteDance",
@@ -509,9 +703,9 @@
   "category": "ML/AI",
   "source": "tracker:simplify",
   "posted_ts": 1785834865,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Aug 04, 05:14 AM ET",
-  "lag_min": 149262
+  "lag_min": 149275
  },
  {
   "company": "ByteDance",
@@ -523,9 +717,9 @@
   "category": "ML/AI",
   "source": "tracker:simplify",
   "posted_ts": 1785978875,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Aug 05, 09:14 PM ET",
-  "lag_min": 146862
+  "lag_min": 146875
  },
  {
   "company": "ByteDance",
@@ -537,9 +731,9 @@
   "category": "ML/AI",
   "source": "tracker:simplify",
   "posted_ts": 1786388388,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Aug 10, 02:59 PM ET",
-  "lag_min": 140037
+  "lag_min": 140050
  },
  {
   "company": "ByteDance",
@@ -551,9 +745,9 @@
   "category": "ML/AI",
   "source": "tracker:simplify",
   "posted_ts": 1786388387,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Aug 10, 02:59 PM ET",
-  "lag_min": 140037
+  "lag_min": 140050
  },
  {
   "company": "ByteDance",
@@ -565,9 +759,9 @@
   "category": "ML/AI",
   "source": "tracker:simplify",
   "posted_ts": 1786388381,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Aug 10, 02:59 PM ET",
-  "lag_min": 140037
+  "lag_min": 140050
  },
  {
   "company": "NVIDIA",
@@ -579,9 +773,9 @@
   "category": "ML/AI",
   "source": "tracker:simplify",
   "posted_ts": 1787097600,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Aug 18, 08:00 PM ET",
-  "lag_min": 128217
+  "lag_min": 128229
  },
  {
   "company": "TikTok",
@@ -593,9 +787,9 @@
   "category": "ML/AI",
   "source": "tracker:simplify",
   "posted_ts": 1787172423,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Aug 19, 04:47 PM ET",
-  "lag_min": 126970
+  "lag_min": 126982
  },
  {
   "company": "TikTok",
@@ -607,9 +801,9 @@
   "category": "ML/AI",
   "source": "tracker:simplify",
   "posted_ts": 1787704451,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Aug 25, 08:34 PM ET",
-  "lag_min": 118102
+  "lag_min": 118115
  },
  {
   "company": "TikTok",
@@ -621,9 +815,9 @@
   "category": "ML/AI",
   "source": "tracker:simplify",
   "posted_ts": 1786112667,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Aug 07, 10:24 AM ET",
-  "lag_min": 144632
+  "lag_min": 144645
  },
  {
   "company": "Amazon",
@@ -635,37 +829,9 @@
   "category": "ML/AI",
   "source": "tracker:simplify",
   "posted_ts": 1793399217,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Oct 30, 06:26 PM ET",
-  "lag_min": 23190
- },
- {
-  "company": "Jane Street",
-  "title": "Machine Learning Engineer Intern",
-  "location": "New York, NY",
-  "url": "https://go.vansh.nyc/3Z",
-  "tier": "S",
-  "score": 77,
-  "category": "ML/AI",
-  "source": "tracker:vanshb03",
-  "posted_ts": 1784881811,
-  "detected_ts": 1794790594.5313363,
-  "opened": "Jul 24, 04:30 AM ET",
-  "lag_min": 165146
- },
- {
-  "company": "Jane Street",
-  "title": "Machine Learning Researcher Intern",
-  "location": "New York, NY",
-  "url": "https://go.vansh.nyc/40",
-  "tier": "S",
-  "score": 77,
-  "category": "ML/AI",
-  "source": "tracker:vanshb03",
-  "posted_ts": 1784881814,
-  "detected_ts": 1794790594.5313363,
-  "opened": "Jul 24, 04:30 AM ET",
-  "lag_min": 165146
+  "lag_min": 23202
  },
  {
   "company": "TikTok",
@@ -677,9 +843,9 @@
   "category": "ML/AI",
   "source": "tracker:vanshb03",
   "posted_ts": 1785853222,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Aug 04, 10:20 AM ET",
-  "lag_min": 148956
+  "lag_min": 148969
  },
  {
   "company": "ByteDance",
@@ -691,9 +857,9 @@
   "category": "ML/AI",
   "source": "tracker:vanshb03",
   "posted_ts": 1786024261,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Aug 06, 09:51 AM ET",
-  "lag_min": 146106
+  "lag_min": 146118
  },
  {
   "company": "Adobe",
@@ -705,9 +871,9 @@
   "category": "ML/AI",
   "source": "tracker:vanshb03",
   "posted_ts": 1792439494,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Oct 19, 03:51 PM ET",
-  "lag_min": 39185
+  "lag_min": 39198
  },
  {
   "company": "Salesforce",
@@ -719,9 +885,9 @@
   "category": "ML/AI",
   "source": "tracker:vanshb03",
   "posted_ts": 1792479600,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Oct 20, 03:00 AM ET",
-  "lag_min": 38517
+  "lag_min": 38529
  },
  {
   "company": "Amazon",
@@ -733,9 +899,9 @@
   "category": "ML/AI",
   "source": "tracker:vanshb03",
   "posted_ts": 1792652400,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Oct 22, 03:00 AM ET",
-  "lag_min": 35637
+  "lag_min": 35649
  },
  {
   "company": "TikTok",
@@ -747,9 +913,9 @@
   "category": "ML/AI",
   "source": "tracker:vanshb03",
   "posted_ts": 1792339604,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Oct 18, 12:06 PM ET",
-  "lag_min": 40850
+  "lag_min": 40863
  },
  {
   "company": "Salesforce",
@@ -761,9 +927,9 @@
   "category": "ML/AI",
   "source": "tracker:vanshb03",
   "posted_ts": 1793382489,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Oct 30, 01:48 PM ET",
-  "lag_min": 23468
+  "lag_min": 23481
  },
  {
   "company": "NVIDIA",
@@ -775,9 +941,9 @@
   "category": "ML/AI",
   "source": "tracker:vanshb03",
   "posted_ts": 1793448359,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Oct 31, 08:05 AM ET",
-  "lag_min": 22371
+  "lag_min": 22383
  },
  {
   "company": "ByteDance",
@@ -789,9 +955,9 @@
   "category": "ML/AI",
   "source": "tracker:vanshb03",
   "posted_ts": 1793519707,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Nov 01, 02:55 AM ET",
-  "lag_min": 21181
+  "lag_min": 21194
  },
  {
   "company": "ByteDance",
@@ -803,9 +969,9 @@
   "category": "ML/AI",
   "source": "tracker:vanshb03",
   "posted_ts": 1793519707,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Nov 01, 02:55 AM ET",
-  "lag_min": 21181
+  "lag_min": 21194
  },
  {
   "company": "TikTok",
@@ -817,9 +983,9 @@
   "category": "ML/AI",
   "source": "tracker:vanshb03",
   "posted_ts": 1793525855,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Nov 01, 04:37 AM ET",
-  "lag_min": 21079
+  "lag_min": 21092
  },
  {
   "company": "TikTok",
@@ -831,9 +997,9 @@
   "category": "ML/AI",
   "source": "tracker:vanshb03",
   "posted_ts": 1793525855,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Nov 01, 04:37 AM ET",
-  "lag_min": 21079
+  "lag_min": 21092
  },
  {
   "company": "TikTok",
@@ -845,9 +1011,9 @@
   "category": "ML/AI",
   "source": "tracker:vanshb03",
   "posted_ts": 1793525855,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Nov 01, 04:37 AM ET",
-  "lag_min": 21079
+  "lag_min": 21092
  },
  {
   "company": "TikTok",
@@ -859,9 +1025,9 @@
   "category": "ML/AI",
   "source": "tracker:vanshb03",
   "posted_ts": 1793525855,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Nov 01, 04:37 AM ET",
-  "lag_min": 21079
+  "lag_min": 21092
  },
  {
   "company": "TikTok",
@@ -873,9 +1039,9 @@
   "category": "ML/AI",
   "source": "tracker:vanshb03",
   "posted_ts": 1793525855,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Nov 01, 04:37 AM ET",
-  "lag_min": 21079
+  "lag_min": 21092
  },
  {
   "company": "TikTok",
@@ -887,9 +1053,9 @@
   "category": "ML/AI",
   "source": "tracker:vanshb03",
   "posted_ts": 1793525855,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Nov 01, 04:37 AM ET",
-  "lag_min": 21079
+  "lag_min": 21092
  },
  {
   "company": "TikTok",
@@ -901,9 +1067,9 @@
   "category": "ML/AI",
   "source": "tracker:vanshb03",
   "posted_ts": 1793525855,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Nov 01, 04:37 AM ET",
-  "lag_min": 21079
+  "lag_min": 21092
  },
  {
   "company": "TikTok",
@@ -915,9 +1081,9 @@
   "category": "ML/AI",
   "source": "tracker:vanshb03",
   "posted_ts": 1794530238,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Nov 12, 07:37 PM ET",
-  "lag_min": 4339
+  "lag_min": 4352
  },
  {
   "company": "Amazon",
@@ -929,7 +1095,7 @@
   "category": "ML/AI",
   "source": "amazon",
   "posted_ts": null,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "posted October 30, 2026"
  },
  {
@@ -942,9 +1108,9 @@
   "category": "ML/AI",
   "source": "tracker:simplify",
   "posted_ts": 1791942515,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Oct 13, 09:48 PM ET",
-  "lag_min": 47468
+  "lag_min": 47481
  },
  {
   "company": "Apple",
@@ -956,9 +1122,9 @@
   "category": "ML/AI",
   "source": "tracker:vanshb03",
   "posted_ts": 1779396848,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "May 21, 04:54 PM ET",
-  "lag_min": 256562
+  "lag_min": 256575
  },
  {
   "company": "Stripe",
@@ -970,9 +1136,35 @@
   "category": "Analytics/Data",
   "source": "greenhouse:stripe",
   "posted_ts": 1790867129.0,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Oct 01, 11:05 AM ET",
-  "lag_min": 65391
+  "lag_min": 65404
+ },
+ {
+  "company": "TikTok",
+  "title": "Data Engineer Intern (E-commerce) - 2027 Summer",
+  "location": "San Jose, California, United States of America",
+  "url": "https://lifeattiktok.com/search/7676250516494436661",
+  "tier": "S",
+  "score": 73,
+  "category": "Analytics/Data",
+  "source": "tiktok",
+  "posted_ts": null,
+  "detected_ts": 1794791359.8136823,
+  "opened": "time not listed"
+ },
+ {
+  "company": "Jane Street",
+  "title": "Data Engineer Intern",
+  "location": "New York, NY",
+  "url": "https://www.janestreet.com/join-jane-street/position/8631973002/",
+  "tier": "S",
+  "score": 73,
+  "category": "Analytics/Data",
+  "source": "janestreet",
+  "posted_ts": null,
+  "detected_ts": 1794791359.8136823,
+  "opened": "time not listed"
  },
  {
   "company": "TikTok",
@@ -984,9 +1176,9 @@
   "category": "Analytics/Data",
   "source": "tracker:simplify",
   "posted_ts": 1786371585,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Aug 10, 10:19 AM ET",
-  "lag_min": 140317
+  "lag_min": 140330
  },
  {
   "company": "TikTok",
@@ -998,9 +1190,9 @@
   "category": "Analytics/Data",
   "source": "tracker:simplify",
   "posted_ts": 1786972909,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Aug 17, 09:21 AM ET",
-  "lag_min": 130295
+  "lag_min": 130308
  },
  {
   "company": "Apple Bank",
@@ -1012,23 +1204,9 @@
   "category": "Analytics/Data",
   "source": "tracker:simplify",
   "posted_ts": 1791331200,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Oct 06, 08:00 PM ET",
-  "lag_min": 57657
- },
- {
-  "company": "Jane Street",
-  "title": "Data Engineer Intern",
-  "location": "New York, NY",
-  "url": "https://go.vansh.nyc/42",
-  "tier": "S",
-  "score": 73,
-  "category": "Analytics/Data",
-  "source": "tracker:vanshb03",
-  "posted_ts": 1784881820,
-  "detected_ts": 1794790594.5313363,
-  "opened": "Jul 24, 04:30 AM ET",
-  "lag_min": 165146
+  "lag_min": 57669
  },
  {
   "company": "TikTok",
@@ -1040,9 +1218,9 @@
   "category": "Analytics/Data",
   "source": "tracker:vanshb03",
   "posted_ts": 1793525855,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Nov 01, 04:37 AM ET",
-  "lag_min": 21079
+  "lag_min": 21092
  },
  {
   "company": "ByteDance",
@@ -1054,9 +1232,9 @@
   "category": "Analytics/Data",
   "source": "tracker:vanshb03",
   "posted_ts": 1794348356,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Nov 10, 05:05 PM ET",
-  "lag_min": 7371
+  "lag_min": 7383
  },
  {
   "company": "Amazon",
@@ -1068,8 +1246,21 @@
   "category": "Analytics/Data",
   "source": "amazon",
   "posted_ts": null,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "posted October  9, 2026"
+ },
+ {
+  "company": "TikTok",
+  "title": "Seller Strategy Business Analyst Project Intern (TikTok Shop - US Operation) - 2025 Start (BS/MS)",
+  "location": "Seattle, Washington, United States of America",
+  "url": "https://lifeattiktok.com/search/7558622480857188626",
+  "tier": "S",
+  "score": 72,
+  "category": "Analytics/Data",
+  "source": "tiktok",
+  "posted_ts": null,
+  "detected_ts": 1794791359.8136823,
+  "opened": "time not listed"
  },
  {
   "company": "Hudson River Trading",
@@ -1081,9 +1272,9 @@
   "category": "Data Science",
   "source": "tracker:simplify",
   "posted_ts": 1791239757,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Oct 05, 06:35 PM ET",
-  "lag_min": 59181
+  "lag_min": 59193
  },
  {
   "company": "Amazon",
@@ -1095,7 +1286,7 @@
   "category": "ML/AI",
   "source": "amazon",
   "posted_ts": null,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "posted November 13, 2026"
  },
  {
@@ -1108,7 +1299,7 @@
   "category": "ML/AI",
   "source": "workday:nvidia",
   "posted_ts": null,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Posted 30+ Days Ago"
  },
  {
@@ -1121,7 +1312,7 @@
   "category": "ML/AI",
   "source": "workday:nvidia",
   "posted_ts": null,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Posted 30+ Days Ago"
  },
  {
@@ -1134,8 +1325,177 @@
   "category": "ML/AI",
   "source": "workday:nvidia",
   "posted_ts": null,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Posted 30+ Days Ago"
+ },
+ {
+  "company": "NVIDIA",
+  "title": "AI Developer Technology Engineering Intern - 2027",
+  "location": "3 Locations",
+  "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/China-Shenzhen/AI-Developer-Technology-Engineering-Intern---2027_JR2024818",
+  "tier": "S",
+  "score": 71,
+  "category": "ML/AI",
+  "source": "workday:nvidia",
+  "posted_ts": null,
+  "detected_ts": 1794791359.8136823,
+  "opened": "Posted 9 Days Ago"
+ },
+ {
+  "company": "NVIDIA",
+  "title": "AI Infrastructure and Frameworks Intern, Cosmos Lab - 2027",
+  "location": "3 Locations",
+  "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/China-Beijing/AI-Infrastructure-and-Frameworks-Intern--Cosmos-Lab---2027_JR2025559",
+  "tier": "S",
+  "score": 71,
+  "category": "ML/AI",
+  "source": "workday:nvidia",
+  "posted_ts": null,
+  "detected_ts": 1794791359.8136823,
+  "opened": "Posted 30+ Days Ago"
+ },
+ {
+  "company": "NVIDIA",
+  "title": "Performance Software Intern, Deep Learning Libraries - 2027",
+  "location": "2 Locations",
+  "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/China-Shanghai/Performance-Software-Intern--Deep-Learning-Libraries---2027_JR2026171",
+  "tier": "S",
+  "score": 71,
+  "category": "ML/AI",
+  "source": "workday:nvidia",
+  "posted_ts": null,
+  "detected_ts": 1794791359.8136823,
+  "opened": "Posted 30+ Days Ago"
+ },
+ {
+  "company": "NVIDIA",
+  "title": "AI Computing Software Development Intern - 2027",
+  "location": "2 Locations",
+  "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/China-Shanghai/AI-Computing-Software-Development-Intern---2027_JR2026164",
+  "tier": "S",
+  "score": 71,
+  "category": "ML/AI",
+  "source": "workday:nvidia",
+  "posted_ts": null,
+  "detected_ts": 1794791359.8136823,
+  "opened": "Posted 30+ Days Ago"
+ },
+ {
+  "company": "NVIDIA",
+  "title": "AI Computing Software Development Intern, LLM Inference - 2027",
+  "location": "2 Locations",
+  "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/China-Shanghai/AI-Computing-Software-Development-Intern--LLM-Inference---2027_JR2026173",
+  "tier": "S",
+  "score": 71,
+  "category": "ML/AI",
+  "source": "workday:nvidia",
+  "posted_ts": null,
+  "detected_ts": 1794791359.8136823,
+  "opened": "Posted 30+ Days Ago"
+ },
+ {
+  "company": "NVIDIA",
+  "title": "AI Computing Software Intern, GPU Kernel Libraries - 2027",
+  "location": "2 Locations",
+  "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/China-Shanghai/AI-Computing-Software-Intern--GPU-Kernel-Libraries---2027_JR2026170",
+  "tier": "S",
+  "score": 71,
+  "category": "ML/AI",
+  "source": "workday:nvidia",
+  "posted_ts": null,
+  "detected_ts": 1794791359.8136823,
+  "opened": "Posted 30+ Days Ago"
+ },
+ {
+  "company": "NVIDIA",
+  "title": "Deep Learning Compiler Intern - 2027",
+  "location": "2 Locations",
+  "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/China-Shanghai/Deep-Learning-Compiler-Intern---2027_JR2026262",
+  "tier": "S",
+  "score": 71,
+  "category": "ML/AI",
+  "source": "workday:nvidia",
+  "posted_ts": null,
+  "detected_ts": 1794791359.8136823,
+  "opened": "Posted 30+ Days Ago"
+ },
+ {
+  "company": "NVIDIA",
+  "title": "AI Agent Development Engineer (RDSS Intern)",
+  "location": "2 Locations",
+  "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/Taiwan-Taipei/AI-Agent-Development-Engineer--RDSS-Intern-_JR2026971",
+  "tier": "S",
+  "score": 71,
+  "category": "ML/AI",
+  "source": "workday:nvidia",
+  "posted_ts": null,
+  "detected_ts": 1794791359.8136823,
+  "opened": "Posted 30+ Days Ago"
+ },
+ {
+  "company": "NVIDIA",
+  "title": "Applied Deep Learning Algorithm Intern, Autonomous Driving - 2027",
+  "location": "2 Locations",
+  "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/China-Shanghai/Applied-Deep-Learning-Algorithm-Intern--Autonomous-Driving---2027_JR2027181",
+  "tier": "S",
+  "score": 71,
+  "category": "ML/AI",
+  "source": "workday:nvidia",
+  "posted_ts": null,
+  "detected_ts": 1794791359.8136823,
+  "opened": "Posted 30+ Days Ago"
+ },
+ {
+  "company": "NVIDIA",
+  "title": "Software Engineering Intern, Deep Learning - 2027",
+  "location": "2 Locations",
+  "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/China-Shanghai/Software-Engineering-Intern--Deep-Learning---2027_JR2027596",
+  "tier": "S",
+  "score": 71,
+  "category": "ML/AI",
+  "source": "workday:nvidia",
+  "posted_ts": null,
+  "detected_ts": 1794791359.8136823,
+  "opened": "Posted 30+ Days Ago"
+ },
+ {
+  "company": "NVIDIA",
+  "title": "Deep Learning Model and System Optimization Engineering Intern \u2013 2027",
+  "location": "2 Locations",
+  "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/China-Shanghai/Deep-Learning-Model-and-System-Optimization-Engineering-Intern---2027_JR2027784",
+  "tier": "S",
+  "score": 71,
+  "category": "ML/AI",
+  "source": "workday:nvidia",
+  "posted_ts": null,
+  "detected_ts": 1794791359.8136823,
+  "opened": "Posted 23 Days Ago"
+ },
+ {
+  "company": "TikTok",
+  "title": "Software Development Engineer Intern (Global E-Commerce-Quality Platform & AI Test Automation) - 2027 Summer",
+  "location": "Seattle, Washington, United States of America",
+  "url": "https://lifeattiktok.com/search/7668837276597127477",
+  "tier": "S",
+  "score": 71,
+  "category": "ML/AI",
+  "source": "tiktok",
+  "posted_ts": null,
+  "detected_ts": 1794791359.8136823,
+  "opened": "time not listed"
+ },
+ {
+  "company": "TikTok",
+  "title": "Research Engineer Intern, Agentic Systems & AI Infrastructure  (TikTok-Generalized Arch) - 2027 Summer",
+  "location": "Seattle, Washington, United States of America",
+  "url": "https://lifeattiktok.com/search/7667934792727906565",
+  "tier": "S",
+  "score": 71,
+  "category": "ML/AI",
+  "source": "tiktok",
+  "posted_ts": null,
+  "detected_ts": 1794791359.8136823,
+  "opened": "time not listed"
  },
  {
   "company": "Adobe",
@@ -1147,7 +1507,7 @@
   "category": "ML/AI",
   "source": "workday:adobe",
   "posted_ts": null,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Posted 30+ Days Ago"
  },
  {
@@ -1160,7 +1520,7 @@
   "category": "ML/AI",
   "source": "workday:adobe",
   "posted_ts": null,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Posted 26 Days Ago"
  },
  {
@@ -1173,9 +1533,9 @@
   "category": "ML/AI",
   "source": "tracker:simplify",
   "posted_ts": 1785835211,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Aug 04, 05:20 AM ET",
-  "lag_min": 149256
+  "lag_min": 149269
  },
  {
   "company": "TikTok",
@@ -1187,9 +1547,9 @@
   "category": "ML/AI",
   "source": "tracker:simplify",
   "posted_ts": 1785737703,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Aug 03, 02:15 AM ET",
-  "lag_min": 150882
+  "lag_min": 150894
  },
  {
   "company": "TikTok",
@@ -1201,9 +1561,9 @@
   "category": "ML/AI",
   "source": "tracker:simplify",
   "posted_ts": 1785921479,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Aug 05, 05:17 AM ET",
-  "lag_min": 147819
+  "lag_min": 147831
  },
  {
   "company": "ByteDance",
@@ -1215,9 +1575,9 @@
   "category": "ML/AI",
   "source": "tracker:simplify",
   "posted_ts": 1786468734,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Aug 11, 01:18 PM ET",
-  "lag_min": 138698
+  "lag_min": 138710
  },
  {
   "company": "TikTok",
@@ -1229,9 +1589,9 @@
   "category": "ML/AI",
   "source": "tracker:simplify",
   "posted_ts": 1792018295,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Oct 14, 06:51 PM ET",
-  "lag_min": 46205
+  "lag_min": 46218
  },
  {
   "company": "TikTok",
@@ -1243,9 +1603,9 @@
   "category": "ML/AI",
   "source": "tracker:simplify",
   "posted_ts": 1792017957,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Oct 14, 06:45 PM ET",
-  "lag_min": 46211
+  "lag_min": 46223
  },
  {
   "company": "TikTok",
@@ -1257,9 +1617,9 @@
   "category": "ML/AI",
   "source": "tracker:simplify",
   "posted_ts": 1792017649,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Oct 14, 06:40 PM ET",
-  "lag_min": 46216
+  "lag_min": 46229
  },
  {
   "company": "TikTok",
@@ -1271,9 +1631,9 @@
   "category": "ML/AI",
   "source": "tracker:simplify",
   "posted_ts": 1792017648,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Oct 14, 06:40 PM ET",
-  "lag_min": 46216
+  "lag_min": 46229
  },
  {
   "company": "TikTok",
@@ -1285,9 +1645,9 @@
   "category": "ML/AI",
   "source": "tracker:simplify",
   "posted_ts": 1792017648,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Oct 14, 06:40 PM ET",
-  "lag_min": 46216
+  "lag_min": 46229
  },
  {
   "company": "TikTok",
@@ -1299,9 +1659,9 @@
   "category": "ML/AI",
   "source": "tracker:simplify",
   "posted_ts": 1792017648,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Oct 14, 06:40 PM ET",
-  "lag_min": 46216
+  "lag_min": 46229
  },
  {
   "company": "NVIDIA",
@@ -1313,9 +1673,9 @@
   "category": "ML/AI",
   "source": "tracker:simplify",
   "posted_ts": 1793577600,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Nov 01, 07:00 PM ET",
-  "lag_min": 20217
+  "lag_min": 20229
  },
  {
   "company": "Microsoft",
@@ -1327,9 +1687,9 @@
   "category": "ML/AI",
   "source": "tracker:vanshb03",
   "posted_ts": 1785852648,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Aug 04, 10:10 AM ET",
-  "lag_min": 148966
+  "lag_min": 148979
  },
  {
   "company": "Microsoft",
@@ -1341,9 +1701,9 @@
   "category": "ML/AI",
   "source": "tracker:vanshb03",
   "posted_ts": 1791411145,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Oct 07, 06:12 PM ET",
-  "lag_min": 56324
+  "lag_min": 56337
  },
  {
   "company": "Microsoft",
@@ -1355,9 +1715,9 @@
   "category": "ML/AI",
   "source": "tracker:vanshb03",
   "posted_ts": 1793282793,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Oct 29, 10:06 AM ET",
-  "lag_min": 25130
+  "lag_min": 25143
  },
  {
   "company": "NVIDIA",
@@ -1369,9 +1729,9 @@
   "category": "ML/AI",
   "source": "tracker:vanshb03",
   "posted_ts": 1793329555,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Oct 29, 11:05 PM ET",
-  "lag_min": 24351
+  "lag_min": 24363
  },
  {
   "company": "ByteDance",
@@ -1383,9 +1743,9 @@
   "category": "ML/AI",
   "source": "tracker:vanshb03",
   "posted_ts": 1793519707,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Nov 01, 02:55 AM ET",
-  "lag_min": 21181
+  "lag_min": 21194
  },
  {
   "company": "ByteDance",
@@ -1397,9 +1757,9 @@
   "category": "ML/AI",
   "source": "tracker:vanshb03",
   "posted_ts": 1793519707,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Nov 01, 02:55 AM ET",
-  "lag_min": 21181
+  "lag_min": 21194
  },
  {
   "company": "ByteDance",
@@ -1411,9 +1771,9 @@
   "category": "ML/AI",
   "source": "tracker:vanshb03",
   "posted_ts": 1793519707,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Nov 01, 02:55 AM ET",
-  "lag_min": 21181
+  "lag_min": 21194
  },
  {
   "company": "TikTok",
@@ -1425,9 +1785,9 @@
   "category": "ML/AI",
   "source": "tracker:vanshb03",
   "posted_ts": 1793525855,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Nov 01, 04:37 AM ET",
-  "lag_min": 21079
+  "lag_min": 21092
  },
  {
   "company": "TikTok",
@@ -1439,9 +1799,9 @@
   "category": "ML/AI",
   "source": "tracker:vanshb03",
   "posted_ts": 1793525855,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Nov 01, 04:37 AM ET",
-  "lag_min": 21079
+  "lag_min": 21092
  },
  {
   "company": "TikTok",
@@ -1453,9 +1813,35 @@
   "category": "ML/AI",
   "source": "tracker:vanshb03",
   "posted_ts": 1793525855,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Nov 01, 04:37 AM ET",
-  "lag_min": 21079
+  "lag_min": 21092
+ },
+ {
+  "company": "Jane Street",
+  "title": "Quantitative Researcher Intern",
+  "location": "New York, NY",
+  "url": "https://www.janestreet.com/join-jane-street/position/8498547002/",
+  "tier": "S",
+  "score": 69,
+  "category": "Quant",
+  "source": "janestreet",
+  "posted_ts": null,
+  "detected_ts": 1794791359.8136823,
+  "opened": "time not listed"
+ },
+ {
+  "company": "Jane Street",
+  "title": "Quantitative Trader Intern",
+  "location": "New York, NY",
+  "url": "https://www.janestreet.com/join-jane-street/position/8617344002/",
+  "tier": "S",
+  "score": 69,
+  "category": "Quant",
+  "source": "janestreet",
+  "posted_ts": null,
+  "detected_ts": 1794791359.8136823,
+  "opened": "time not listed"
  },
  {
   "company": "Scale AI",
@@ -1467,9 +1853,9 @@
   "category": "ML/AI",
   "source": "greenhouse:scaleai",
   "posted_ts": 1792434189.0,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Oct 19, 02:23 PM ET",
-  "lag_min": 39273
+  "lag_min": 39286
  },
  {
   "company": "Two Sigma",
@@ -1481,37 +1867,88 @@
   "category": "Quant",
   "source": "tracker:simplify",
   "posted_ts": 1785633717,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Aug 01, 09:21 PM ET",
-  "lag_min": 152615
+  "lag_min": 152627
  },
  {
-  "company": "Jane Street",
-  "title": "Quantitative Trader Intern",
-  "location": "New York, NY",
-  "url": "https://go.vansh.nyc/3X",
+  "company": "Google",
+  "title": "Forward Deployed Engineering Intern, BS/MS, Summer 2027",
+  "location": "Sunnyvale, CA, USA; New York, NY, USA; Reston, VA, USA",
+  "url": "https://www.google.com/about/careers/applications/jobs/results/75665705386549958",
   "tier": "S",
-  "score": 69,
-  "category": "Quant",
-  "source": "tracker:vanshb03",
-  "posted_ts": 1784881800,
-  "detected_ts": 1794790594.5313363,
-  "opened": "Jul 24, 04:30 AM ET",
-  "lag_min": 165147
+  "score": 68,
+  "category": "SWE",
+  "source": "google",
+  "posted_ts": 1791796170,
+  "detected_ts": 1794791359.8136823,
+  "opened": "Oct 12, 05:09 AM ET",
+  "lag_min": 49920
  },
  {
-  "company": "Jane Street",
-  "title": "Quantitative Researcher Intern",
-  "location": "New York, NY",
-  "url": "https://go.vansh.nyc/3Y",
+  "company": "TikTok",
+  "title": "Platform User Operations Specialist Project Intern (TikTok-Platform Responsibility-User Feedback Operations) - 2027 Start",
+  "location": "San Jose, California, United States of America",
+  "url": "https://lifeattiktok.com/search/7706845403284801797",
   "tier": "S",
-  "score": 69,
-  "category": "Quant",
-  "source": "tracker:vanshb03",
-  "posted_ts": 1784881807,
-  "detected_ts": 1794790594.5313363,
-  "opened": "Jul 24, 04:30 AM ET",
-  "lag_min": 165146
+  "score": 68,
+  "category": "SWE",
+  "source": "tiktok",
+  "posted_ts": null,
+  "detected_ts": 1794791359.8136823,
+  "opened": "time not listed"
+ },
+ {
+  "company": "TikTok",
+  "title": "Platform User Operations Specialist Intern\uff08TikTok-Platform Responsibility-User Feedback Operations\uff09- 2027 Summer",
+  "location": "San Jose, California, United States of America",
+  "url": "https://lifeattiktok.com/search/7670419762749819189",
+  "tier": "S",
+  "score": 68,
+  "category": "SWE",
+  "source": "tiktok",
+  "posted_ts": null,
+  "detected_ts": 1794791359.8136823,
+  "opened": "time not listed"
+ },
+ {
+  "company": "TikTok",
+  "title": "Backend Software Engineer Intern (TikTok-Growth-Innovative Growth) - 2027 Summer",
+  "location": "San Jose, California, United States of America",
+  "url": "https://lifeattiktok.com/search/7667934860750063925",
+  "tier": "S",
+  "score": 68,
+  "category": "SWE",
+  "source": "tiktok",
+  "posted_ts": null,
+  "detected_ts": 1794791359.8136823,
+  "opened": "time not listed"
+ },
+ {
+  "company": "TikTok",
+  "title": "Frontend Engineer Intern (Ads Interface) - 2027 Summer",
+  "location": "San Jose, California, United States of America",
+  "url": "https://lifeattiktok.com/search/7671211313289398581",
+  "tier": "S",
+  "score": 68,
+  "category": "SWE",
+  "source": "tiktok",
+  "posted_ts": null,
+  "detected_ts": 1794791359.8136823,
+  "opened": "time not listed"
+ },
+ {
+  "company": "TikTok",
+  "title": "Frontend Software Engineer Intern (Ads Measurement Signal and Privacy) - 2027 Summer",
+  "location": "San Jose, California, United States of America",
+  "url": "https://lifeattiktok.com/search/7668584161852229893",
+  "tier": "S",
+  "score": 68,
+  "category": "SWE",
+  "source": "tiktok",
+  "posted_ts": null,
+  "detected_ts": 1794791359.8136823,
+  "opened": "time not listed"
  },
  {
   "company": "TikTok",
@@ -1523,9 +1960,9 @@
   "category": "SWE",
   "source": "tracker:simplify",
   "posted_ts": 1785737700,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Aug 03, 02:15 AM ET",
-  "lag_min": 150882
+  "lag_min": 150894
  },
  {
   "company": "TikTok",
@@ -1537,9 +1974,9 @@
   "category": "SWE",
   "source": "tracker:simplify",
   "posted_ts": 1785737705,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Aug 03, 02:15 AM ET",
-  "lag_min": 150881
+  "lag_min": 150894
  },
  {
   "company": "TikTok",
@@ -1551,9 +1988,9 @@
   "category": "SWE",
   "source": "tracker:simplify",
   "posted_ts": 1785737700,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Aug 03, 02:15 AM ET",
-  "lag_min": 150882
+  "lag_min": 150894
  },
  {
   "company": "TikTok",
@@ -1565,9 +2002,9 @@
   "category": "SWE",
   "source": "tracker:simplify",
   "posted_ts": 1785824431,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Aug 04, 02:20 AM ET",
-  "lag_min": 149436
+  "lag_min": 149449
  },
  {
   "company": "TikTok",
@@ -1579,9 +2016,9 @@
   "category": "SWE",
   "source": "tracker:simplify",
   "posted_ts": 1785824408,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Aug 04, 02:20 AM ET",
-  "lag_min": 149436
+  "lag_min": 149449
  },
  {
   "company": "TikTok",
@@ -1593,9 +2030,9 @@
   "category": "SWE",
   "source": "tracker:simplify",
   "posted_ts": 1786141165,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Aug 07, 06:19 PM ET",
-  "lag_min": 144157
+  "lag_min": 144170
  },
  {
   "company": "Two Sigma",
@@ -1607,479 +2044,8 @@
   "category": "SWE",
   "source": "tracker:simplify",
   "posted_ts": 1788906532,
-  "detected_ts": 1794790594.5313363,
+  "detected_ts": 1794791359.8136823,
   "opened": "Sep 08, 06:28 PM ET",
-  "lag_min": 98068
- },
- {
-  "company": "TikTok",
-  "title": "Software Engineer Intern, Growth Innovation",
-  "location": "San Jose, CA",
-  "url": "https://go.vansh.nyc/6e",
-  "tier": "S",
-  "score": 68,
-  "category": "SWE",
-  "source": "tracker:vanshb03",
-  "posted_ts": 1785853281,
-  "detected_ts": 1794790594.5313363,
-  "opened": "Aug 04, 10:21 AM ET",
-  "lag_min": 148955
- },
- {
-  "company": "Twitch",
-  "title": "Undergrad Software Engineering Intern",
-  "location": "San Francisco, CA",
-  "url": "https://go.vansh.nyc/eV",
-  "tier": "S",
-  "score": 68,
-  "category": "SWE",
-  "source": "tracker:vanshb03",
-  "posted_ts": 1792652400,
-  "detected_ts": 1794790594.5313363,
-  "opened": "Oct 22, 03:00 AM ET",
-  "lag_min": 35637
- },
- {
-  "company": "TikTok",
-  "title": "Security Software Engineer Project Intern, Product Security",
-  "location": "San Jose, CA",
-  "url": "https://go.vansh.nyc/RN",
-  "tier": "S",
-  "score": 68,
-  "category": "SWE",
-  "source": "tracker:vanshb03",
-  "posted_ts": 1792339604,
-  "detected_ts": 1794790594.5313363,
-  "opened": "Oct 18, 12:06 PM ET",
-  "lag_min": 40850
- },
- {
-  "company": "ByteDance",
-  "title": "Production System Engineer Project Intern, Server DevOps",
-  "location": "San Jose, CA",
-  "url": "https://go.vansh.nyc/14e",
-  "tier": "S",
-  "score": 68,
-  "category": "SWE",
-  "source": "tracker:vanshb03",
-  "posted_ts": 1793519707,
-  "detected_ts": 1794790594.5313363,
-  "opened": "Nov 01, 02:55 AM ET",
-  "lag_min": 21181
- },
- {
-  "company": "TikTok",
-  "title": "Software Engineer Intern, Ads Infrastructure",
-  "location": "San Jose, CA",
-  "url": "https://go.vansh.nyc/18m",
-  "tier": "S",
-  "score": 68,
-  "category": "SWE",
-  "source": "tracker:vanshb03",
-  "posted_ts": 1793525855,
-  "detected_ts": 1794790594.5313363,
-  "opened": "Nov 01, 04:37 AM ET",
-  "lag_min": 21079
- },
- {
-  "company": "TikTok",
-  "title": "Software Engineer Project Intern, Lead Ads",
-  "location": "San Jose, CA",
-  "url": "https://go.vansh.nyc/18H",
-  "tier": "S",
-  "score": 68,
-  "category": "SWE",
-  "source": "tracker:vanshb03",
-  "posted_ts": 1793525855,
-  "detected_ts": 1794790594.5313363,
-  "opened": "Nov 01, 04:37 AM ET",
-  "lag_min": 21079
- },
- {
-  "company": "Amazon",
-  "title": "Data Engineer Internship - 2027 (US)",
-  "location": "Seattle, Washington, USA",
-  "url": "https://www.amazon.jobs/en/jobs/10553907/data-engineer-internship-2027-us",
-  "tier": "S",
-  "score": 67,
-  "category": "Analytics/Data",
-  "source": "amazon",
-  "posted_ts": null,
-  "detected_ts": 1794790594.5313363,
-  "opened": "posted September 18, 2026"
- },
- {
-  "company": "Amazon",
-  "title": "Business Intelligence Engineer Internship - 2027 (US)",
-  "location": "Seattle, Washington, USA",
-  "url": "https://www.amazon.jobs/en/jobs/10553765/business-intelligence-engineer-internship-2027-us",
-  "tier": "S",
-  "score": 67,
-  "category": "Analytics/Data",
-  "source": "amazon",
-  "posted_ts": null,
-  "detected_ts": 1794790594.5313363,
-  "opened": "posted September 18, 2026"
- },
- {
-  "company": "Airbnb",
-  "title": "Advanced Analytics Intern",
-  "location": "United States",
-  "url": "https://careers.airbnb.com/positions/8380007?gh_jid=8380007",
-  "tier": "S",
-  "score": 67,
-  "category": "Analytics/Data",
-  "source": "greenhouse:airbnb",
-  "posted_ts": 1794432928.0,
-  "detected_ts": 1794790594.5313363,
-  "opened": "Nov 11, 04:35 PM ET",
-  "lag_min": 5961
- },
- {
-  "company": "Microsoft",
-  "title": "Software Engineer Intern, Data Platform/Analytics",
-  "location": "Redmond, WA",
-  "url": "https://go.vansh.nyc/5I",
-  "tier": "S",
-  "score": 67,
-  "category": "Analytics/Data",
-  "source": "tracker:vanshb03",
-  "posted_ts": 1785852636,
-  "detected_ts": 1794790594.5313363,
-  "opened": "Aug 04, 10:10 AM ET",
-  "lag_min": 148966
- },
- {
-  "company": "ByteDance",
-  "title": "Data Lake Infrastructure & Data Analytics Research Engineer Intern, AML-Ark-US",
-  "location": "Seattle, WA",
-  "url": "https://go.vansh.nyc/14c",
-  "tier": "S",
-  "score": 67,
-  "category": "Analytics/Data",
-  "source": "tracker:vanshb03",
-  "posted_ts": 1793519707,
-  "detected_ts": 1794790594.5313363,
-  "opened": "Nov 01, 02:55 AM ET",
-  "lag_min": 21181
- },
- {
-  "company": "Walmart",
-  "title": "Data Science Intern 3",
-  "location": "Bentonville, AR",
-  "url": "https://walmart.wd504.myworkdayjobs.com/WalmartExternal/job/USA-ISD-Office---DGTC-AR-BENTONVILLE-Home-Office/Summer-2027-Intern---Data-Science-III_R-2630030",
-  "tier": "A",
-  "score": 66,
-  "category": "Data Science",
-  "source": "tracker:simplify",
-  "posted_ts": 1788998400,
-  "detected_ts": 1794790594.5313363,
-  "opened": "Sep 09, 08:00 PM ET",
-  "lag_min": 96537
- },
- {
-  "company": "Walmart",
-  "title": "Senior Data Scientist Intern",
-  "location": "Bentonville, AR",
-  "url": "https://walmart.wd504.myworkdayjobs.com/WalmartExternal/job/USA-ISD-Office---DGTC-AR-BENTONVILLE-Home-Office/Summer-2027-Intern--Intern--Sr-Data-Science_R-2630032",
-  "tier": "A",
-  "score": 66,
-  "category": "Data Science",
-  "source": "tracker:simplify",
-  "posted_ts": 1788998400,
-  "detected_ts": 1794790594.5313363,
-  "opened": "Sep 09, 08:00 PM ET",
-  "lag_min": 96537
- },
- {
-  "company": "Walmart",
-  "title": "Data Science Intern, Last Mile Delivery",
-  "location": "Bentonville, AR",
-  "url": "https://go.vansh.nyc/1jy",
-  "tier": "A",
-  "score": 66,
-  "category": "Data Science",
-  "source": "tracker:vanshb03",
-  "posted_ts": 1793922039,
-  "detected_ts": 1794790594.5313363,
-  "opened": "Nov 05, 06:40 PM ET",
-  "lag_min": 14476
- },
- {
-  "company": "Walmart",
-  "title": "Data Science & Data Analytics Intern, Last Mile Delivery",
-  "location": "Bentonville, AR",
-  "url": "https://go.vansh.nyc/1sh",
-  "tier": "A",
-  "score": 66,
-  "category": "Data Science",
-  "source": "tracker:vanshb03",
-  "posted_ts": 1794268800,
-  "detected_ts": 1794790594.5313363,
-  "opened": "Nov 09, 07:00 PM ET",
-  "lag_min": 8697
- },
- {
-  "company": "Coinbase",
-  "title": "Machine Learning Engineer Intern",
-  "location": "Hybrid - San Francisco, CA",
-  "url": "https://www.coinbase.com/careers/positions/8175441?gh_jid=8175441",
-  "tier": "A",
-  "score": 64,
-  "category": "ML/AI",
-  "source": "greenhouse:coinbase",
-  "posted_ts": 1788906127.0,
-  "detected_ts": 1794790594.5313363,
-  "opened": "Sep 08, 06:22 PM ET",
-  "lag_min": 98074
- },
- {
-  "company": "Ramp",
-  "title": "Applied Scientist Intern",
-  "location": "New York, NY (HQ)",
-  "url": "https://jobs.ashbyhq.com/ramp/b39ceb08-a0a7-4f8b-a760-2fb88e209956",
-  "tier": "A",
-  "score": 64,
-  "category": "ML/AI",
-  "source": "ashby:ramp",
-  "posted_ts": 1789436644.643,
-  "detected_ts": 1794790594.5313363,
-  "opened": "Sep 14, 09:44 PM ET",
-  "lag_min": 89232
- },
- {
-  "company": "Palantir",
-  "title": "Software Engineer, Internship - Sovereign AI Systems",
-  "location": "New York, NY",
-  "url": "https://jobs.lever.co/palantir/cd64bcd4-50bb-4aeb-a135-4e0487ffd312",
-  "tier": "A",
-  "score": 64,
-  "category": "ML/AI",
-  "source": "lever:palantir",
-  "posted_ts": 1793903375.363,
-  "detected_ts": 1794790594.5313363,
-  "opened": "Nov 05, 01:29 PM ET",
-  "lag_min": 14787
- },
- {
-  "company": "Palantir Technologies",
-  "title": "Software Engineer Intern, Sovereign AI Systems",
-  "location": "New York, NY",
-  "url": "https://go.vansh.nyc/1j0",
-  "tier": "A",
-  "score": 64,
-  "category": "ML/AI",
-  "source": "tracker:vanshb03",
-  "posted_ts": 1793903717,
-  "detected_ts": 1794790594.5313363,
-  "opened": "Nov 05, 01:35 PM ET",
-  "lag_min": 14781
- },
- {
-  "company": "Amazon",
-  "title": "Software Development Engineer Intern, Annapurna Labs - 2027",
-  "location": "Cupertino, California, USA",
-  "url": "https://www.amazon.jobs/en/jobs/10517567/software-development-engineer-intern-annapurna-labs-2027",
-  "tier": "S",
-  "score": 63,
-  "category": "SWE",
-  "source": "amazon",
-  "posted_ts": null,
-  "detected_ts": 1794790594.5313363,
-  "opened": "posted August 27, 2026"
- },
- {
-  "company": "NVIDIA",
-  "title": "NVIDIA 2027 Internships: Systems Software Engineering",
-  "location": "US, CA, Santa Clara",
-  "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/NVIDIA-2027-Internships--Systems-Software-Engineering_JR2023492",
-  "tier": "S",
-  "score": 63,
-  "category": "SWE",
-  "source": "workday:nvidia",
-  "posted_ts": null,
-  "detected_ts": 1794790594.5313363,
-  "opened": "Posted 16 Days Ago"
- },
- {
-  "company": "NVIDIA",
-  "title": "NVIDIA 2027 Internships: Software Engineering",
-  "location": "US, CA, Santa Clara",
-  "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/NVIDIA-2027-Internships--Software-Engineering_JR2023495",
-  "tier": "S",
-  "score": 63,
-  "category": "SWE",
-  "source": "workday:nvidia",
-  "posted_ts": null,
-  "detected_ts": 1794790594.5313363,
-  "opened": "Posted 16 Days Ago"
- },
- {
-  "company": "Stripe",
-  "title": "Software Engineer, Intern (Summer)",
-  "location": "San Francisco, Seattle, New York City",
-  "url": "https://stripe.com/jobs/search?gh_jid=8128745",
-  "tier": "S",
-  "score": 63,
-  "category": "SWE",
-  "source": "greenhouse:stripe",
-  "posted_ts": 1788214845.0,
-  "detected_ts": 1794790594.5313363,
-  "opened": "Aug 31, 06:20 PM ET",
-  "lag_min": 109596
- },
- {
-  "company": "Databricks",
-  "title": "Software Engineering Intern (2027)",
-  "location": "Bellevue, Washington; Mountain View, California; San Francisco, California; Vancouver, Canada",
-  "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=6865687002",
-  "tier": "S",
-  "score": 63,
-  "category": "SWE",
-  "source": "greenhouse:databricks",
-  "posted_ts": 1691165917.0,
-  "detected_ts": 1794790594.5313363,
-  "opened": "Aug 04, 12:18 PM ET",
-  "lag_min": 1727078
- },
- {
-  "company": "Salesforce",
-  "title": "Software Engineer Intern",
-  "location": "Palo Alto, CA; Seattle, WA; Indianapolis, IN; SF; NYC; Bellevue, WA; Atlanta, GA; Burlington, MA",
-  "url": "https://salesforce.wd12.myworkdayjobs.com/Futureforce_Internships/job/California---San-Francisco/Summer-2027-Intern---Software-Engineer_JR340771",
-  "tier": "S",
-  "score": 63,
-  "category": "SWE",
-  "source": "tracker:simplify",
-  "posted_ts": 1778191473,
-  "detected_ts": 1794790594.5313363,
-  "opened": "May 07, 06:04 PM ET",
-  "lag_min": 276652
- },
- {
-  "company": "TikTok",
-  "title": "Software Engineer Intern - Creative Intelligence and Brand Innovation",
-  "location": "San Jose, CA",
-  "url": "https://lifeattiktok.com/search/7668642761473902901",
-  "tier": "S",
-  "score": 63,
-  "category": "SWE",
-  "source": "tracker:simplify",
-  "posted_ts": 1785737700,
-  "detected_ts": 1794790594.5313363,
-  "opened": "Aug 03, 02:15 AM ET",
-  "lag_min": 150882
- },
- {
-  "company": "TikTok",
-  "title": "Software Engineer Intern",
-  "location": "San Jose, CA",
-  "url": "https://lifeattiktok.com/search/7668581636242016565",
-  "tier": "S",
-  "score": 63,
-  "category": "SWE",
-  "source": "tracker:simplify",
-  "posted_ts": 1785737700,
-  "detected_ts": 1794790594.5313363,
-  "opened": "Aug 03, 02:15 AM ET",
-  "lag_min": 150882
- },
- {
-  "company": "TikTok",
-  "title": "Backend Software Engineer Intern",
-  "location": "San Jose, CA",
-  "url": "https://lifeattiktok.com/search/7667934635573692725",
-  "tier": "S",
-  "score": 63,
-  "category": "SWE",
-  "source": "tracker:simplify",
-  "posted_ts": 1785737703,
-  "detected_ts": 1794790594.5313363,
-  "opened": "Aug 03, 02:15 AM ET",
-  "lag_min": 150882
- },
- {
-  "company": "TikTok",
-  "title": "Backend Software Engineer Intern - Digital Content Center",
-  "location": "San Jose, CA",
-  "url": "https://lifeattiktok.com/search/7667934302872537397",
-  "tier": "S",
-  "score": 63,
-  "category": "SWE",
-  "source": "tracker:simplify",
-  "posted_ts": 1785737704,
-  "detected_ts": 1794790594.5313363,
-  "opened": "Aug 03, 02:15 AM ET",
-  "lag_min": 150882
- },
- {
-  "company": "TikTok",
-  "title": "Software Engineer Intern - Social Friending",
-  "location": "San Jose, CA",
-  "url": "https://lifeattiktok.com/search/7667935399050692917",
-  "tier": "S",
-  "score": 63,
-  "category": "SWE",
-  "source": "tracker:simplify",
-  "posted_ts": 1785737704,
-  "detected_ts": 1794790594.5313363,
-  "opened": "Aug 03, 02:15 AM ET",
-  "lag_min": 150882
- },
- {
-  "company": "TikTok",
-  "title": "Frontend Engineer Intern - Open Platform",
-  "location": "San Jose, CA",
-  "url": "https://lifeattiktok.com/search/7667935739300792629",
-  "tier": "S",
-  "score": 63,
-  "category": "SWE",
-  "source": "tracker:simplify",
-  "posted_ts": 1785737703,
-  "detected_ts": 1794790594.5313363,
-  "opened": "Aug 03, 02:15 AM ET",
-  "lag_min": 150882
- },
- {
-  "company": "TikTok",
-  "title": "Software Engineer Intern - Agentic Creation-Effect Platform",
-  "location": "San Jose, CA",
-  "url": "https://lifeattiktok.com/search/7668445566565321013",
-  "tier": "S",
-  "score": 63,
-  "category": "SWE",
-  "source": "tracker:simplify",
-  "posted_ts": 1785737701,
-  "detected_ts": 1794790594.5313363,
-  "opened": "Aug 03, 02:15 AM ET",
-  "lag_min": 150882
- },
- {
-  "company": "TikTok",
-  "title": "Software Engineer Intern - Business Integrity",
-  "location": "San Jose, CA",
-  "url": "https://lifeattiktok.com/search/7668584916620527925",
-  "tier": "S",
-  "score": 63,
-  "category": "SWE",
-  "source": "tracker:simplify",
-  "posted_ts": 1785737701,
-  "detected_ts": 1794790594.5313363,
-  "opened": "Aug 03, 02:15 AM ET",
-  "lag_min": 150882
- },
- {
-  "company": "ByteDance",
-  "title": "Software Engineer Intern - Distributed NoSQL Database Systems",
-  "location": "San Jose, CA",
-  "url": "https://jobs.bytedance.com/en/position/7668374190764050741/detail",
-  "tier": "S",
-  "score": 63,
-  "category": "SWE",
-  "source": "tracker:simplify",
-  "posted_ts": 1785748596,
-  "detected_ts": 1794790594.5313363,
-  "opened": "Aug 03, 05:16 AM ET",
-  "lag_min": 150700
+  "lag_min": 98080
  }
 ]
