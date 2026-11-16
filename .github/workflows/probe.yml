@@ -8,4 +8,17 @@ jobs:
     timeout-minutes: 8
     steps:
       - uses: actions/checkout@v4
-      - run: python3 probe.py
+      - run: |
+          cp -r data /tmp/d
+          RADAR_DATA_DIR=/tmp/d GITHUB_EVENT_NAME=local python3 poller.py
+          python3 - <<'PY'
+          import json
+          h=json.load(open('/tmp/d/health.json'))
+          for k,v in h['sources'].items(): print('H', k, v)
+          snap=json.load(open('/tmp/d/snapshot.json'))
+          for src in ('apple','ibm','bloomberg','workday:nvidia','workday:salesforce','workday:adobe','workday:capitalone','workday:snap','greenhouse:wehrtyou'):
+              rows=[r for r in snap if r['source']==src][:4]
+              print('S', src, len([r for r in snap if r['source']==src]))
+              for r in rows: print('   ', r['title'],'|',r['location'],'|',r['url'],'|',r['opened'])
+          print(open('/tmp/d/workday_facets.json').read())
+          PY
