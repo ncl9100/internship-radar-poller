@@ -116,6 +116,14 @@ def classify(title):
     return None, 0
 
 
+def age_days(it):
+    """Age of a posting in days when the board says so, else None."""
+    if it.get("posted_ts"):
+        return (NOW - it["posted_ts"]) / 86400
+    m = re.search(r"(\d+)\+?\s*days?\s*ago", it.get("posted_text") or "", re.I)
+    return int(m.group(1)) if m else None
+
+
 def passes_filters(title, location):
     if not INTERN.search(title):
         return False
@@ -612,6 +620,11 @@ def main():
                 continue
             state["keys"][key] = NOW
             state["titles"][tkey] = NOW
+            # A config or filter change can expose old roles on a company board;
+            # only treat a direct-source role as new if it was posted recently.
+            age = age_days(it) if comp else None
+            if age is not None and age > 3:
+                continue
             if not silent:
                 new_roles.append(role)
         health[label] = {"ok": err is None, "fetched": len(items), "matched": matched,
