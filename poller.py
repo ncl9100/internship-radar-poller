@@ -169,7 +169,7 @@ def http_json(url, payload=None, headers=None, timeout=20):
     req = urllib.request.Request(url, data=body, headers=h, method="POST" if body else "GET")
     # Retry transient failures (timeouts, connection resets, 429 and 5xx) so a
     # single blip doesn't mark the source as failing in the digest.
-    delays = [3, 8]
+    delays = [4, 12, 25]
     for attempt in range(len(delays) + 1):
         try:
             with urllib.request.urlopen(req, timeout=timeout) as r:
@@ -180,7 +180,7 @@ def http_json(url, payload=None, headers=None, timeout=20):
             wait = delays[attempt]
             ra = e.headers.get("Retry-After") if e.headers else None
             if ra and ra.strip().isdigit():
-                wait = min(max(wait, int(ra.strip())), 15)
+                wait = min(max(wait, int(ra.strip())), 30)
         except (TimeoutError, urllib.error.URLError, ConnectionError) as e:
             if attempt == len(delays):
                 raise
@@ -242,13 +242,60 @@ def src_ashby(org):
     return out
 
 
+WD_FACETS = DATA / "workday_facets.json"
+US_NAMES = {"united states of america", "united states", "usa", "us"}
+
+
+def _wd_walk(facets):
+    for f in facets or []:
+        vals = f.get("values") or []
+        if vals and isinstance(vals[0], dict) and "facetParameter" in vals[0]:
+            yield from _wd_walk(vals)
+        else:
+            yield f
+
+
+def _wd_pick_facets(facets):
+    """Find the 'Intern' job-type value and the US country value, if the board has them."""
+    applied = {}
+    for f in _wd_walk(facets):
+        param = f.get("facetParameter")
+        for v in f.get("values") or []:
+            d = (v.get("descriptor") or "").strip().lower()
+            if param and d in US_NAMES and "loc" in param.lower() + (f.get("descriptor") or "").lower() + "country":
+                applied.setdefault(param, [v["id"]])
+            if param in ("workerSubType", "jobType", "Job_Type") and re.search(r"\bintern", d):
+                applied.setdefault(param, []).append(v["id"])
+    return applied
+
+
 def src_workday(tenant, wd, site, pages=10):
     host = f"{tenant}.{wd}.myworkdayjobs.com"
     api = f"https://{host}/wday/cxs/{tenant}/{site}/jobs"
+    hdr = {"Origin": f"https://{host}", "Referer": f"https://{host}/en-US/{site}",
+           "Accept-Language": "en-US"}
+    cache = load_json(WD_FACETS, {})
+    applied = cache.get(tenant)
+    if applied is None:
+        first = http_json(api, {"appliedFacets": {}, "limit": 20, "offset": 0,
+                                "searchText": "intern"}, hdr)
+        applied = _wd_pick_facets(first.get("facets"))
+        cache[tenant] = applied
+        WD_FACETS.write_text(json.dumps(cache, indent=1))
+        time.sleep(2)
+    # With an Intern job-type filter we don't need the keyword (it matches loosely).
+    has_intern = any(k in applied for k in ("workerSubType", "jobType", "Job_Type"))
+    search = "" if has_intern else "intern"
     out, total = [], 0
     for page in range(pages):
-        data = http_json(api, {"appliedFacets": {}, "limit": 20,
-                               "offset": page * 20, "searchText": "intern"})
+        try:
+            data = http_json(api, {"appliedFacets": applied, "limit": 20,
+                                   "offset": page * 20, "searchText": search}, hdr)
+        except urllib.error.HTTPError as e:
+            if page == 0 and e.code in (400, 422) and applied:
+                cache.pop(tenant, None)  # facet ids changed; relearn next run
+                WD_FACETS.write_text(json.dumps(cache, indent=1))
+            raise
         posts = data.get("jobPostings", [])
         for j in posts:
             path = j.get("externalPath", "")
@@ -262,7 +309,7 @@ def src_workday(tenant, wd, site, pages=10):
             total = data.get("total") or 0  # Workday only reports total on page 1
         if len(posts) < 20 or (page + 1) * 20 >= total:
             break
-        time.sleep(0.5)
+        time.sleep(2)
     return out
 
 
@@ -391,6 +438,87 @@ def src_janestreet():
     return out
 
 
+def src_apple():
+    import http.cookiejar
+    op = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))
+    base = "https://jobs.apple.com"
+    hdr = {"User-Agent": UA, "Accept": "application/json", "Origin": base,
+           "Referer": f"{base}/en-us/search"}
+    with op.open(urllib.request.Request(f"{base}/api/v1/CSRFToken", headers=hdr), timeout=20) as r:
+        tok = r.headers.get("X-Apple-CSRF-Token") or ""
+    if tok:
+        hdr["X-Apple-CSRF-Token"] = tok
+    hdr["Content-Type"] = "application/json"
+    out = []
+    for page in range(1, 6):
+        # Apple lists internships under its Students team as evergreen postings
+        # (e.g. "Machine Learning and AI Undergrad Internships"); the keyword is ignored.
+        body = json.dumps({"query": "", "filters": {"locations": ["postLocation-USA"],
+                                                    "teams": [{"team": "teamsAndSubTeams-STDNT"}]},
+                           "page": page, "locale": "en-us", "sort": "newest",
+                           "format": {"longDate": "MMMM D, YYYY", "mediumDate": "MMM D, YYYY"}}).encode()
+        with op.open(urllib.request.Request(f"{base}/api/v1/search", data=body, headers=hdr,
+                                            method="POST"), timeout=20) as r:
+            res = json.loads(r.read().decode("utf-8"))["res"]
+        rows = res.get("searchResults") or []
+        for j in rows:
+            pid = j.get("positionId") or j.get("id")
+            slug = j.get("transformedPostingTitle") or ""
+            locs = [l.get("name") or l.get("city") or "" for l in (j.get("locations") or [])]
+            out.append({
+                "id": pid, "title": j.get("postingTitle", ""),
+                "location": "; ".join(l for l in locs if l) or "United States",
+                "url": f"{base}/en-us/details/{pid}/{slug}",
+                "posted_ts": iso_ts(j.get("postDateInGMT")),
+            })
+        if len(rows) < 20:
+            break
+        time.sleep(1)
+    return out
+
+
+def src_ibm():
+    data = http_json("https://www-api.ibm.com/search/api/v2", {
+        "appId": "careers", "scopes": ["careers2"],
+        "query": {"bool": {"must": [{"simple_query_string": {
+            "query": "intern", "fields": ["title^3", "description^2"]}}]}},
+        "size": 100, "sort": [{"dcdate": "desc"}], "lang": "zz", "localeSelector": {},
+        "sm": {"query": "intern", "lang": "zz"},
+        "_source": ["_id", "title", "url", "dcdate", "field_keyword_19"]})
+    out = []
+    for h in (data.get("hits") or {}).get("hits", []):
+        src = h.get("_source") or {}
+        title = src.get("title", "")
+        loc = src.get("field_keyword_19") or ""
+        if isinstance(loc, list):
+            loc = "; ".join(loc)
+        if not loc and " - " in title:
+            loc = title.rsplit(" - ", 1)[-1]
+        out.append({"id": h.get("_id"), "title": title, "location": loc,
+                    "url": src.get("url"), "posted_ts": None,
+                    "posted_text": f"posted {src.get('dcdate', '')}"})
+    return out
+
+
+def src_bloomberg():
+    req = urllib.request.Request(
+        "https://bloomberg.avature.net/careers/SearchJobs/?search=intern&jobRecordsPerPage=100",
+        headers={"User-Agent": UA, "Accept": "text/html"})
+    with urllib.request.urlopen(req, timeout=30) as r:
+        html = r.read().decode("utf-8", "replace")
+    out, seen = [], set()
+    pat = r'href="(https://bloomberg\.avature\.net/careers/JobDetail/[^"]+)"[^>]*>\s*([^<]{3,200}?)\s*<'
+    for url, title in re.findall(pat, html):
+        if url in seen or title.strip().lower() in ("apply", "apply now", "learn more"):
+            continue
+        seen.add(url)
+        out.append({"id": url.rsplit("/", 1)[-1], "title": title.strip(),
+                    "location": "", "url": url, "posted_ts": None})
+    if not out:
+        raise ValueError("Bloomberg careers page layout changed (no job links)")
+    return out
+
+
 def src_tracker(url):
     data = http_json(url, timeout=60)
     out = []
@@ -435,9 +563,9 @@ def alert_lines(r):
 def send_ntfy(r, topic, email=None):
     payload = {
         "topic": topic,
-        "title": f"Tier S: {r['title']} @ {r['company']}"[:240],
+        "title": f"Tier {r['tier']}: {r['title']} @ {r['company']}"[:240],
         "message": "\n".join(alert_lines(r)[1:5]),
-        "priority": 5 if r["category"] != "SWE" else 4,
+        "priority": (5 if r["tier"] == "S" else 4) - (1 if r["category"] == "SWE" else 0),
         "tags": ["rotating_light"],
         "click": r["url"],
         "actions": [{"action": "view", "label": "Open posting", "url": r["url"]}],
@@ -464,7 +592,7 @@ def send_smtp(r, to):
     user = os.environ["SMTP_USER"].strip()
     pw = os.environ["SMTP_PASS"].replace(" ", "").strip()
     msg = EmailMessage()
-    msg["Subject"] = f"[Tier S] {r['title']} at {r['company']} (fit {r['score']})"
+    msg["Subject"] = f"[Tier {r['tier']}] {r['title']} at {r['company']} (fit {r['score']})"
     msg["From"] = user
     msg["To"] = to
     lines = alert_lines(r)
@@ -472,7 +600,7 @@ def send_smtp(r, to):
     rows = "".join(f"<div style='margin:4px 0'>{escape(l)}</div>" for l in lines[1:5])
     msg.add_alternative(
         f"<div style='font-family:-apple-system,Segoe UI,sans-serif;max-width:480px;font-size:15px'>"
-        f"<div style='font-size:11px;font-weight:700;letter-spacing:1px;color:#c0392b'>TIER S, JUST OPENED</div>"
+        f"<div style='font-size:11px;font-weight:700;letter-spacing:1px;color:#c0392b'>TIER {escape(r['tier'])}, JUST OPENED</div>"
         f"<h2 style='margin:6px 0 10px;font-size:18px'>{escape(r['title'])} at {escape(r['company'])}</h2>"
         f"{rows}<p><a href='{escape(r['url'])}' style='display:inline-block;background:#2F4FD8;"
         f"color:#fff;padding:10px 16px;border-radius:6px;text-decoration:none'>Open posting</a></p></div>",
@@ -504,7 +632,7 @@ def send_alerts(roles, max_per_run):
     if extra and topic:
         try:
             http_json(os.environ.get("NTFY_SERVER", "https://ntfy.sh").rstrip("/") + "/", {
-                "topic": topic, "title": f"+{len(extra)} more Tier S roles",
+                "topic": topic, "title": f"+{len(extra)} more Tier S/A roles",
                 "message": "\n".join(f"{r['company']}: {r['title']}" for r in extra[:15]),
                 "priority": 4})
         except Exception as e:
@@ -543,6 +671,12 @@ def build_jobs(cfg):
             jobs.append(("tiktok", c, src_tiktok))
         if c.get("janestreet"):
             jobs.append(("janestreet", c, src_janestreet))
+        if c.get("apple"):
+            jobs.append(("apple", c, src_apple))
+        if c.get("ibm"):
+            jobs.append(("ibm", c, src_ibm))
+        if c.get("bloomberg"):
+            jobs.append(("bloomberg", c, src_bloomberg))
     for label, url in (cfg.get("trackers") or {}).items():
         jobs.append((f"tracker:{label}", None, lambda u=url: src_tracker(u)))
     return jobs
@@ -582,8 +716,19 @@ def main():
         except Exception as e:
             return label, comp, [], f"{type(e).__name__}: {e}"[:300], time.time() - t0
 
+    def run_serial(js):
+        out = []
+        for i, j in enumerate(js):
+            if i:
+                time.sleep(3)
+            out.append(run(j))
+        return out
+
+    serial = [j for j in jobs if j[0].startswith("workday:")]
+    parallel = [j for j in jobs if not j[0].startswith("workday:")]
     with ThreadPoolExecutor(max_workers=16) as pool:
-        results = list(pool.map(run, jobs))
+        wd_future = pool.submit(run_serial, serial)
+        results = list(pool.map(run, parallel)) + wd_future.result()
 
     health, new_roles, snapshot, snap_keys = {}, [], [], set()
     for label, comp, items, err, secs in sorted(results, key=lambda r: r[0].startswith("tracker:")):
@@ -638,7 +783,7 @@ def main():
     failures = send_alerts(to_alert, int(cfg.get("alerts", {}).get("max_per_run", 8)))
 
     if os.environ.get("TEST_ALERT") == "1":
-        tier_s = [r for r in snapshot if r["tier"] == "S"]
+        tier_s = [r for r in snapshot if r["tier"] in alert_tiers]
         tier_s.sort(key=lambda r: -r["score"])
         if tier_s:
             t = dict(tier_s[0], title="TEST " + tier_s[0]["title"])
@@ -656,9 +801,10 @@ def main():
 
     failing = sorted(k for k, v in health.items() if not v["ok"])
     prev_failing = sorted(k for k, v in prev_health.get("sources", {}).items() if not v.get("ok"))
-    if new_roles or failures or failing != prev_failing or event in ("push", "workflow_dispatch", "local"):
+    stale = NOW - prev_health.get("written_ts", 0) > 3600  # hourly heartbeat
+    if new_roles or failures or stale or failing != prev_failing or event in ("push", "workflow_dispatch", "local"):
         (DATA / "health.json").write_text(json.dumps({
-            "written_at": fmt_et(NOW), "event": event, "new_roles": len(new_roles),
+            "written_at": fmt_et(NOW), "written_ts": round(NOW), "event": event, "new_roles": len(new_roles),
             "alerted": len(to_alert), "alert_failures": failures,
             "failing_sources": failing, "sources": health}, indent=1))
     if event in ("push", "workflow_dispatch", "local"):
@@ -666,7 +812,7 @@ def main():
         (DATA / "snapshot.json").write_text(json.dumps(snapshot[:150], indent=1))
 
     print(f"{len(jobs)} sources, {len(failing)} failing, {len(new_roles)} new roles, "
-          f"{len(to_alert)} Tier S alerts, {len(failures)} alert failures")
+          f"{len(to_alert)} alerts, {len(failures)} alert failures")
     for r in new_roles[:20]:
         print(f"  [{r['tier']} {r['score']}] {r['company']}: {r['title']} ({r['location']})")
 

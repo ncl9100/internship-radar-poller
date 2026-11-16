@@ -1,7 +1,8 @@
 # Internship Radar company list.
 #
-# tier = "S"  -> instant phone push + its own email for EVERY matching role (SWE included)
-# tier = "A"  -> logged with a fit score for the daily Radar digest
+# tier = "S"  -> instant phone push (priority 5) + its own email for EVERY matching role
+# tier = "A"  -> instant phone push (priority 4) + its own email, also in the Radar digest
+#                ([alerts] tiers below controls which tiers push)
 # not listed  -> Tier B, logged only if it passes the filters
 #
 # names = how the company shows up in the Simplify / vanshb03 trackers
@@ -11,13 +12,13 @@
 #   greenhouse = "<board token>"      lever = "<company>"      ashby = "<org>"
 #   workday    = ["<tenant>", "<wdN>", "<Site>"]
 #   eightfold  = ["<host>", "<domain>"]
-#   amazon     = true
+#   amazon / google / tiktok / janestreet / apple / ibm / bloomberg = true (custom feeds)
 #
 # To add a company: copy a block, set name + tier, add names and a direct source if it has one.
 
 [alerts]
-tiers = ["S"]
-max_per_run = 8
+tiers = ["S", "A"]
+max_per_run = 10
 
 [trackers]
 simplify = "https://raw.githubusercontent.com/SimplifyJobs/Summer2027-Internships/dev/.github/scripts/listings.json"
@@ -39,6 +40,7 @@ names = ["Meta", "Facebook", "Instagram", "WhatsApp"]
 [[company]]
 name = "Apple"
 tier = "S"
+apple = true
 
 [[company]]
 name = "Amazon"
@@ -50,7 +52,7 @@ amazon = true
 name = "Microsoft"
 tier = "S"
 names = ["Microsoft", "LinkedIn", "GitHub"]
-# no public feed (403); covered by the trackers
+# no public feed (403, and its Eightfold API rate-limits GitHub); covered by the trackers
 
 [[company]]
 name = "Netflix"
@@ -152,6 +154,7 @@ greenhouse = "instacart"
 name = "Snap"
 tier = "A"
 names = ["Snap", "Snapchat"]
+workday = ["snapchat", "wd1", "snap"]
 
 [[company]]
 name = "Roblox"
@@ -211,14 +214,18 @@ lever = "palantir"
 [[company]]
 name = "Bloomberg"
 tier = "A"
+names = ["Bloomberg", "Bloomberg LP", "Bloomberg Industry Group"]
+bloomberg = true
 
 [[company]]
 name = "Capital One"
 tier = "A"
+workday = ["capitalone", "wd12", "Capital_One"]
 
 [[company]]
 name = "IBM"
 tier = "A"
+ibm = true
 
 [[company]]
 name = "Walmart"
@@ -229,6 +236,7 @@ names = ["Walmart", "Walmart Global Tech"]
 name = "Hudson River Trading"
 tier = "A"
 names = ["Hudson River Trading", "HRT"]
+greenhouse = "wehrtyou"
 
 [[company]]
 name = "Etsy"
@@ -238,3 +246,8 @@ tier = "A"
 name = "Dropbox"
 tier = "A"
 greenhouse = "dropbox"
+
+[[company]]
+name = "Shopify"
+tier = "A"
+# careers site has no public feed; covered by the trackers

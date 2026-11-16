@@ -2,7 +2,17 @@
 
 Checks company job boards directly every ~10 minutes (every 30 overnight) plus the
 Simplify and vanshb03 trackers. Every new matching Summer 2027 role gets a fit score.
-New **Tier S** roles send an instant phone push and their own email.
+New **Tier S and Tier A** roles send an instant phone push and their own email
+(set by `[alerts] tiers` in `companies.toml`).
+
+## How it stays running
+
+GitHub's scheduled runs are best-effort and can be skipped for hours, so the
+workflow doesn't rely on them. Each run loops for about 5.5 hours (`.github/loop.sh`),
+polling every 10 minutes and saving state after each pass, and queues the next run
+itself before it starts. The hourly cron is only a watchdog that restarts the chain
+if it ever breaks. `data/health.json` is refreshed at least hourly (`written_at`),
+so if it is more than an hour or two old, the poller has stopped.
 
 - `companies.toml`: tiers and sources. Edit this to add or move companies.
 - `poller.py`: the poller (Python standard library only).
