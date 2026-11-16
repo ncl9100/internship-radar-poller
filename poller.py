@@ -36,7 +36,7 @@ NOW = time.time()
 
 INTERN = re.compile(r"\bintern(ship)?s?\b|\bco-?op\b", re.I)
 BAD = re.compile(
-    r"ph\.?\s?d|doctoral|master'?s|\bmba\b|\bm\.?s\.?\b(?!\w)|postdoc|new grad|"
+    r"\bmba\b|postdoc|new grad|"
     r"graduate program|full[- ]time|freshm|sophomore|first[- ]year|second[- ]year|"
     r"high school|\bexplore\b|\bstep\b|hardware|electrical|mechanical|silicon|asic|"
     r"fpga|analog|\brf\b|sales|marketing|recruit|legal|accounting|finance intern|"
@@ -45,6 +45,10 @@ BAD = re.compile(
     r"project manag|\bpm intern|operations intern|business development",
     re.I,
 )
+# Grad-degree titles are dropped unless the title also opens the role to
+# undergrads (e.g. "BS/MS", "Bachelor's or Master's").
+GRAD_ONLY = re.compile(r"ph\.?\s?d|doctoral|master'?s|\bm\.?s\.?\b(?!\w)", re.I)
+UNDERGRAD_OK = re.compile(r"\bb\.?s\b|\bb\.?a\b|bachelor|undergrad", re.I)
 OFF_SEASON = re.compile(r"\b(fall|autumn|winter|spring)\b|summer\s*2026", re.I)
 NON_US = re.compile(
     r"london|united kingdom|\buk\b|dublin|ireland|toronto|vancouver|montreal|canada|"
@@ -52,7 +56,13 @@ NON_US = re.compile(
     r"paris|france|berlin|munich|germany|amsterdam|netherlands|zurich|switzerland|"
     r"tel aviv|israel|beijing|shanghai|shenzhen|china|hong kong|taiwan|taipei|seoul|"
     r"korea|mexico|brazil|warsaw|poland|madrid|spain|stockholm|sweden|emea|apac|latam|"
-    r"copenhagen|denmark|oslo|lisbon|portugal|prague|bucharest|cairo|dubai",
+    r"copenhagen|denmark|oslo|lisbon|portugal|prague|bucharest|cairo|dubai|"
+    r"belgrade|serbia|yerevan|armenia|romania|cluj|krakow|kraków|bulgaria|sofia|"
+    r"vietnam|philippines|manila|indonesia|jakarta|malaysia|kuala lumpur|thailand|"
+    r"bangkok|argentina|buenos aires|colombia|bogota|chile|santiago|costa rica|"
+    r"nigeria|kenya|south africa|turkey|istanbul|\buae\b|saudi|riyadh|qatar|"
+    r"new zealand|italy|milan|belgium|brussels|austria|vienna|finland|helsinki|"
+    r"czech|hungary|budapest|greece|athens|edinburgh|estonia|tallinn",
     re.I,
 )
 US_HINT = re.compile(
@@ -110,6 +120,8 @@ def passes_filters(title, location):
     if not INTERN.search(title):
         return False
     if BAD.search(title):
+        return False
+    if GRAD_ONLY.search(title) and not UNDERGRAD_OK.search(title):
         return False
     if OFF_SEASON.search(title) and not re.search(r"summer\s*2027", title, re.I):
         return False
@@ -222,10 +234,10 @@ def src_ashby(org):
     return out
 
 
-def src_workday(tenant, wd, site, pages=3):
+def src_workday(tenant, wd, site, pages=10):
     host = f"{tenant}.{wd}.myworkdayjobs.com"
     api = f"https://{host}/wday/cxs/{tenant}/{site}/jobs"
-    out = []
+    out, total = [], 0
     for page in range(pages):
         data = http_json(api, {"appliedFacets": {}, "limit": 20,
                                "offset": page * 20, "searchText": "intern"})
@@ -238,8 +250,11 @@ def src_workday(tenant, wd, site, pages=3):
                 "url": f"https://{host}/en-US/{site}{path}",
                 "posted_ts": None, "posted_text": j.get("postedOn", ""),
             })
-        if len(posts) < 20:
+        if page == 0:
+            total = data.get("total") or 0  # Workday only reports total on page 1
+        if len(posts) < 20 or (page + 1) * 20 >= total:
             break
+        time.sleep(0.5)
     return out
 
 
@@ -278,6 +293,93 @@ def src_amazon():
                 "posted_ts": None, "posted_text": f"posted {j.get('posted_date', '')}",
                 "_day_ts": ts,
             })
+    return out
+
+
+def src_google():
+    # Google's careers page embeds results as a JS data blob (20 per page).
+    base = ("https://www.google.com/about/careers/applications/jobs/results"
+            "?location=United%20States&target_level=INTERN_AND_APPRENTICE&sort_by=date")
+    out = []
+    for page in range(1, 6):
+        req = urllib.request.Request(f"{base}&page={page}", headers={"User-Agent": UA})
+        with urllib.request.urlopen(req, timeout=20) as r:
+            body = r.read().decode("utf-8", "replace")
+        m = re.search(r"AF_initDataCallback\(\{key: 'ds:1'.*?data:(\[.*?\]), sideChannel", body, re.S)
+        if not m:
+            if page == 1:
+                raise ValueError("Google page layout changed (no ds:1 data)")
+            break
+        data = json.loads(m.group(1))
+        jobs = data[0] or []
+        for j in jobs:
+            locs = [l[0] for l in (j[9] or []) if l and l[0]]
+            created = j[12][0] if len(j) > 12 and j[12] else None
+            out.append({
+                "id": j[0], "title": j[1], "location": "; ".join(locs),
+                "url": f"https://www.google.com/about/careers/applications/jobs/results/{j[0]}",
+                "posted_ts": created,
+            })
+        total = data[2] if len(data) > 2 and isinstance(data[2], int) else 0
+        if len(jobs) < 20 or len(out) >= total:
+            break
+    return out
+
+
+# TikTok's API filters by city code, not country. These cover its US offices
+# (San Jose, Seattle, LA, NYC, Austin, DC, SF, Chicago, San Diego, Miami,
+# Houston, Atlanta, plus small data center sites).
+TIKTOK_US_CITIES = ["CT_1103355", "CT_157", "CT_94", "CT_114", "CT_247", "CT_233",
+                    "CT_75", "CT_221", "CT_203", "CT_223", "CT_1103554", "CT_100762",
+                    "CT_2001643", "MDCY00038339", "MDCY00039300", "CT_1000001", "CT_2001826"]
+
+
+def src_tiktok():
+    out = []
+    for offset in range(0, 2000, 100):
+        data = http_json(
+            "https://api.lifeattiktok.com/api/v1/public/supplier/search/job/posts",
+            {"recruitment_id_list": [], "job_category_id_list": [], "subject_id_list": [],
+             "location_code_list": TIKTOK_US_CITIES, "keyword": "intern", "limit": 100,
+             "offset": offset},
+            {"website-path": "tiktok", "Origin": "https://lifeattiktok.com",
+             "Referer": "https://lifeattiktok.com/"})
+        if data.get("code") not in (0, None):
+            raise ValueError(f"TikTok API code {data.get('code')}: {data.get('message')}")
+        posts = (data.get("data") or {}).get("job_post_list") or []
+        for j in posts:
+            parts, c = [], j.get("city_info")
+            while c:
+                parts.append(c.get("en_name") or "")
+                c = c.get("parent")
+            out.append({
+                "id": j["id"], "title": j.get("title", ""),
+                "location": ", ".join(p for p in parts if p),
+                "url": f"https://lifeattiktok.com/search/{j['id']}",
+                "posted_ts": None,
+            })
+        if len(posts) < 100:
+            break
+    return out
+
+
+JS_CITY = {"NYC": "New York, NY", "CHI": "Chicago, IL", "ATX": "Austin, TX",
+           "LDN": "London", "HKG": "Hong Kong", "SGP": "Singapore"}
+
+
+def src_janestreet():
+    data = http_json("https://www.janestreet.com/jobs/main.json")
+    out = []
+    for j in data:
+        if j.get("availability") != "Summer Internship":
+            continue
+        out.append({
+            # Jane Street titles omit "Intern"; add it so the filters see it.
+            "id": j["id"], "title": f"{j.get('position', '').strip()} Intern",
+            "location": JS_CITY.get(j.get("city"), j.get("city") or ""),
+            "url": f"https://www.janestreet.com/join-jane-street/position/{j['id']}/",
+            "posted_ts": None,
+        })
     return out
 
 
@@ -427,6 +529,12 @@ def build_jobs(cfg):
             jobs.append((f"eightfold:{name}", c, lambda e=c["eightfold"]: src_eightfold(*e)))
         if c.get("amazon"):
             jobs.append(("amazon", c, src_amazon))
+        if c.get("google"):
+            jobs.append(("google", c, src_google))
+        if c.get("tiktok"):
+            jobs.append(("tiktok", c, src_tiktok))
+        if c.get("janestreet"):
+            jobs.append(("janestreet", c, src_janestreet))
     for label, url in (cfg.get("trackers") or {}).items():
         jobs.append((f"tracker:{label}", None, lambda u=url: src_tracker(u)))
     return jobs
