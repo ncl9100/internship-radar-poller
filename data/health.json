@@ -1,133 +1,135 @@
 {
- "written_at": "Nov 15, 09:52 PM ET",
+ "written_at": "Nov 16, 05:53 AM ET",
  "event": "schedule",
- "new_roles": 1,
+ "new_roles": 0,
  "alerted": 0,
  "alert_failures": [],
  "failing_sources": [
+  "workday:adobe",
   "workday:salesforce"
  ],
  "sources": {
   "google": {
    "ok": true,
-   "fetched": 18,
+   "fetched": 17,
    "matched": 1,
-   "secs": 0.5
+   "secs": 0.3
   },
   "amazon": {
    "ok": true,
    "fetched": 95,
    "matched": 29,
-   "secs": 1.0
+   "secs": 1.9
   },
   "eightfold:netflix": {
    "ok": true,
    "fetched": 6,
    "matched": 1,
-   "secs": 0.3
+   "secs": 0.5
   },
   "workday:nvidia": {
    "ok": true,
    "fetched": 200,
    "matched": 30,
-   "secs": 13.5
+   "secs": 14.5
   },
   "ashby:openai": {
    "ok": true,
-   "fetched": 838,
+   "fetched": 839,
    "matched": 0,
    "secs": 0.2
   },
   "greenhouse:anthropic": {
    "ok": true,
-   "fetched": 662,
+   "fetched": 661,
    "matched": 0,
-   "secs": 0.1
+   "secs": 0.3
   },
   "lever:spotify": {
    "ok": true,
    "fetched": 87,
    "matched": 0,
-   "secs": 18.9
+   "secs": 9.2
   },
   "greenhouse:airbnb": {
    "ok": true,
-   "fetched": 212,
+   "fetched": 210,
    "matched": 1,
-   "secs": 0.1
+   "secs": 0.3
   },
   "greenhouse:stripe": {
    "ok": true,
-   "fetched": 785,
+   "fetched": 786,
    "matched": 2,
-   "secs": 0.1
+   "secs": 0.3
   },
   "tiktok": {
    "ok": true,
-   "fetched": 1177,
+   "fetched": 1178,
    "matched": 100,
-   "secs": 17.5
+   "secs": 15.0
   },
   "greenhouse:databricks": {
    "ok": true,
    "fetched": 895,
    "matched": 2,
-   "secs": 0.1
+   "secs": 3.6
   },
   "workday:salesforce": {
    "ok": false,
    "fetched": 0,
    "matched": 0,
-   "secs": 11.1,
+   "secs": 11.5,
    "error": "HTTPError: HTTP Error 429: Too Many Requests"
   },
   "workday:adobe": {
-   "ok": true,
-   "fetched": 121,
-   "matched": 7,
-   "secs": 7.8
+   "ok": false,
+   "fetched": 0,
+   "matched": 0,
+   "secs": 25.9,
+   "error": "HTTPError: HTTP Error 429: Too Many Requests"
   },
   "janestreet": {
    "ok": true,
    "fetched": 43,
    "matched": 11,
-   "secs": 0.0
+   "secs": 0.4
   },
   "greenhouse:pinterest": {
    "ok": true,
-   "fetched": 163,
+   "fetched": 161,
    "matched": 5,
-   "secs": 0.1
+   "secs": 0.3
   },
   "greenhouse:lyft": {
    "ok": true,
    "fetched": 148,
    "matched": 3,
-   "secs": 0.1
+   "secs": 1.4
   },
   "greenhouse:doordashusa": {
    "ok": true,
-   "fetched": 428,
+   "fetched": 425,
    "matched": 2,
-   "secs": 0.1
+   "secs": 0.2
   },
   "greenhouse:instacart": {
    "ok": true,
    "fetched": 85,
    "matched": 0,
-   "secs": 0.0
+   "secs": 0.2
   },
   "greenhouse:roblox": {
    "ok": true,
    "fetched": 270,
    "matched": 1,
-   "secs": 0.0
+   "secs": 0.2
   },
   "greenhouse:figma": {
    "ok": true,
    "fetched": 139,
    "matched": 2,
-   "secs": 0.0
+   "secs": 0.1
   },
   "greenhouse:duolingo": {
    "ok": true,
@@ -181,7 +183,7 @@
    "ok": true,
    "fetched": 302,
    "matched": 31,
-   "secs": 1.2
+   "secs": 0.8
   },
   "greenhouse:dropbox": {
    "ok": true,
@@ -191,14 +193,14 @@
   },
   "tracker:simplify": {
    "ok": true,
-   "fetched": 1930,
-   "matched": 1106,
+   "fetched": 1929,
+   "matched": 1112,
    "secs": 0.2
   },
   "tracker:vanshb03": {
    "ok": true,
-   "fetched": 1977,
-   "matched": 1459,
+   "fetched": 1960,
+   "matched": 1451,
    "secs": 0.1
   }
  }
