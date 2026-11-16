@@ -20,34 +20,29 @@ def show(name, res, pats=()):
     for p in pats:
         m = re.findall(p, txt); print(f"  /{p[:50]}/ -> {len(m)} e.g. {m[:6]}")
 
-# ---- Meta
+
+BROWSER = {"sec-ch-ua": '"Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"', "sec-ch-ua-mobile": "?0",
+           "sec-ch-ua-platform": '"Windows"', "sec-fetch-dest": "document", "sec-fetch-mode": "navigate",
+           "sec-fetch-site": "none", "sec-fetch-user": "?1", "upgrade-insecure-requests": "1"}
 op = mk()
-show("meta jobsearch html", req("https://www.metacareers.com/jobsearch?q=intern&roles[0]=Internship", op=op, accept="text/html"),
-     [r'/jobs/(\d{6,})', r'"title":"([^"]{5,120})"', r'"lsd","([^"]+)"|name="lsd" value="([^"]+)"'])
-show("meta sitemap", req("https://www.metacareers.com/jobs/sitemap.xml", accept="application/xml"), [r'<loc>([^<]+)</loc>'])
-show("meta jobs html", req("https://www.metacareers.com/jobs?q=intern", accept="text/html"), [r'/jobs/(\d{6,})', r'doc_id[^0-9]{0,10}(\d{10,})'])
-# ---- Microsoft
-show("ms gcs", req("https://gcsservices.careers.microsoft.com/search/api/v1/search?q=intern&lc=United%20States&l=en_us&pg=1&pgSz=20&o=Recent&flt=true",
-     headers={"Origin":"https://jobs.careers.microsoft.com","Referer":"https://jobs.careers.microsoft.com/"}))
+show("meta browser hdrs", req("https://www.metacareers.com/jobs?q=intern", op=op, headers=BROWSER,
+     accept="text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"), [r'/jobs/(\d{6,})', r'"lsd"\s*,\s*\[\]\s*,\s*\{"token":"([^"]+)"', r'"LSD",\[\],\{"token":"([^"]+)"'])
+show("meta root", req("https://www.metacareers.com/", op=op, headers=BROWSER, accept="text/html"), [r'"LSD",\[\],\{"token":"([^"]+)"'])
 op = mk()
-show("ms eightfold landing", req("https://apply.careers.microsoft.com/careers?query=intern", op=op, accept="text/html"), [r'csrf[^"]{0,20}"\s*content="([^"]+)"'])
-show("ms pcsx", req("https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com&query=intern&location=United%20States&start=0&sort_by=timestamp", op=op,
-     headers={"Referer":"https://apply.careers.microsoft.com/careers?query=intern"}))
-show("ms apply v2", req("https://apply.careers.microsoft.com/api/apply/v2/jobs?domain=microsoft.com&query=intern&location=United%20States&start=0&num=10&sort_by=timestamp", op=op,
-     headers={"Referer":"https://apply.careers.microsoft.com/careers?query=intern"}))
-# ---- Uber
-show("uber api", req("https://www.uber.com/api/loadSearchJobsResults?localeCode=en",
-     {"limit": 10, "page": 0, "params": {"query": "intern", "location": [{"country": "USA"}], "department": [], "team": [], "programAndPlatform": [], "lineOfBusinessName": []}},
-     {"x-csrf-token": "x", "Origin": "https://www.uber.com", "Referer": "https://www.uber.com/us/en/careers/list/"}))
-show("uber api2", req("https://www.uber.com/api/loadSearchJobsResults?localeCode=en",
-     {"limit": 10, "page": 0, "params": {"query": "intern"}}, {"x-csrf-token": "x"}))
-# ---- Citadel
-show("citadel internships", req("https://www.citadel.com/careers/open-opportunities/students/internships/", accept="text/html"),
-     [r'href="(https://www\.citadel\.com/careers/details/[^"]+)"', r'<h\d[^>]*>([^<]*[Ii]ntern[^<]*)</h'])
-show("citadel sec internships", req("https://www.citadelsecurities.com/careers/open-opportunities/students/internships/", accept="text/html"),
-     [r'href="(https://www\.citadelsecurities\.com/careers/details/[^"]+)"'])
-show("citadel wp-json", req("https://www.citadel.com/wp-json/wp/v2/types"), [r'"(career[^"]*|job[^"]*|opportunit[^"]*)"'])
-# ---- Two Sigma
-show("twosigma avature", req("https://careers.twosigma.com/careers/SearchJobs/?jobRecordsPerPage=100", accept="text/html"),
-     [r'href="(https://careers\.twosigma\.com/careers/JobDetail/[^"]+)"'])
-show("twosigma students", req("https://www.twosigma.com/careers/students/", accept="text/html"), [r'href="([^"]*(?:JobDetail|jobs?/)[^"]*)"'])
+show("ms pcsx p0", req("https://apply.careers.microsoft.com/careers?query=intern", op=op, accept="text/html"))
+for q in ["intern", "internship"]:
+    code, txt = req(f"https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com&query={q}&location=United%20States&start=0&sort_by=timestamp", op=op, headers={"Referer":"https://apply.careers.microsoft.com/careers?query=intern"})
+    try:
+        d = json.loads(txt)["data"]; pos = d["positions"]
+        print(f"\nMS {q}: count={d.get('count')} n={len(pos)} keys={list(d.keys())}")
+        for p in pos[:12]: print("   ", p["name"], "|", p["locations"][:2], "|", p["postedTs"], "|", p["positionUrl"])
+    except Exception as e: print("MS", q, code, txt[:200])
+code, txt = req("https://apply.careers.microsoft.com/api/pcsx/search?domain=microsoft.com&query=intern&location=United%20States&start=10&sort_by=timestamp", op=op, headers={"Referer":"https://apply.careers.microsoft.com/careers?query=intern"})
+print("MS page2", code, [p["name"] for p in json.loads(txt)["data"]["positions"]][:5] if code==200 else txt[:100])
+for u in ["https://www.uber.com/api/loadSearchJobsResults?localeCode=en-US", "https://www.uber.com/us/en/careers/api/loadSearchJobsResults", "https://www.uber.com/api/careers/loadSearchJobsResults?localeCode=en"]:
+    show("uber "+u[22:70], req(u, {"limit": 10, "page": 0, "params": {"query": "intern", "location": [{"country": "USA"}]}}, {"x-csrf-token": "x", "Origin": "https://www.uber.com"}))
+show("uber careers html", req("https://www.uber.com/us/en/careers/list/?query=intern", headers=BROWSER, accept="text/html"), [r'/careers/list/(\d{5,})', r'"(/api/[A-Za-z/]+)"'])
+code, txt = req("https://www.twosigma.com/careers/students/", accept="text/html")
+print("\ntwosigma hrefs", sorted(set(re.findall(r'href="(https?://[^"]*(?:career|job|greenhouse|lever|workday|avature|icims|taleo)[^"]*)"', txt)))[:25])
+code, txt = req("https://www.twosigma.com/careers/", accept="text/html")
+print("twosigma careers hrefs", sorted(set(re.findall(r'href="(https?://[^"]*(?:career|job|greenhouse|lever|workday|avature|icims|taleo)[^"]*)"', txt)))[:25])
