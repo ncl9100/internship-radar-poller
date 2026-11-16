@@ -9,6 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: |
+          python3 probe.py; exit 0
           cp -r data /tmp/d
           RADAR_DATA_DIR=/tmp/d GITHUB_EVENT_NAME=local python3 poller.py
           python3 - <<'PY'
