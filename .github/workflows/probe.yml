@@ -5,7 +5,27 @@ on:
 jobs:
   probe:
     runs-on: ubuntu-latest
-    timeout-minutes: 6
+    timeout-minutes: 8
     steps:
       - uses: actions/checkout@v4
-      - run: python3 probe.py
+      - run: |
+          cp -r data /tmp/d
+          # pass 1 (learn), then delete one cached Meta id so pass 2 exercises the title fetch
+          RADAR_DATA_DIR=/tmp/d GITHUB_EVENT_NAME=schedule python3 poller.py
+          python3 -c "
+          import json;c=json.load(open('/tmp/d/meta_titles.json'));ks=list(c)[:3]
+          [c.pop(k) for k in ks];json.dump(c,open('/tmp/d/meta_titles.json','w'));print('dropped',ks)"
+          RADAR_DATA_DIR=/tmp/d GITHUB_EVENT_NAME=local python3 poller.py
+          python3 - <<'PY'
+          import json
+          h=json.load(open('/tmp/d/health.json'))
+          print('FAILING', h['failing_sources'])
+          for k in ('microsoft','meta','twosigma','apple'): print('H', k, h['sources'].get(k))
+          c=json.load(open('/tmp/d/meta_titles.json'))
+          print('META cached', len(c), [v for v in c.values() if v['title']][:3])
+          snap=json.load(open('/tmp/d/snapshot.json'))
+          for src in ('microsoft','meta','twosigma'):
+              rows=[r for r in snap if r['source']==src]
+              print('S', src, len(rows))
+              for r in rows[:5]: print('   ', r['title'],'|',r['location'],'|',r['url'],'|',r['opened'])
+          PY

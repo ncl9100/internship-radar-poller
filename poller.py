@@ -22,7 +22,7 @@ import urllib.error
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor
 from email.message import EmailMessage
-from html import escape
+from html import escape, unescape
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
@@ -519,6 +519,115 @@ def src_bloomberg():
     return out
 
 
+BROWSER_HDRS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) "
+                  "Chrome/130.0 Safari/537.36",
+    "Accept-Language": "en-US,en;q=0.9",
+    "sec-ch-ua": '"Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"',
+    "sec-ch-ua-mobile": "?0", "sec-ch-ua-platform": '"Windows"',
+    "sec-fetch-dest": "document", "sec-fetch-mode": "navigate", "sec-fetch-site": "none",
+    "sec-fetch-user": "?1", "upgrade-insecure-requests": "1",
+}
+
+
+def get_text(url, headers=None, opener=None, timeout=30):
+    h = dict(BROWSER_HDRS, Accept="text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8")
+    h.update(headers or {})
+    req = urllib.request.Request(url, headers=h)
+    for attempt in range(3):
+        try:
+            with (opener or urllib.request.build_opener()).open(req, timeout=timeout) as r:
+                return r.read().decode("utf-8", "replace")
+        except urllib.error.HTTPError as e:
+            if e.code != 429 and e.code < 500 or attempt == 2:
+                raise
+        except (TimeoutError, urllib.error.URLError, ConnectionError):
+            if attempt == 2:
+                raise
+        time.sleep(5 * (attempt + 1))
+
+
+def src_microsoft():
+    import http.cookiejar
+    op = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))
+    base = "https://apply.careers.microsoft.com"
+    get_text(f"{base}/careers?query=intern", opener=op)  # session cookie, else 429/403
+    out = []
+    for start in range(0, 50, 10):
+        req = urllib.request.Request(
+            f"{base}/api/pcsx/search?domain=microsoft.com&query=intern"
+            f"&location=United%20States&start={start}&sort_by=timestamp",
+            headers=dict(BROWSER_HDRS, Accept="application/json",
+                         Referer=f"{base}/careers?query=intern"))
+        with op.open(req, timeout=30) as r:
+            data = json.loads(r.read().decode("utf-8")).get("data") or {}
+        pos = data.get("positions") or []
+        for j in pos:
+            out.append({
+                "id": j["id"], "title": j.get("name", ""),
+                "location": "; ".join(j.get("locations") or []),
+                "url": base + (j.get("positionUrl") or f"/careers/job/{j['id']}"),
+                "posted_ts": j.get("postedTs"),
+            })
+        if len(pos) < 10:
+            break
+        time.sleep(1)
+    return out
+
+
+META_TITLES = DATA / "meta_titles.json"
+
+
+def src_meta():
+    """Meta has no job API we can use, but its job sitemap lists every open role.
+    A new URL there is a new role; we open only new pages to read the title."""
+    sm = get_text("https://www.metacareers.com/jobs/sitemap.xml")
+    ids = re.findall(r"<loc>https://www\.metacareers\.com/profile/job_details/(\d+)/?</loc>", sm)
+    if not ids:
+        raise ValueError("Meta sitemap layout changed (no job URLs)")
+    cache = load_json(META_TITLES, None)
+    if cache is None:
+        # First run: remember what is already posted without opening 1,000+ pages.
+        cache = {i: {"title": "", "location": ""} for i in ids}
+    fetched = 0
+    for i in ids:
+        if i in cache or fetched >= 40:
+            continue
+        html = get_text(f"https://www.metacareers.com/profile/job_details/{i}/")
+        title = re.search(r'property="og:title" content="([^"]*)"', html)
+        loc = re.search(r'"locations?":\s*\[?"([^"\]]{3,80})', html)
+        cache[i] = {"title": unescape(title.group(1)) if title else "",
+                    "location": loc.group(1) if loc else ""}
+        fetched += 1
+        time.sleep(1)
+    live = set(ids)
+    cache = {k: v for k, v in cache.items() if k in live}
+    META_TITLES.write_text(json.dumps(cache, separators=(",", ":")))
+    return [{"id": i, "title": cache[i]["title"], "location": cache[i]["location"],
+             "url": f"https://www.metacareers.com/profile/job_details/{i}/", "posted_ts": None}
+            for i in ids if i in cache and cache[i]["title"]]
+
+
+def src_twosigma():
+    out, seen = [], set()
+    for page in ("InternshipsAndEarlyCareers", "OpenRoles"):
+        html = get_text(f"https://careers.twosigma.com/careers/{page}")
+        pat = r'href="(https://careers\.twosigma\.com/careers/JobDetail/[^"]+)"[^>]*>\s*([^<]{3,200}?)\s*<'
+        for url, title in re.findall(pat, html):
+            if url in seen or title.strip().lower() in ("apply", "apply now", "learn more", "view job"):
+                continue
+            seen.add(url)
+            slug_loc = url.split("/JobDetail/")[1].rsplit("/", 1)[0]
+            m = re.match(r"(.*?-(?:United-States|United-Kingdom|Japan|China|India|Canada|Netherlands))-", slug_loc)
+            slug_loc = m.group(1) if m else slug_loc
+            out.append({"id": url.rsplit("/", 1)[-1], "title": unescape(title.strip()),
+                        "location": slug_loc.replace("-", " "), "url": url, "posted_ts": None})
+        time.sleep(1)
+    if not out:
+        raise ValueError("Two Sigma careers page layout changed (no job links)")
+    return out
+
+
 def src_tracker(url):
     data = http_json(url, timeout=60)
     out = []
@@ -677,6 +786,12 @@ def build_jobs(cfg):
             jobs.append(("ibm", c, src_ibm))
         if c.get("bloomberg"):
             jobs.append(("bloomberg", c, src_bloomberg))
+        if c.get("microsoft"):
+            jobs.append(("microsoft", c, src_microsoft))
+        if c.get("meta"):
+            jobs.append(("meta", c, src_meta))
+        if c.get("twosigma"):
+            jobs.append(("twosigma", c, src_twosigma))
     for label, url in (cfg.get("trackers") or {}).items():
         jobs.append((f"tracker:{label}", None, lambda u=url: src_tracker(u)))
     return jobs
