@@ -13,28 +13,21 @@ def sec(n, f):
 def google():
     body = req("https://www.google.com/about/careers/applications/jobs/results?q=intern&location=United%20States&target_level=INTERN_AND_APPRENTICE&sort_by=date", raw=True)
     m = re.search(r"AF_initDataCallback\(\{key: 'ds:1'.*?data:(\[.*?\]), sideChannel", body, re.S)
-    data = json.loads(m.group(1)); print("top len", len(data), "data[1:]", json.dumps(data[1:])[:200])
-    for j in data[0][:2]: print(json.dumps(j)[:1500])
-    body2 = req("https://www.google.com/about/careers/applications/jobs/results?q=intern&location=United%20States&target_level=INTERN_AND_APPRENTICE&sort_by=date&page=2", raw=True)
-    m2 = re.search(r"AF_initDataCallback\(\{key: 'ds:1'.*?data:(\[.*?\]), sideChannel", body2, re.S)
-    print("page2 count", len(json.loads(m2.group(1))[0]) if m2 else "none")
-    body3 = req("https://www.google.com/about/careers/applications/jobs/results?location=United%20States&target_level=INTERN_AND_APPRENTICE&sort_by=date", raw=True)
-    m3 = re.search(r"AF_initDataCallback\(\{key: 'ds:1'.*?data:(\[.*?\]), sideChannel", body3, re.S)
-    d3 = json.loads(m3.group(1)); print("no-q count", len(d3[0]), "meta", json.dumps(d3[1:])[:100], [j[1] for j in d3[0]])
+    j = json.loads(m.group(1))[0][1]
+    for i, v in enumerate(j):
+        if i in (3, 4) or (isinstance(v, str) and len(v) > 300): continue
+        print(i, json.dumps(v)[:300])
 sec("google", google)
 def tiktok():
-    d = req("https://api.lifeattiktok.com/api/v1/public/supplier/search/job/posts", {"recruitment_id_list": [], "job_category_id_list": [], "subject_id_list": [], "location_code_list": [], "keyword": "intern", "limit": 3, "offset": 0}, {"website-path": "tiktok", "Origin": "https://lifeattiktok.com", "Referer": "https://lifeattiktok.com/"})
-    print("count no-loc", d["data"].get("count"))
-    for j in d["data"]["job_post_list"][:2]: print(json.dumps(j)[:1500])
+    d = req("https://api.lifeattiktok.com/api/v1/public/supplier/search/job/posts", {"recruitment_id_list": [], "job_category_id_list": [], "subject_id_list": [], "location_code_list": [], "keyword": "data scientist intern", "limit": 3, "offset": 0}, {"website-path": "tiktok", "Origin": "https://lifeattiktok.com", "Referer": "https://lifeattiktok.com/"})
+    print("count", d["data"].get("count"))
+    for j in d["data"]["job_post_list"][:2]:
+        print(json.dumps({k: v for k, v in j.items() if k not in ("description", "requirement")})[:1500])
 sec("tiktok", tiktok)
 def js():
     d = req("https://www.janestreet.com/jobs/main.json")
-    ints = [x for x in d if "intern" in (x.get("availability", "") + x.get("duration", "") + x.get("position", "")).lower()]
-    print("avail values", sorted({x.get("availability") for x in d}), "dur", sorted({x.get("duration") for x in d})[:20])
-    for x in ints[:3]: print(json.dumps({k: (v[:80] if isinstance(v, str) else v) for k, v in x.items()}))
+    for k in ("availability", "duration", "category", "city"): print(k, sorted({str(x.get(k)) for x in d})[:25])
+    ints = [x for x in d if "intern" in json.dumps({k: x.get(k) for k in ("availability", "duration", "position")}).lower()]
+    print("n intern", len(ints))
+    for x in ints[:4]: print(json.dumps({k: (v[:60] if isinstance(v, str) else v) for k, v in x.items()}))
 sec("jane street", js)
-def apple():
-    body = req("https://jobs.apple.com/en-us/search?search=intern&sort=newest&location=united-states-USA", raw=True)
-    i = body.find("__staticRouterHydrationData"); s = body[i:i+300000]
-    k = s.find("searchResults"); print(s[k:k+1500])
-sec("apple", apple)
