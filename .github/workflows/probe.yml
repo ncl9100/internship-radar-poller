@@ -1,0 +1,11 @@
+name: probe
+on:
+  push:
+    branches: [diag-probe3]
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 probe.py
