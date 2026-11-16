@@ -1,9 +1,10 @@
 {
- "written_at": "Nov 16, 03:30 PM ET",
- "written_ts": 1794861035,
- "event": "push",
- "new_roles": 11,
- "alerted": 1,
+ "written_at": "Nov 16, 03:50 PM ET",
+ "written_ts": 1794862235,
+ "event": "schedule",
+ "test_alert": "sent Nov 16, 03:51 PM ET: TikTok TEST Data Science Intern (TikTok Product) - 2027 Summer",
+ "new_roles": 0,
+ "alerted": 0,
  "alert_failures": [],
  "failing_sources": [],
  "sources": {
@@ -13,11 +14,17 @@
    "matched": 1,
    "secs": 0.4
   },
+  "meta": {
+   "ok": true,
+   "fetched": 0,
+   "matched": 0,
+   "secs": 0.8
+  },
   "apple": {
    "ok": true,
    "fetched": 70,
    "matched": 2,
-   "secs": 5.0
+   "secs": 5.1
   },
   "amazon": {
    "ok": true,
@@ -25,17 +32,23 @@
    "matched": 29,
    "secs": 0.7
   },
+  "microsoft": {
+   "ok": true,
+   "fetched": 48,
+   "matched": 20,
+   "secs": 5.8
+  },
   "eightfold:netflix": {
    "ok": true,
    "fetched": 6,
    "matched": 1,
-   "secs": 4.3
+   "secs": 0.2
   },
   "ashby:openai": {
    "ok": true,
-   "fetched": 833,
+   "fetched": 834,
    "matched": 0,
-   "secs": 0.6
+   "secs": 0.2
   },
   "greenhouse:anthropic": {
    "ok": true,
@@ -53,35 +66,41 @@
    "ok": true,
    "fetched": 206,
    "matched": 1,
-   "secs": 0.1
+   "secs": 0.2
   },
   "greenhouse:stripe": {
    "ok": true,
    "fetched": 791,
    "matched": 2,
-   "secs": 0.2
+   "secs": 0.1
   },
   "tiktok": {
    "ok": true,
    "fetched": 1167,
    "matched": 100,
-   "secs": 16.6
+   "secs": 12.1
   },
   "greenhouse:databricks": {
    "ok": true,
-   "fetched": 889,
+   "fetched": 891,
    "matched": 2,
-   "secs": 0.2
+   "secs": 4.3
   },
   "janestreet": {
    "ok": true,
    "fetched": 43,
    "matched": 11,
-   "secs": 0.5
+   "secs": 0.6
+  },
+  "twosigma": {
+   "ok": true,
+   "fetched": 17,
+   "matched": 3,
+   "secs": 5.1
   },
   "greenhouse:pinterest": {
    "ok": true,
-   "fetched": 163,
+   "fetched": 164,
    "matched": 5,
    "secs": 0.1
   },
@@ -93,9 +112,9 @@
   },
   "greenhouse:doordashusa": {
    "ok": true,
-   "fetched": 424,
+   "fetched": 426,
    "matched": 2,
-   "secs": 0.2
+   "secs": 3.3
   },
   "greenhouse:instacart": {
    "ok": true,
@@ -105,7 +124,7 @@
   },
   "greenhouse:roblox": {
    "ok": true,
-   "fetched": 263,
+   "fetched": 264,
    "matched": 1,
    "secs": 0.1
   },
@@ -167,19 +186,19 @@
    "ok": true,
    "fetched": 303,
    "matched": 31,
-   "secs": 0.2
+   "secs": 0.1
   },
   "bloomberg": {
    "ok": true,
    "fetched": 12,
    "matched": 0,
-   "secs": 2.0
+   "secs": 1.9
   },
   "ibm": {
    "ok": true,
    "fetched": 100,
    "matched": 51,
-   "secs": 1.7
+   "secs": 0.3
   },
   "greenhouse:wehrtyou": {
    "ok": true,
@@ -189,7 +208,7 @@
   },
   "greenhouse:dropbox": {
    "ok": true,
-   "fetched": 42,
+   "fetched": 41,
    "matched": 0,
    "secs": 0.1
   },
@@ -197,31 +216,31 @@
    "ok": true,
    "fetched": 70,
    "matched": 11,
-   "secs": 12.3
+   "secs": 9.1
   },
   "workday:salesforce": {
    "ok": true,
    "fetched": 8,
    "matched": 5,
-   "secs": 2.9
+   "secs": 0.3
   },
   "workday:adobe": {
    "ok": true,
    "fetched": 22,
    "matched": 6,
-   "secs": 5.9
+   "secs": 3.0
   },
   "workday:snap": {
    "ok": true,
    "fetched": 117,
    "matched": 1,
-   "secs": 17.3
+   "secs": 18.3
   },
   "workday:capitalone": {
    "ok": true,
    "fetched": 5,
    "matched": 0,
-   "secs": 2.5
+   "secs": 0.2
   },
   "tracker:simplify": {
    "ok": true,
