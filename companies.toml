@@ -382,4 +382,4 @@ greenhouse = "waymo"
 [[company]]
 name = "Retool"
 tier = "A"
-greenhouse = "retool"
+# Greenhouse board API returns 404; covered by the trackers
