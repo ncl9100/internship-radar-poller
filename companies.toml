@@ -253,3 +253,133 @@ greenhouse = "dropbox"
 name = "Shopify"
 tier = "A"
 # careers site has no public feed; covered by the trackers
+
+# Moved up from Tier B (Nov 16, 2026)
+[[company]]
+name = "Goldman Sachs"
+tier = "A"
+names = ["Goldman Sachs", "Goldman"]
+
+[[company]]
+name = "ServiceNow"
+tier = "A"
+
+[[company]]
+name = "Brex"
+tier = "A"
+greenhouse = "brex"
+
+[[company]]
+name = "Schonfeld"
+tier = "A"
+names = ["Schonfeld", "Schonfeld Strategic Advisors"]
+
+[[company]]
+name = "Micron Technology"
+tier = "A"
+
+# ------------------------------------------------- Tier A: hot startups --
+
+[[company]]
+name = "Perplexity"
+tier = "A"
+names = ["Perplexity", "Perplexity AI"]
+ashby = "perplexity"
+
+[[company]]
+name = "Anysphere"
+tier = "A"
+names = ["Anysphere", "Cursor"]
+ashby = "anysphere"
+
+[[company]]
+name = "Notion"
+tier = "A"
+ashby = "notion"
+
+[[company]]
+name = "Plaid"
+tier = "A"
+lever = "plaid"
+
+[[company]]
+name = "Rippling"
+tier = "A"
+
+[[company]]
+name = "Anduril"
+tier = "A"
+names = ["Anduril", "Anduril Industries"]
+greenhouse = "andurilindustries"
+
+[[company]]
+name = "Glean"
+tier = "A"
+greenhouse = "gleanwork"
+
+[[company]]
+name = "Vercel"
+tier = "A"
+greenhouse = "vercel"
+
+[[company]]
+name = "Mercury Technologies"
+tier = "A"
+# not plain "Mercury": would also match Mercury Insurance / Mercury Systems
+greenhouse = "mercury"
+
+[[company]]
+name = "Harvey AI"
+tier = "A"
+# not plain "Harvey": too generic a prefix
+ashby = "harvey"
+
+[[company]]
+name = "ElevenLabs"
+tier = "A"
+ashby = "elevenlabs"
+
+[[company]]
+name = "Replit"
+tier = "A"
+ashby = "replit"
+
+[[company]]
+name = "xAI"
+tier = "A"
+greenhouse = "xai"
+
+[[company]]
+name = "CoreWeave"
+tier = "A"
+greenhouse = "coreweave"
+
+[[company]]
+name = "Applied Intuition"
+tier = "A"
+greenhouse = "appliedintuition"
+
+[[company]]
+name = "Chime"
+tier = "A"
+greenhouse = "chime"
+
+[[company]]
+name = "Cohere AI"
+tier = "A"
+# not plain "Cohere": would also match Coherent Corp
+ashby = "cohere"
+
+[[company]]
+name = "Hugging Face"
+tier = "A"
+
+[[company]]
+name = "Waymo"
+tier = "A"
+greenhouse = "waymo"
+
+[[company]]
+name = "Retool"
+tier = "A"
+ashby = "retool"
