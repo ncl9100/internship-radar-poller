@@ -1,8 +1,8 @@
 {
- "written_at": "Nov 17, 05:35 PM ET",
- "written_ts": 1794954953,
+ "written_at": "Nov 17, 05:45 PM ET",
+ "written_ts": 1794955553,
  "event": "schedule",
- "new_roles": 0,
+ "new_roles": 1,
  "alerted": 0,
  "alert_failures": [],
  "failing_sources": [],
@@ -17,31 +17,31 @@
    "ok": true,
    "fetched": 41,
    "matched": 0,
-   "secs": 0.8
+   "secs": 0.9
   },
   "apple": {
    "ok": true,
    "fetched": 70,
    "matched": 2,
-   "secs": 4.0
+   "secs": 4.2
   },
   "amazon": {
    "ok": true,
    "fetched": 99,
    "matched": 29,
-   "secs": 1.7
+   "secs": 1.5
   },
   "microsoft": {
    "ok": true,
    "fetched": 48,
    "matched": 18,
-   "secs": 7.0
+   "secs": 6.3
   },
   "eightfold:netflix": {
    "ok": true,
    "fetched": 6,
    "matched": 1,
-   "secs": 0.3
+   "secs": 0.4
   },
   "ashby:openai": {
    "ok": true,
@@ -59,13 +59,13 @@
    "ok": true,
    "fetched": 87,
    "matched": 0,
-   "secs": 14.6
+   "secs": 0.6
   },
   "greenhouse:airbnb": {
    "ok": true,
    "fetched": 200,
    "matched": 1,
-   "secs": 0.1
+   "secs": 0.2
   },
   "greenhouse:stripe": {
    "ok": true,
@@ -77,7 +77,7 @@
    "ok": true,
    "fetched": 1170,
    "matched": 100,
-   "secs": 12.0
+   "secs": 10.9
   },
   "greenhouse:databricks": {
    "ok": true,
@@ -89,25 +89,25 @@
    "ok": true,
    "fetched": 43,
    "matched": 11,
-   "secs": 0.3
+   "secs": 0.4
   },
   "twosigma": {
    "ok": true,
    "fetched": 17,
    "matched": 3,
-   "secs": 4.5
+   "secs": 4.3
   },
   "greenhouse:pinterest": {
    "ok": true,
    "fetched": 174,
    "matched": 5,
-   "secs": 0.2
+   "secs": 0.1
   },
   "greenhouse:lyft": {
    "ok": true,
    "fetched": 145,
    "matched": 3,
-   "secs": 0.2
+   "secs": 0.1
   },
   "greenhouse:doordashusa": {
    "ok": true,
@@ -119,19 +119,19 @@
    "ok": true,
    "fetched": 84,
    "matched": 0,
-   "secs": 0.1
+   "secs": 0.2
   },
   "greenhouse:roblox": {
    "ok": true,
    "fetched": 267,
    "matched": 1,
-   "secs": 0.2
+   "secs": 0.1
   },
   "greenhouse:figma": {
    "ok": true,
    "fetched": 139,
    "matched": 2,
-   "secs": 0.1
+   "secs": 0.2
   },
   "greenhouse:duolingo": {
    "ok": true,
@@ -149,13 +149,13 @@
    "ok": true,
    "fetched": 258,
    "matched": 5,
-   "secs": 0.1
+   "secs": 0.2
   },
   "greenhouse:reddit": {
    "ok": true,
    "fetched": 148,
    "matched": 0,
-   "secs": 0.1
+   "secs": 0.2
   },
   "greenhouse:discord": {
    "ok": true,
@@ -167,7 +167,7 @@
    "ok": true,
    "fetched": 382,
    "matched": 0,
-   "secs": 0.2
+   "secs": 0.1
   },
   "greenhouse:scaleai": {
    "ok": true,
@@ -185,7 +185,7 @@
    "ok": true,
    "fetched": 301,
    "matched": 31,
-   "secs": 0.9
+   "secs": 0.8
   },
   "bloomberg": {
    "ok": true,
@@ -233,13 +233,13 @@
    "ok": true,
    "fetched": 166,
    "matched": 3,
-   "secs": 0.2
+   "secs": 0.1
   },
   "ashby:plaid": {
    "ok": true,
    "fetched": 141,
    "matched": 0,
-   "secs": 0.1
+   "secs": 0.2
   },
   "greenhouse:andurilindustries": {
    "ok": true,
@@ -251,37 +251,37 @@
    "ok": true,
    "fetched": 120,
    "matched": 0,
-   "secs": 0.2
+   "secs": 0.1
   },
   "greenhouse:vercel": {
    "ok": true,
    "fetched": 87,
    "matched": 0,
-   "secs": 0.2
+   "secs": 0.1
   },
   "greenhouse:mercury": {
    "ok": true,
    "fetched": 75,
    "matched": 0,
-   "secs": 0.2
+   "secs": 0.1
   },
   "ashby:harvey": {
    "ok": true,
    "fetched": 384,
    "matched": 0,
-   "secs": 0.1
+   "secs": 0.2
   },
   "ashby:elevenlabs": {
    "ok": true,
    "fetched": 128,
    "matched": 0,
-   "secs": 0.2
+   "secs": 0.1
   },
   "ashby:replit": {
    "ok": true,
    "fetched": 34,
    "matched": 0,
-   "secs": 0.1
+   "secs": 0.2
   },
   "greenhouse:xai": {
    "ok": true,
@@ -305,7 +305,7 @@
    "ok": true,
    "fetched": 127,
    "matched": 0,
-   "secs": 0.2
+   "secs": 0.1
   },
   "greenhouse:waymo": {
    "ok": true,
@@ -317,31 +317,31 @@
    "ok": true,
    "fetched": 70,
    "matched": 10,
-   "secs": 9.1
+   "secs": 17.2
   },
   "workday:salesforce": {
    "ok": true,
    "fetched": 7,
    "matched": 5,
-   "secs": 0.5
+   "secs": 0.4
   },
   "workday:adobe": {
    "ok": true,
    "fetched": 21,
    "matched": 6,
-   "secs": 3.1
+   "secs": 3.2
   },
   "workday:snap": {
    "ok": true,
    "fetched": 115,
    "matched": 1,
-   "secs": 14.5
+   "secs": 18.2
   },
   "workday:capitalone": {
    "ok": true,
    "fetched": 6,
    "matched": 0,
-   "secs": 0.3
+   "secs": 16.5
   },
   "tracker:simplify": {
    "ok": true,
@@ -351,9 +351,9 @@
   },
   "tracker:vanshb03": {
    "ok": true,
-   "fetched": 1959,
-   "matched": 1440,
-   "secs": 0.1
+   "fetched": 1961,
+   "matched": 1441,
+   "secs": 0.3
   }
  }
 }
