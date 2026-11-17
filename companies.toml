@@ -290,7 +290,7 @@ ashby = "perplexity"
 name = "Anysphere"
 tier = "A"
 names = ["Anysphere", "Cursor"]
-ashby = "anysphere"
+ashby = "cursor"
 
 [[company]]
 name = "Notion"
@@ -300,7 +300,7 @@ ashby = "notion"
 [[company]]
 name = "Plaid"
 tier = "A"
-lever = "plaid"
+ashby = "plaid"
 
 [[company]]
 name = "Rippling"
@@ -357,7 +357,7 @@ greenhouse = "coreweave"
 [[company]]
 name = "Applied Intuition"
 tier = "A"
-greenhouse = "appliedintuition"
+# Greenhouse board API returns 404; covered by the trackers
 
 [[company]]
 name = "Chime"
@@ -382,4 +382,4 @@ greenhouse = "waymo"
 [[company]]
 name = "Retool"
 tier = "A"
-ashby = "retool"
+greenhouse = "retool"
