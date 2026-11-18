@@ -459,6 +459,7 @@ exact = true
 name = "Match Group"
 tier = "A"
 names = ["Match Group", "Tinder", "Hinge"]
+lever = "matchgroup"
 # exact: keeps "Hinge" from matching Hinge Health
 exact = true
 
@@ -578,26 +579,30 @@ tier = "A"
 names = ["Point72", "Cubist"]
 
 # ------------------------------------------ added Nov 18, 2026 (Tier B) --
-# Listed so their boards are checked directly and they show in the digest,
-# but no phone ping (they post a lot of roles).
+# Listed so their boards are checked directly and they show in the digest.
+# Only their data roles (promote) ping as Tier A; the rest stay digest-only.
 
 [[company]]
 name = "Verizon"
 tier = "B"
+promote = ["Data Science", "ML/AI", "Analytics/Data"]
 workday = ["verizon", "wd12", "verizon-careers"]
 
 [[company]]
 name = "New York Life"
 tier = "B"
+promote = ["Data Science", "ML/AI", "Analytics/Data"]
 names = ["New York Life", "New York Life Investments"]
 
 [[company]]
 name = "Mastercard"
 tier = "B"
+promote = ["Data Science", "ML/AI", "Analytics/Data"]
 workday = ["mastercard", "wd1", "CorporateCareers"]
 
 [[company]]
 name = "Akuna Capital"
 tier = "B"
+promote = ["Data Science", "ML/AI", "Analytics/Data"]
 names = ["Akuna Capital", "Akuna"]
 greenhouse = "akunacapital"

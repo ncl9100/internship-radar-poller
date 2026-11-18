@@ -862,6 +862,11 @@ def main():
             matched += 1
             tier = (company_cfg or {}).get("tier", "B")
             score, cat = fit_score(title, loc, tier)
+            # promote = ["Data Science", ...] bumps those roles at a lower-tier
+            # company to Tier A, so they alert while the company's other roles don't.
+            if tier not in ("S", "A") and cat in (company_cfg or {}).get("promote", []):
+                tier = "A"
+                score, cat = fit_score(title, loc, tier)
             role = {
                 "company": company, "title": title, "location": loc, "url": it["url"],
                 "tier": tier, "score": score, "category": cat, "source": label,
