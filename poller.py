@@ -19,6 +19,7 @@ import sys
 import time
 import tomllib
 import urllib.error
+import urllib.parse
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor
 from email.message import EmailMessage
@@ -628,6 +629,57 @@ def src_twosigma():
     return out
 
 
+def src_oracle(host, site, keyword="intern", pages=4):
+    """Oracle Recruiting Cloud (e.g. JPMorgan Chase): public requisition search API."""
+    out = []
+    for page in range(pages):
+        finder = (f'findReqs;siteNumber={site},keyword="{keyword}",limit=25,'
+                  f'offset={page * 25},sortBy=POSTING_DATES_DESC')
+        url = (f"https://{host}/hcmRestApi/resources/latest/recruitingCEJobRequisitions"
+               f"?onlyData=true&expand=requisitionList.secondaryLocations"
+               f"&finder={urllib.parse.quote(finder, safe='=;,')}")
+        data = http_json(url)
+        items = data.get("items") or []
+        reqs = (items[0].get("requisitionList") or []) if items else []
+        for j in reqs:
+            locs = [j.get("PrimaryLocation") or ""] + [
+                (s.get("Name") or "") for s in (j.get("secondaryLocations") or [])]
+            out.append({
+                "id": j.get("Id"), "title": j.get("Title", ""),
+                "location": "; ".join(l for l in locs if l),
+                "url": f"https://{host}/hcmUI/CandidateExperience/en/sites/{site}/job/{j.get('Id')}",
+                "posted_ts": iso_ts(j.get("PostedDate")),
+            })
+        total = (items[0].get("TotalJobsCount") or 0) if items else 0
+        if len(reqs) < 25 or (page + 1) * 25 >= total:
+            break
+        time.sleep(1)
+    return out
+
+
+def src_smartrecruiters(company, keyword="intern", pages=4):
+    """SmartRecruiters public postings API (e.g. Visa)."""
+    out = []
+    for page in range(pages):
+        data = http_json(f"https://api.smartrecruiters.com/v1/companies/{company}/postings"
+                         f"?q={keyword}&limit=100&offset={page * 100}")
+        posts = data.get("content") or []
+        for j in posts:
+            loc = j.get("location") or {}
+            where = ", ".join(x for x in (loc.get("city"), loc.get("region"), loc.get("country")) if x)
+            if loc.get("remote"):
+                where = (where + "; Remote").strip("; ")
+            out.append({
+                "id": j.get("id"), "title": j.get("name", ""), "location": where,
+                "url": f"https://jobs.smartrecruiters.com/{company}/{j.get('id')}",
+                "posted_ts": iso_ts(j.get("releasedDate")),
+            })
+        if len(posts) < 100 or (page + 1) * 100 >= (data.get("totalFound") or 0):
+            break
+        time.sleep(1)
+    return out
+
+
 def src_tracker(url):
     data = http_json(url, timeout=60)
     out = []
@@ -770,6 +822,11 @@ def build_jobs(cfg):
             jobs.append((f"ashby:{c['ashby']}", c, lambda t=c["ashby"]: src_ashby(t)))
         if c.get("workday"):
             jobs.append((f"workday:{name}", c, lambda w=c["workday"]: src_workday(*w)))
+        if c.get("oracle"):
+            jobs.append((f"oracle:{name}", c, lambda o=c["oracle"]: src_oracle(*o)))
+        if c.get("smartrecruiters"):
+            jobs.append((f"smartrecruiters:{c['smartrecruiters']}", c,
+                         lambda t=c["smartrecruiters"]: src_smartrecruiters(t)))
         if c.get("eightfold"):
             jobs.append((f"eightfold:{name}", c, lambda e=c["eightfold"]: src_eightfold(*e)))
         if c.get("amazon"):
