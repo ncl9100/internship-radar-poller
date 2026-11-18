@@ -1,60 +1,24 @@
-"""One-off check of direct job-board sources. Run by the probe workflow; prints a report."""
-import importlib.util, json, sys, time, pathlib
+"""One-off check of Workday sources: shows chosen facets and sample titles."""
+import importlib.util, json, pathlib, time
 root = pathlib.Path(__file__).resolve().parent.parent
 spec = importlib.util.spec_from_file_location("poller", root / "poller.py")
 p = importlib.util.module_from_spec(spec); spec.loader.exec_module(p)
-
-CONFIGURED = [  # sources now in companies.toml
-    ("PayPal", "wd", ("paypal", "wd1", "jobs")),
-    ("Block", "gh", "block"),
-    ("Match Group", "lever", "matchgroup"),
-    ("eBay", "wd", ("ebay", "wd5", "apply")),
-    ("Disney", "wd", ("disney", "wd5", "disneycareer")),
-    ("MongoDB", "gh", "mongodb"),
-    ("Zillow", "wd", ("zillow", "wd5", "Zillow_Group_External")),
-    ("Riot Games", "gh", "riotgames"),
-    ("IMC Trading", "gh", "imc"),
-    ("Verizon", "wd", ("verizon", "wd12", "verizon-careers")),
-    ("Mastercard", "wd", ("mastercard", "wd1", "CorporateCareers")),
-    ("Akuna Capital", "gh", "akunacapital"),
-]
-GUESSES = [  # candidate sources for companies still on trackers only
-    ("Block", "gh", "square"), ("Snowflake", "ashby", "snowflake"), ("Snowflake", "gh", "snowflake"),
-    ("Wayfair", "gh", "wayfair"), ("Wayfair", "gh", "wayfaircareers"),
-    ("Expedia Group", "wd", ("expedia", "wd108", "search")),
-    ("Intuit", "wd", ("intuit", "wd1", "Intuit")),
-    ("NBCUniversal", "wd", ("nbcuniversal", "wd5", "NBCUniversal")),
-    ("Electronic Arts", "wd", ("ea", "wd1", "EA")),
-    ("Citi", "wd", ("citi", "wd5", "2")),
-    ("New York Life", "wd", ("newyorklife", "wd1", "NYLCareers")),
-    ("American Express", "wd", ("aexp", "wd5", "AmEx")),
-    ("Visa", "wd", ("visa", "wd5", "Visa")),
-    ("Optiver", "gh", "optiver"), ("Optiver", "gh", "optiverus"),
-    ("Point72", "gh", "point72"), ("D. E. Shaw", "gh", "deshaw"),
-    ("Susquehanna International Group", "wd", ("sig", "wd1", "SIG_External")),
-    ("Tesla", "gh", "tesla"), ("Match Group", "gh", "hinge"),
-]
-
-def run(kind, arg):
-    if kind == "gh": return p.src_greenhouse(arg)
-    if kind == "lever": return p.src_lever(arg)
-    if kind == "ashby": return p.src_ashby(arg)
-    return p.src_workday(*arg, pages=3)
-
-report = []
-for group, items in (("configured", CONFIGURED), ("guess", GUESSES)):
-    for name, kind, arg in items:
-        try:
-            jobs = run(kind, arg)
-            interns = [j for j in jobs if p.INTERN.search(j.get("title", ""))]
-            passing = [j["title"] for j in jobs if p.passes_filters(j.get("title", ""), j.get("location", ""))]
-            report.append({"group": group, "company": name, "source": f"{kind}:{arg}", "ok": True,
-                           "fetched": len(jobs), "intern_titles": len(interns), "pass_filters": len(passing),
-                           "sample": passing[:3] or [j["title"] for j in interns[:2]]})
-        except Exception as e:
-            report.append({"group": group, "company": name, "source": f"{kind}:{arg}", "ok": False,
-                           "error": f"{type(e).__name__}: {e}"[:160]})
-        time.sleep(1.5 if kind == "wd" else 0.3)
-
-for r in report:
-    print(json.dumps(r))
+BOARDS = [("verizon","wd12","verizon-careers"),("disney","wd5","disneycareer"),("ebay","wd5","apply"),
+          ("ebay","wd1","apply"),("visa","wd5","Visa"),("citi","wd5","2"),("expedia","wd108","search"),
+          ("mastercard","wd1","CorporateCareers"),("zillow","wd5","Zillow_Group_External")]
+for t, wd, site in BOARDS:
+    host = f"{t}.{wd}.myworkdayjobs.com"; api = f"https://{host}/wday/cxs/{t}/{site}/jobs"
+    hdr = {"Origin": f"https://{host}", "Referer": f"https://{host}/en-US/{site}", "Accept-Language": "en-US"}
+    try:
+        raw = p.http_json(api, {"appliedFacets": {}, "limit": 20, "offset": 0, "searchText": "intern"}, hdr)
+        applied = p._wd_pick_facets(raw.get("facets"))
+        facets = [(f.get("facetParameter"), f.get("descriptor"), [v.get("descriptor") for v in (f.get("values") or [])][:8]) for f in p._wd_walk(raw.get("facets"))]
+        print(json.dumps({"board": f"{t}/{wd}/{site}", "raw_total": raw.get("total"),
+              "raw_titles": [j["title"] for j in raw.get("jobPostings", [])[:6]], "applied": applied}))
+        for f in facets: print("   facet", json.dumps(f)[:300])
+        time.sleep(2)
+        filt = p.http_json(api, {"appliedFacets": applied, "limit": 20, "offset": 0, "searchText": ""}, hdr)
+        print("   filtered_total", filt.get("total"), [j["title"] for j in filt.get("jobPostings", [])[:6]])
+    except Exception as e:
+        print(json.dumps({"board": f"{t}/{wd}/{site}", "error": str(e)[:150]}))
+    time.sleep(2)
