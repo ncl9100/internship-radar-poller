@@ -94,8 +94,7 @@ CATEGORIES = [
     ("Quant", 24, re.compile(r"quant", re.I)),
     ("SWE", 18, re.compile(
         r"software|\bswe\b|\bsde\b|developer|engineer|full.?stack|backend|back.?end|"
-        r"front.?end|platform|infrastructure|mobile|\bios\b|android|security|cloud|"
-        r"technology (summer )?(analyst|intern)|\btech intern|application development", re.I)),
+        r"front.?end|platform|infrastructure|mobile|\bios\b|android|security|cloud", re.I)),
 ]
 TIER_POINTS = {"S": 35, "A": 22, "B": 8}
 PRODUCT_BONUS = re.compile(r"product|experiment|a/b|growth|consumer|user|ads|marketplace", re.I)
@@ -111,10 +110,18 @@ def title_key(title):
     return norm(t)
 
 
-def classify(title):
+# Generic tech-program titles (e.g. Citi's "Technology Summer Analyst Intern") only
+# count at companies on the list; elsewhere they are mostly IT-helpdesk internships.
+LISTED_TECH = re.compile(
+    r"technology (summer )?(analyst|intern)|\btech intern|application development", re.I)
+
+
+def classify(title, listed=False):
     for name, pts, rx in CATEGORIES:
         if rx.search(title):
             return name, pts
+    if listed and LISTED_TECH.search(title):
+        return "SWE", 18
     return None, 0
 
 
@@ -126,7 +133,7 @@ def age_days(it):
     return int(m.group(1)) if m else None
 
 
-def passes_filters(title, location):
+def passes_filters(title, location, listed=False):
     if not INTERN.search(title):
         return False
     if BAD.search(title):
@@ -140,11 +147,11 @@ def passes_filters(title, location):
     loc = location or ""
     if loc and NON_US.search(loc) and not US_HINT.search(loc):
         return False
-    return classify(title)[0] is not None
+    return classify(title, listed)[0] is not None
 
 
-def fit_score(title, location, tier):
-    cat, pts = classify(title)
+def fit_score(title, location, tier, listed=False):
+    cat, pts = classify(title, listed)
     score = pts + TIER_POINTS.get(tier, 8)
     loc = location or ""
     if PREFERRED_LOC.search(loc):
@@ -748,9 +755,18 @@ def send_smtp(r, to):
         f"color:#fff;padding:10px 16px;border-radius:6px;text-decoration:none'>Open posting</a></p></div>",
         subtype="html")
     host = os.environ.get("SMTP_HOST", "smtp.gmail.com")
-    with smtplib.SMTP_SSL(host, 465, context=ssl.create_default_context(), timeout=30) as s:
-        s.login(user, pw)
-        s.send_message(msg)
+    for attempt in range(3):  # Gmail sometimes times out; retry before giving up
+        try:
+            with smtplib.SMTP_SSL(host, 465, context=ssl.create_default_context(), timeout=30) as s:
+                s.login(user, pw)
+                s.send_message(msg)
+            return
+        except smtplib.SMTPAuthenticationError:
+            raise  # a bad password will not fix itself
+        except (smtplib.SMTPException, OSError):
+            if attempt == 2:
+                raise
+            time.sleep(10 * (attempt + 1))
 
 
 def send_alerts(roles, max_per_run):
@@ -892,16 +908,16 @@ def main():
             company_cfg = comp or resolve(it.get("company", ""))
             company = comp["name"] if comp else it.get("company", "")
             title, loc = it.get("title", ""), it.get("location", "")
-            if not title or not it.get("url") or not passes_filters(title, loc):
+            if not title or not it.get("url") or not passes_filters(title, loc, bool(company_cfg)):
                 continue
             matched += 1
             tier = (company_cfg or {}).get("tier", "B")
-            score, cat = fit_score(title, loc, tier)
+            score, cat = fit_score(title, loc, tier, bool(company_cfg))
             # promote = ["Data Science", ...] bumps those roles at a lower-tier
             # company to Tier A, so they alert while the company's other roles don't.
             if tier not in ("S", "A") and cat in (company_cfg or {}).get("promote", []):
                 tier = "A"
-                score, cat = fit_score(title, loc, tier)
+                score, cat = fit_score(title, loc, tier, True)
             role = {
                 "company": company, "title": title, "location": loc, "url": it["url"],
                 "tier": tier, "score": score, "category": cat, "source": label,
