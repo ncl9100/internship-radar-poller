@@ -25,7 +25,7 @@ so if it is more than an hour or two old, the poller has stopped.
 
 Direct feeds (fast): Google, Amazon, Apple, Microsoft, Meta (job sitemap), Netflix, NVIDIA,
 OpenAI, Anthropic, Spotify, Airbnb, Stripe, TikTok, Databricks, Salesforce, Adobe,
-Jane Street, Two Sigma, plus most Tier A companies.
+Jane Street, Two Sigma, plus most Tier A companies (incl. Kalshi, Runway).
 Trackers only (slower, hours after posting): Uber (no public feed), Citadel (blocks bots),
 Walmart, Etsy, Shopify, and anything not listed.
 
@@ -43,3 +43,9 @@ Actions tab > Internship Radar poller > Run workflow.
 
 The first run of each source only learns what is already posted, so you
 don't get flooded with old roles. Alerts start from the second run.
+
+## Name matching
+
+Tracker company names match a company's `name`/`names` by prefix. Add `exact = true`
+to a company block when its name is a prefix of unrelated companies (e.g. Sierra vs
+Sierra Nevada Corporation); then the tracker name must match exactly.

@@ -331,8 +331,10 @@ greenhouse = "mercury"
 [[company]]
 name = "Harvey AI"
 tier = "A"
-# not plain "Harvey": too generic a prefix
+# trackers list it as plain "Harvey"; exact keeps it from matching other Harveys
+names = ["Harvey"]
 ashby = "harvey"
+exact = true
 
 [[company]]
 name = "ElevenLabs"
@@ -383,3 +385,55 @@ greenhouse = "waymo"
 name = "Retool"
 tier = "A"
 # Greenhouse board API returns 404; covered by the trackers
+
+# --------------------------------- Tier A: fast-growing AI cos (Nov 17, 2026) --
+# From the Lenny 100 / Live Data headcount-growth list. Only Kalshi and Runway
+# have verified board tokens; the rest are covered by the trackers.
+
+[[company]]
+name = "Kalshi"
+tier = "A"
+greenhouse = "kalshi"
+
+[[company]]
+name = "Runway"
+tier = "A"
+names = ["RunwayML", "Runway ML", "Runway AI"]
+greenhouse = "runwayml"
+# exact: "Runway" is also an unrelated student job platform with similar names
+exact = true
+
+[[company]]
+name = "Sierra"
+tier = "A"
+names = ["Sierra AI"]
+# exact: plain prefix would match Sierra Nevada Corporation / Sierra Space
+exact = true
+
+[[company]]
+name = "Decagon"
+tier = "A"
+names = ["Decagon AI"]
+
+[[company]]
+name = "Mistral AI"
+tier = "A"
+names = ["Mistral"]
+# most roles are Paris/London; the NON_US filter drops those
+
+[[company]]
+name = "Modal"
+tier = "A"
+names = ["Modal Labs"]
+exact = true
+
+[[company]]
+name = "Thinking Machines Lab"
+tier = "A"
+names = ["Thinking Machines"]
+
+[[company]]
+name = "Cognition"
+tier = "A"
+names = ["Cognition AI", "Cognition Labs"]
+exact = true

@@ -807,7 +807,9 @@ def make_resolver(cfg):
     def resolve(company_name):
         k = norm(company_name)
         for a, c in aliases:
-            if a and k.startswith(a):
+            # exact = true: alias must equal the tracker name (avoids e.g.
+            # "Sierra" matching "Sierra Nevada Corporation")
+            if a and (k == a if c.get("exact") else k.startswith(a)):
                 return c
         return None
     return resolve
