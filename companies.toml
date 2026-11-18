@@ -387,8 +387,8 @@ tier = "A"
 # Greenhouse board API returns 404; covered by the trackers
 
 # --------------------------------- Tier A: fast-growing AI cos (Nov 17, 2026) --
-# From the Lenny 100 / Live Data headcount-growth list. Only Kalshi and Runway
-# have verified board tokens; the rest are covered by the trackers.
+# From the Lenny 100 / Live Data headcount-growth list. Kalshi has a direct
+# Greenhouse feed; the rest are covered by the trackers.
 
 [[company]]
 name = "Kalshi"
@@ -399,7 +399,7 @@ greenhouse = "kalshi"
 name = "Runway"
 tier = "A"
 names = ["RunwayML", "Runway ML", "Runway AI"]
-greenhouse = "runwayml"
+# Greenhouse board API returns 404 (board itself is live); covered by the trackers
 # exact: "Runway" is also an unrelated student job platform with similar names
 exact = true
 

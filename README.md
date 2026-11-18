@@ -25,7 +25,7 @@ so if it is more than an hour or two old, the poller has stopped.
 
 Direct feeds (fast): Google, Amazon, Apple, Microsoft, Meta (job sitemap), Netflix, NVIDIA,
 OpenAI, Anthropic, Spotify, Airbnb, Stripe, TikTok, Databricks, Salesforce, Adobe,
-Jane Street, Two Sigma, plus most Tier A companies (incl. Kalshi, Runway).
+Jane Street, Two Sigma, plus most Tier A companies (incl. Kalshi).
 Trackers only (slower, hours after posting): Uber (no public feed), Citadel (blocks bots),
 Walmart, Etsy, Shopify, and anything not listed.
 
