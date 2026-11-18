@@ -437,3 +437,167 @@ name = "Cognition"
 tier = "A"
 names = ["Cognition AI", "Cognition Labs"]
 exact = true
+
+# ------------------------------------------ added Nov 18, 2026 (Tier A) --
+# Consumer product / data science fits not covered above.
+
+[[company]]
+name = "PayPal"
+tier = "A"
+names = ["PayPal", "Venmo"]
+workday = ["paypal", "wd1", "jobs"]
+
+[[company]]
+name = "Block"
+tier = "A"
+names = ["Block", "Block, Inc.", "Square", "Cash App"]
+greenhouse = "block"
+# exact: "Block" is a prefix of many unrelated companies
+exact = true
+
+[[company]]
+name = "Match Group"
+tier = "A"
+names = ["Match Group", "Tinder", "Hinge"]
+# exact: keeps "Hinge" from matching Hinge Health
+exact = true
+
+[[company]]
+name = "Snowflake"
+tier = "A"
+
+[[company]]
+name = "Expedia Group"
+tier = "A"
+names = ["Expedia", "Expedia Group", "Vrbo"]
+
+[[company]]
+name = "Wayfair"
+tier = "A"
+
+[[company]]
+name = "eBay"
+tier = "A"
+workday = ["ebay", "wd5", "apply"]
+
+[[company]]
+name = "Intuit"
+tier = "A"
+# exact: keeps it from matching Intuitive Surgical
+exact = true
+
+[[company]]
+name = "Disney"
+tier = "A"
+names = ["Disney", "The Walt Disney Company", "Disney Entertainment", "ESPN", "Hulu"]
+workday = ["disney", "wd5", "disneycareer"]
+
+[[company]]
+name = "Visa"
+tier = "A"
+exact = true
+
+[[company]]
+name = "American Express"
+tier = "A"
+names = ["American Express", "Amex"]
+
+[[company]]
+name = "JPMorgan Chase"
+tier = "A"
+names = ["JPMorgan Chase", "JPMorganChase", "JPMorgan", "JP Morgan", "J.P. Morgan"]
+
+[[company]]
+name = "NBCUniversal"
+tier = "A"
+names = ["NBCUniversal", "NBCU", "Peacock"]
+
+[[company]]
+name = "MongoDB"
+tier = "A"
+greenhouse = "mongodb"
+
+[[company]]
+name = "Zillow"
+tier = "A"
+names = ["Zillow", "Zillow Group"]
+workday = ["zillow", "wd5", "Zillow_Group_External"]
+
+[[company]]
+name = "Electronic Arts"
+tier = "A"
+names = ["Electronic Arts", "EA"]
+# exact: "EA" is a prefix of many unrelated names
+exact = true
+
+[[company]]
+name = "Riot Games"
+tier = "A"
+greenhouse = "riotgames"
+
+[[company]]
+name = "Tesla"
+tier = "A"
+
+[[company]]
+name = "Morgan Stanley"
+tier = "A"
+
+[[company]]
+name = "Citi"
+tier = "A"
+names = ["Citi", "Citigroup", "Citibank"]
+# exact: keeps it from matching Citizens Bank, Citizen, etc.
+exact = true
+
+[[company]]
+name = "D. E. Shaw"
+tier = "A"
+names = ["D. E. Shaw", "D.E. Shaw", "DE Shaw", "The D. E. Shaw Group"]
+
+[[company]]
+name = "Susquehanna International Group"
+tier = "A"
+names = ["Susquehanna International Group", "Susquehanna", "SIG"]
+exact = true
+
+[[company]]
+name = "Optiver"
+tier = "A"
+
+[[company]]
+name = "IMC Trading"
+tier = "A"
+names = ["IMC", "IMC Trading"]
+greenhouse = "imc"
+exact = true
+
+[[company]]
+name = "Point72"
+tier = "A"
+names = ["Point72", "Cubist"]
+
+# ------------------------------------------ added Nov 18, 2026 (Tier B) --
+# Listed so their boards are checked directly and they show in the digest,
+# but no phone ping (they post a lot of roles).
+
+[[company]]
+name = "Verizon"
+tier = "B"
+workday = ["verizon", "wd12", "verizon-careers"]
+
+[[company]]
+name = "New York Life"
+tier = "B"
+names = ["New York Life", "New York Life Investments"]
+
+[[company]]
+name = "Mastercard"
+tier = "B"
+workday = ["mastercard", "wd1", "CorporateCareers"]
+
+[[company]]
+name = "Akuna Capital"
+tier = "B"
+names = ["Akuna Capital", "Akuna"]
+greenhouse = "akunacapital"
