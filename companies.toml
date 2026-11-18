@@ -977,3 +977,266 @@ promote = ["Data Science", "ML/AI", "Analytics/Data"]
 name = "Fireworks AI"
 tier = "B"
 promote = ["Data Science", "ML/AI", "Analytics/Data"]
+
+# ------------------------- added Nov 18, 2026 (LeetCode company list, Tier A) --
+
+[[company]]
+name = "Zoox"
+tier = "A"
+lever = "zoox"
+
+[[company]]
+name = "Affirm"
+tier = "A"
+greenhouse = "affirm"
+
+[[company]]
+name = "Mixpanel"
+tier = "A"
+greenhouse = "mixpanel"
+
+[[company]]
+name = "Faire"
+tier = "A"
+greenhouse = "faire"
+exact = true
+
+[[company]]
+name = "Asana"
+tier = "A"
+greenhouse = "asana"
+exact = true
+
+[[company]]
+name = "Samsara"
+tier = "A"
+greenhouse = "samsara"
+exact = true
+
+[[company]]
+name = "Verkada"
+tier = "A"
+greenhouse = "verkada"
+
+[[company]]
+name = "Cloudflare"
+tier = "A"
+greenhouse = "cloudflare"
+
+[[company]]
+name = "CrowdStrike"
+tier = "A"
+workday = ["crowdstrike", "wd5", "crowdstrikecareers"]
+
+[[company]]
+name = "Blackstone"
+tier = "A"
+
+[[company]]
+name = "WorldQuant"
+tier = "A"
+greenhouse = "worldquant"
+
+[[company]]
+name = "Indeed"
+tier = "A"
+exact = true
+
+[[company]]
+name = "Credit Karma"
+tier = "A"
+
+[[company]]
+name = "Confluent"
+tier = "A"
+exact = true
+
+[[company]]
+name = "HubSpot"
+tier = "A"
+
+[[company]]
+name = "Toast"
+tier = "A"
+greenhouse = "toast"
+exact = true
+
+# ------------------------- added Nov 18, 2026 (LeetCode company list, Tier B) --
+
+[[company]]
+name = "AMD"
+tier = "B"
+names = ["AMD", "Advanced Micro Devices"]
+promote = ["Data Science", "ML/AI", "Analytics/Data"]
+exact = true
+
+[[company]]
+name = "Qualcomm"
+tier = "B"
+promote = ["Data Science", "ML/AI", "Analytics/Data"]
+
+[[company]]
+name = "Intel"
+tier = "B"
+names = ["Intel", "Intel Corporation"]
+promote = ["Data Science", "ML/AI", "Analytics/Data"]
+exact = true
+
+[[company]]
+name = "Cisco"
+tier = "B"
+promote = ["Data Science", "ML/AI", "Analytics/Data"]
+
+[[company]]
+name = "Autodesk"
+tier = "B"
+promote = ["Data Science", "ML/AI", "Analytics/Data"]
+
+[[company]]
+name = "Workday"
+tier = "B"
+promote = ["Data Science", "ML/AI", "Analytics/Data"]
+exact = true
+
+[[company]]
+name = "Nutanix"
+tier = "B"
+promote = ["Data Science", "ML/AI", "Analytics/Data"]
+
+[[company]]
+name = "Rivian"
+tier = "B"
+promote = ["Data Science", "ML/AI", "Analytics/Data"]
+
+[[company]]
+name = "Aurora Innovation"
+tier = "B"
+promote = ["Data Science", "ML/AI", "Analytics/Data"]
+
+[[company]]
+name = "Vanguard"
+tier = "B"
+names = ["Vanguard", "The Vanguard Group"]
+promote = ["Data Science", "ML/AI", "Analytics/Data"]
+workday = ["vanguard", "wd5", "vanguard_external"]
+exact = true
+
+[[company]]
+name = "Barclays"
+tier = "B"
+promote = ["Data Science", "ML/AI", "Analytics/Data"]
+
+[[company]]
+name = "CME Group"
+tier = "B"
+promote = ["Data Science", "ML/AI", "Analytics/Data", "Quant"]
+
+[[company]]
+name = "PEAK6"
+tier = "B"
+promote = ["Data Science", "ML/AI", "Analytics/Data", "Quant"]
+
+[[company]]
+name = "Trexquant"
+tier = "B"
+promote = ["Data Science", "ML/AI", "Analytics/Data", "Quant"]
+
+[[company]]
+name = "MSCI"
+tier = "B"
+promote = ["Data Science", "ML/AI", "Analytics/Data"]
+
+[[company]]
+name = "FactSet"
+tier = "B"
+promote = ["Data Science", "ML/AI", "Analytics/Data"]
+
+[[company]]
+name = "Thomson Reuters"
+tier = "B"
+promote = ["Data Science", "ML/AI", "Analytics/Data"]
+
+[[company]]
+name = "Twilio"
+tier = "B"
+promote = ["Data Science", "ML/AI", "Analytics/Data"]
+greenhouse = "twilio"
+
+[[company]]
+name = "Okta"
+tier = "B"
+promote = ["Data Science", "ML/AI", "Analytics/Data"]
+greenhouse = "okta"
+exact = true
+
+[[company]]
+name = "Zscaler"
+tier = "B"
+promote = ["Data Science", "ML/AI", "Analytics/Data"]
+
+[[company]]
+name = "Coursera"
+tier = "B"
+promote = ["Data Science", "ML/AI", "Analytics/Data"]
+greenhouse = "coursera"
+
+[[company]]
+name = "Opendoor"
+tier = "B"
+promote = ["Data Science", "ML/AI", "Analytics/Data"]
+
+[[company]]
+name = "Grubhub"
+tier = "B"
+promote = ["Data Science", "ML/AI", "Analytics/Data"]
+
+[[company]]
+name = "Nike"
+tier = "B"
+promote = ["Data Science", "ML/AI", "Analytics/Data"]
+exact = true
+
+[[company]]
+name = "Target"
+tier = "B"
+names = ["Target", "Target Corporation"]
+promote = ["Data Science", "ML/AI", "Analytics/Data"]
+exact = true
+
+[[company]]
+name = "Geico"
+tier = "B"
+promote = ["Data Science", "ML/AI", "Analytics/Data"]
+
+[[company]]
+name = "USAA"
+tier = "B"
+promote = ["Data Science", "ML/AI", "Analytics/Data"]
+
+[[company]]
+name = "Unity"
+tier = "B"
+names = ["Unity", "Unity Technologies"]
+promote = ["Data Science", "ML/AI", "Analytics/Data"]
+exact = true
+
+[[company]]
+name = "Activision Blizzard"
+tier = "B"
+promote = ["Data Science", "ML/AI", "Analytics/Data"]
+
+[[company]]
+name = "Dataminr"
+tier = "B"
+promote = ["Data Science", "ML/AI", "Analytics/Data"]
+
+[[company]]
+name = "Moloco"
+tier = "B"
+promote = ["Data Science", "ML/AI", "Analytics/Data"]
+greenhouse = "moloco"
+
+[[company]]
+name = "Yahoo"
+tier = "B"
+promote = ["Data Science", "ML/AI", "Analytics/Data"]
