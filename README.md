@@ -18,6 +18,7 @@ so if it is more than an hour or two old, the poller has stopped.
 - `poller.py`: the poller (Python standard library only).
 - `data/new_roles.jsonl`: every new role found, with tier, fit score, category,
   opened time and detection lag. The Claude Internship Radar reads this.
+- `data/skipped_grad.jsonl`: new roles dropped by the degree check (see below).
 - `data/health.json`: which sources work. Check this if alerts go quiet.
 - `data/snapshot.json`: current Tier S/A matches (written on manual runs and pushes).
 
@@ -43,6 +44,17 @@ Actions tab > Internship Radar poller > Run workflow.
 
 The first run of each source only learns what is already posted, so you
 don't get flooded with old roles. Alerts start from the second run.
+
+## Degree check
+
+Before a new role alerts, the poller reads the posting's required qualifications
+and notes which degree levels they name (`degrees` in the role log: B, M, P).
+A role is skipped only when it names Master's and/or PhD and never Bachelor's or
+undergrad. Mixed roles ("Bachelor's/Master's", "BS, MS or PhD") still alert, and a
+PhD listed only under preferred qualifications doesn't count. If a posting can't be
+read, the role is kept (`degrees: unknown`). Skipped roles go to
+`data/skipped_grad.jsonl`, so a wrong skip is easy to spot. Titles that are
+clearly grad-only (e.g. "PhD Research Intern") were already dropped before this.
 
 ## Name matching
 

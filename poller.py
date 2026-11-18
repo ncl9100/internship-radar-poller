@@ -50,6 +50,123 @@ BAD = re.compile(
 # undergrads (e.g. "BS/MS", "Bachelor's or Master's").
 GRAD_ONLY = re.compile(r"ph\.?\s?d|doctoral|master'?s|\bm\.?s\.?\b(?!\w)", re.I)
 UNDERGRAD_OK = re.compile(r"\bb\.?s\b|\bb\.?a\b|bachelor|undergrad", re.I)
+# ----------------------------------------------------------- degree check ---
+# Many grad-only roles don't say so in the title (Microsoft's "Research Intern - ..."
+# roles need a PhD, but only the qualifications section says it). So for each new
+# role we read the posting and look at which degree levels its requirements name.
+# A role is dropped only when it names Master's and/or PhD and never Bachelor's or
+# undergrad, so "Bachelor's/Master's" and "BS, MS or PhD" roles still come through.
+# Anything we can't read or can't classify is kept (fails open).
+
+REQ_START = re.compile(
+    r"(required|minimum|basic)\s+qualifications?|qualifications|requirements|"
+    r"eligibility|who you are|what you(?:'|’)ll need|what we(?:'|’)re looking for|"
+    r"you (?:should|must) (?:have|be)|to be considered", re.I)
+REQ_END = re.compile(
+    r"preferred\s+qualifications?|nice to have|bonus points|preferred|"
+    r"what we offer|benefits|the base pay|pay range|salary range|about (?:us|the team)|"
+    r"equal opportunity", re.I)
+# "having completed a Bachelor's" describes a past degree, not who may apply.
+PAST_BACHELORS = re.compile(
+    r"\b(?:completed|complete|hold|holds|holding|have|has|having|earned|possess|"
+    r"obtained|received|already have|with)\s+(?:an?\s+|your\s+|their\s+)?"
+    r"(?:bachelor'?s|bachelors|b\.?s\.?|b\.?a\.?|undergraduate|4-year)\b(?:\s+degree)?", re.I)
+LEVEL_B = re.compile(
+    r"bachelor|baccalaureate|undergrad|\bb\.\s?s\b|\bb\.\s?a\b|\bbs\b|\bba\b|\bb\.?sc\b|"
+    r"\bbs/|/bs\b|\bbs,|college (?:junior|senior|student)|rising (?:junior|senior)|"
+    r"(?:junior|senior)s?\s+(?:year|standing|in college|or senior)", re.I)
+LEVEL_M = re.compile(
+    r"master|\bm\.\s?s\b|\bms\b|\bm\.?sc\b|\bms/|/ms\b|\bmeng\b|\bm\.eng\b|"
+    r"graduate (?:student|degree|program|school|level)|grad student", re.I)
+LEVEL_P = re.compile(r"ph\.?\s?d|doctora(?:l|te)", re.I)
+
+
+def degree_levels(text):
+    """Return the set of degree levels ('B', 'M', 'P') a posting's requirements name."""
+    text = unescape(re.sub(r"<[^>]+>", " ", text or ""))
+    text = re.sub(r"\s+", " ", text)
+    m = REQ_START.search(text)
+    if m:
+        seg = text[m.start():m.start() + 4000]
+        end = REQ_END.search(seg, 20)
+        seg = seg[:end.start()] if end else seg
+    else:
+        seg = text
+    # keep only sentences about who can apply / what degree they're in
+    sents = [s for s in re.split(r"(?<=[.;!?•·])\s+|\s[-*]\s", seg)
+             if re.search(r"enroll|pursu|degree|student|candidate|program|"
+                          r"graduat|bachelor|master|ph\.?\s?d|doctora|undergrad", s, re.I)]
+    seg = PAST_BACHELORS.sub(" ", " ".join(sents))
+    levels = set()
+    if LEVEL_B.search(seg):
+        levels.add("B")
+    if LEVEL_M.search(seg):
+        levels.add("M")
+    if LEVEL_P.search(seg):
+        levels.add("P")
+    return levels
+
+
+def is_grad_only(levels):
+    return bool(levels & {"M", "P"}) and "B" not in levels
+
+
+def _flatten(obj, out):
+    if isinstance(obj, str):
+        out.append(obj)
+    elif isinstance(obj, dict):
+        for v in obj.values():
+            _flatten(v, out)
+    elif isinstance(obj, list):
+        for v in obj:
+            _flatten(v, out)
+    return out
+
+
+def fetch_description(label, it):
+    """Best-effort full posting text. Returns '' when nothing can be read."""
+    if it.get("desc"):
+        return it["desc"]
+    kind, _, key = label.partition(":")
+    rid = it.get("id")
+    try:
+        if kind == "greenhouse":
+            j = http_json(f"https://boards-api.greenhouse.io/v1/boards/{key}/jobs/{rid}", timeout=15)
+            return j.get("content") or ""
+        if kind == "workday" and it.get("_wd_api"):
+            j = http_json(it["_wd_api"] + str(rid), headers=it.get("_wd_hdr"), timeout=15)
+            return (j.get("jobPostingInfo") or {}).get("jobDescription") or ""
+        if kind == "eightfold" and it.get("_ef"):
+            host, domain = it["_ef"]
+            j = http_json(f"https://{host}/api/apply/v2/jobs/{rid}?domain={domain}", timeout=15)
+            return " ".join(_flatten(j, []))
+        if kind == "microsoft":
+            j = http_json("https://apply.careers.microsoft.com/api/pcsx/position_details"
+                          f"?position_id={rid}&domain=microsoft.com&hl=en",
+                          headers=dict(BROWSER_HDRS, Accept="application/json"), timeout=15)
+            txt = " ".join(_flatten(j, []))
+            if len(txt) > 300:
+                return txt
+    except Exception:
+        pass
+    # Fallback: the posting page itself (works for server-rendered pages and
+    # pages that embed JobPosting JSON-LD).
+    try:
+        return get_text(it["url"], timeout=15)
+    except Exception:
+        return ""
+
+
+def grad_check(label, company, it):
+    """(drop?, levels) for one new role."""
+    levels = degree_levels(fetch_description(label, it))
+    if not levels and norm(company) == "microsoft" and re.match(r"research intern\b", it.get("title", ""), re.I):
+        # Microsoft Research "Research Intern" roles are PhD roles; assume so if
+        # the description couldn't be read.
+        levels = {"P"}
+    return is_grad_only(levels), levels
+
+
 OFF_SEASON = re.compile(r"\b(fall|autumn|winter|spring)\b|summer\s*2026", re.I)
 NON_US = re.compile(
     r"london|united kingdom|\buk\b|dublin|ireland|toronto|vancouver|montreal|canada|"
@@ -231,6 +348,8 @@ def src_lever(company):
             "location": "; ".join(l for l in locs if l),
             "url": j.get("hostedUrl"),
             "posted_ts": (j.get("createdAt") or 0) / 1000 or None,
+            "desc": " ".join(_flatten([j.get("descriptionPlain"), j.get("lists"),
+                                       j.get("additionalPlain")], [])),
         })
     return out
 
@@ -247,6 +366,7 @@ def src_ashby(org):
             "id": j["id"], "title": j.get("title", ""),
             "location": "; ".join(l for l in locs if l),
             "url": j.get("jobUrl"), "posted_ts": iso_ts(j.get("publishedAt")),
+            "desc": j.get("descriptionPlain") or j.get("descriptionHtml") or "",
         })
     return out
 
@@ -313,6 +433,7 @@ def src_workday(tenant, wd, site, pages=10):
                 "location": j.get("locationsText", ""),
                 "url": f"https://{host}/en-US/{site}{path}",
                 "posted_ts": None, "posted_text": j.get("postedOn", ""),
+                "_wd_api": f"https://{host}/wday/cxs/{tenant}/{site}", "_wd_hdr": hdr,
             })
         if page == 0:
             total = data.get("total") or 0  # Workday only reports total on page 1
@@ -332,7 +453,7 @@ def src_eightfold(host, domain):
             "id": j["id"], "title": j.get("name", ""),
             "location": "; ".join(l for l in locs if l),
             "url": j.get("canonicalPositionUrl") or f"https://{host}/careers?pid={j['id']}",
-            "posted_ts": j.get("t_create"),
+            "posted_ts": j.get("t_create"), "_ef": (host, domain),
         })
     return out
 
@@ -356,6 +477,8 @@ def src_amazon():
                 "url": "https://www.amazon.jobs" + j.get("job_path", ""),
                 "posted_ts": None, "posted_text": f"posted {j.get('posted_date', '')}",
                 "_day_ts": ts,
+                "desc": " ".join(x for x in (j.get("basic_qualifications"),
+                                             j.get("description")) if x),
             })
     return out
 
@@ -898,7 +1021,7 @@ def main():
         wd_future = pool.submit(run_serial, serial)
         results = list(pool.map(run, parallel)) + wd_future.result()
 
-    health, new_roles, snapshot, snap_keys = {}, [], [], set()
+    health, new_roles, snapshot, snap_keys, candidates = {}, [], [], set(), []
     for label, comp, items, err, secs in sorted(results, key=lambda r: r[0].startswith("tracker:")):
         # direct sources first, so a role found on the company's own board wins
         # over the same role later appearing on a tracker
@@ -945,11 +1068,31 @@ def main():
             if age is not None and age > (3 if comp else 7):
                 continue
             if not silent:
-                new_roles.append(role)
+                candidates.append((label, company, it, role))
         health[label] = {"ok": err is None, "fetched": len(items), "matched": matched,
                          "secs": round(secs, 1), **({"error": err} if err else {})}
         if err is None:
             sources_ok.add(label)
+
+    # Degree check: read each new role's posting and drop Master's/PhD-only roles.
+    # Capped per pass so a burst of new roles can't stall the run; roles past the
+    # cap are kept unchecked.
+    cap = int(cfg.get("degree_check", {}).get("max_per_run", 40))
+    to_check = candidates[:cap]
+    with ThreadPoolExecutor(max_workers=8) as pool:
+        verdicts = list(pool.map(lambda c: grad_check(c[0], c[1], c[2]), to_check))
+    grad_skipped = []
+    for (label, company, it, role), (drop, levels) in zip(to_check, verdicts):
+        role["degrees"] = "".join(sorted(levels)) or "unknown"
+        (grad_skipped if drop else new_roles).append(role)
+    for _, _, _, role in candidates[cap:]:
+        role["degrees"] = "unchecked"
+        new_roles.append(role)
+    if grad_skipped:
+        log = DATA / "skipped_grad.jsonl"
+        lines = log.read_text().splitlines() if log.exists() else []
+        lines += [json.dumps(r) for r in grad_skipped]
+        log.write_text("\n".join(lines[-1000:]) + "\n")
 
     new_roles.sort(key=lambda r: -r["score"])
     alert_tiers = set(cfg.get("alerts", {}).get("tiers", ["S"]))
@@ -986,14 +1129,18 @@ def main():
         (DATA / "health.json").write_text(json.dumps({
             "written_at": fmt_et(NOW), "written_ts": round(NOW), "event": event,
             **({"test_alert": test_result} if test_result else {}), "new_roles": len(new_roles),
-            "alerted": len(to_alert), "alert_failures": failures,
+            "alerted": len(to_alert), "grad_only_skipped": len(grad_skipped),
+            "alert_failures": failures,
             "failing_sources": failing, "sources": health}, indent=1))
     if event in ("push", "workflow_dispatch", "local"):
         snapshot.sort(key=lambda r: -r["score"])
         (DATA / "snapshot.json").write_text(json.dumps(snapshot[:150], indent=1))
 
     print(f"{len(jobs)} sources, {len(failing)} failing, {len(new_roles)} new roles, "
-          f"{len(to_alert)} alerts, {len(failures)} alert failures")
+          f"{len(to_alert)} alerts, {len(failures)} alert failures, "
+          f"{len(grad_skipped)} grad-only skipped")
+    for r in grad_skipped[:20]:
+        print(f"  [skipped, degrees {r['degrees']}] {r['company']}: {r['title']}")
     for r in new_roles[:20]:
         print(f"  [{r['tier']} {r['score']}] {r['company']}: {r['title']} ({r['location']})")
 
