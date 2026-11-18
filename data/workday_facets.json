@@ -91,5 +91,14 @@
    "bc33aa3152ec42d4995f4791a106ed09"
   ]
  },
- "troweprice": {}
+ "troweprice": {},
+ "crowdstrike": {
+  "workerSubType": [
+   "f79adfd173da01f3129fd137e373b210"
+  ],
+  "locationCountry": [
+   "bc33aa3152ec42d4995f4791a106ed09"
+  ]
+ },
+ "vanguard": {}
 }
