@@ -607,6 +607,31 @@ tier = "A"
 names = ["Point72", "Cubist"]
 greenhouse = "point72"
 
+# ---------------------------------- added Nov 18, 2026 (InternDock list) --
+
+[[company]]
+name = "Bank of America"
+tier = "A"
+# no direct source: campus roles aren't on its public Workday board
+exact = true
+
+[[company]]
+name = "BlackRock"
+tier = "A"
+# no direct source: campus roles aren't on its public Workday board
+
+[[company]]
+name = "The Trade Desk"
+tier = "A"
+names = ["The Trade Desk", "Trade Desk"]
+greenhouse = "thetradedesk"
+
+[[company]]
+name = "Five Rings"
+tier = "A"
+names = ["Five Rings", "Five Rings Capital", "Five Rings LLC"]
+greenhouse = "fiveringsllc"
+
 # ------------------------------------------ added Nov 18, 2026 (Tier B) --
 # Listed so their boards are checked directly and they show in the digest.
 # Only their data roles (promote) ping as Tier A; the rest stay digest-only.
@@ -635,3 +660,35 @@ tier = "B"
 promote = ["Data Science", "ML/AI", "Analytics/Data"]
 names = ["Akuna Capital", "Akuna"]
 greenhouse = "akunacapital"
+
+[[company]]
+name = "Tower Research Capital"
+tier = "B"
+names = ["Tower Research Capital", "Tower Research"]
+promote = ["Data Science", "ML/AI", "Analytics/Data", "Quant"]
+greenhouse = "towerresearchcapital"
+
+[[company]]
+name = "AQR Capital Management"
+tier = "B"
+names = ["AQR Capital Management", "AQR"]
+promote = ["Data Science", "ML/AI", "Analytics/Data", "Quant"]
+greenhouse = "aqr"
+exact = true
+
+[[company]]
+name = "Fidelity Investments"
+tier = "B"
+promote = ["Data Science", "ML/AI", "Analytics/Data"]
+workday = ["fmr", "wd1", "FidelityCareers"]
+
+[[company]]
+name = "Wells Fargo"
+tier = "B"
+promote = ["Data Science", "ML/AI", "Analytics/Data"]
+
+[[company]]
+name = "Old Mission"
+tier = "B"
+names = ["Old Mission", "Old Mission Capital"]
+promote = ["Data Science", "ML/AI", "Analytics/Data", "Quant"]
