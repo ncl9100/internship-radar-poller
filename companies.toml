@@ -466,11 +466,13 @@ exact = true
 [[company]]
 name = "Snowflake"
 tier = "A"
+ashby = "snowflake"
 
 [[company]]
 name = "Expedia Group"
 tier = "A"
 names = ["Expedia", "Expedia Group", "Vrbo"]
+workday = ["expedia", "wd108", "search"]
 
 [[company]]
 name = "Wayfair"
@@ -491,7 +493,7 @@ exact = true
 name = "Disney"
 tier = "A"
 names = ["Disney", "The Walt Disney Company", "Disney Entertainment", "ESPN", "Hulu"]
-workday = ["disney", "wd5", "disneycareer"]
+# no direct source: Disney's Workday board only lists a handful of non-intern roles
 
 [[company]]
 name = "Visa"
@@ -548,6 +550,7 @@ tier = "A"
 name = "Citi"
 tier = "A"
 names = ["Citi", "Citigroup", "Citibank"]
+workday = ["citi", "wd5", "2"]
 # exact: keeps it from matching Citizens Bank, Citizen, etc.
 exact = true
 
@@ -565,6 +568,7 @@ exact = true
 [[company]]
 name = "Optiver"
 tier = "A"
+greenhouse = "optiverus"
 
 [[company]]
 name = "IMC Trading"
@@ -577,6 +581,7 @@ exact = true
 name = "Point72"
 tier = "A"
 names = ["Point72", "Cubist"]
+greenhouse = "point72"
 
 # ------------------------------------------ added Nov 18, 2026 (Tier B) --
 # Listed so their boards are checked directly and they show in the digest.
@@ -586,7 +591,7 @@ names = ["Point72", "Cubist"]
 name = "Verizon"
 tier = "B"
 promote = ["Data Science", "ML/AI", "Analytics/Data"]
-workday = ["verizon", "wd12", "verizon-careers"]
+# no direct source: its Workday board has no intern filter and 1,000+ retail roles
 
 [[company]]
 name = "New York Life"
