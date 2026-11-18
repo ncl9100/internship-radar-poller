@@ -28,5 +28,38 @@
   "workerSubType": [
    "a12c70bf789e10572aab83c4780919ad"
   ]
+ },
+ "paypal": {
+  "workerSubType": [
+   "faedd7c80dd5102a18625dcc9dead481"
+  ]
+ },
+ "expedia": {
+  "workerSubType": [
+   "c553432013ba103b0b56537ed4c71d12"
+  ]
+ },
+ "ebay": {
+  "Location_Country": [
+   "bc33aa3152ec42d4995f4791a106ed09"
+  ],
+  "workerSubType": [
+   "faedd7c80dd5102a18625dcc9dead481"
+  ]
+ },
+ "zillow": {
+  "workerSubType": [
+   "156fb9a2f01c10bed80e178a5482955b"
+  ]
+ },
+ "citi": {
+  "workerSubType": [
+   "e32326e1708d01c9aa33257249019bdd"
+  ]
+ },
+ "mastercard": {
+  "workerSubType": [
+   "cfba33fac07f49c9b6d3d53336c6a291"
+  ]
  }
 }
