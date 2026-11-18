@@ -629,31 +629,34 @@ def src_twosigma():
     return out
 
 
-def src_oracle(host, site, keyword="intern", pages=4):
-    """Oracle Recruiting Cloud (e.g. JPMorgan Chase): public requisition search API."""
-    out = []
-    for page in range(pages):
-        finder = (f'findReqs;siteNumber={site},keyword="{keyword}",limit=25,'
-                  f'offset={page * 25},sortBy=POSTING_DATES_DESC')
-        url = (f"https://{host}/hcmRestApi/resources/latest/recruitingCEJobRequisitions"
-               f"?onlyData=true&expand=requisitionList.secondaryLocations"
-               f"&finder={urllib.parse.quote(finder, safe='=;,')}")
-        data = http_json(url)
-        items = data.get("items") or []
-        reqs = (items[0].get("requisitionList") or []) if items else []
-        for j in reqs:
-            locs = [j.get("PrimaryLocation") or ""] + [
-                (s.get("Name") or "") for s in (j.get("secondaryLocations") or [])]
-            out.append({
-                "id": j.get("Id"), "title": j.get("Title", ""),
-                "location": "; ".join(l for l in locs if l),
-                "url": f"https://{host}/hcmUI/CandidateExperience/en/sites/{site}/job/{j.get('Id')}",
-                "posted_ts": iso_ts(j.get("PostedDate")),
-            })
-        total = (items[0].get("TotalJobsCount") or 0) if items else 0
-        if len(reqs) < 25 or (page + 1) * 25 >= total:
-            break
-        time.sleep(1)
+def src_oracle(host, site, keywords=("summer internship", "summer analyst", "intern"), pages=2):
+    """Oracle Recruiting Cloud (e.g. JPMorgan Chase): public requisition search API.
+    Its keyword search is loose ("intern" also hits "internal"), so it searches a few
+    phrases sorted by relevance and lets passes_filters() sort out the rest."""
+    out, seen = [], set()
+    for kw in keywords:
+        for page in range(pages):
+            finder = (f"findReqs;siteNumber={site},keyword=%22{urllib.parse.quote(kw)}%22,"
+                      f"limit=25,offset={page * 25},sortBy=RELEVANCY")
+            data = http_json(f"https://{host}/hcmRestApi/resources/latest/recruitingCEJobRequisitions"
+                             f"?onlyData=true&expand=requisitionList.secondaryLocations&finder={finder}")
+            items = data.get("items") or []
+            reqs = (items[0].get("requisitionList") or []) if items else []
+            for j in reqs:
+                if j.get("Id") in seen:
+                    continue
+                seen.add(j.get("Id"))
+                locs = [j.get("PrimaryLocation") or ""] + [
+                    (x.get("Name") or "") for x in (j.get("secondaryLocations") or [])]
+                out.append({
+                    "id": j.get("Id"), "title": j.get("Title", ""),
+                    "location": "; ".join(l for l in locs if l),
+                    "url": f"https://{host}/hcmUI/CandidateExperience/en/sites/{site}/job/{j.get('Id')}",
+                    "posted_ts": iso_ts(j.get("PostedDate")),
+                })
+            if len(reqs) < 25:
+                break
+            time.sleep(1)
     return out
 
 
