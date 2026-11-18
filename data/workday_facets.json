@@ -61,5 +61,11 @@
   "workerSubType": [
    "cfba33fac07f49c9b6d3d53336c6a291"
   ]
+ },
+ "micron": {
+  "workerSubType": [
+   "bff7a31dbdd3016722f3aeb41a01cf81",
+   "bff7a31dbdd301cd53c8aeb41a01ce81"
+  ]
  }
 }
