@@ -90,11 +90,12 @@ CATEGORIES = [
         r"\bnlp\b|computer vision|\bllm|genai|generative", re.I)),
     ("Analytics/Data", 28, re.compile(
         r"data analy|business analy|analytics|data engineer|business intelligence|"
-        r"\bbi\b|data platform", re.I)),
+        r"\bbi\b|data platform|data solutions|data architect|\bdata intern", re.I)),
     ("Quant", 24, re.compile(r"quant", re.I)),
     ("SWE", 18, re.compile(
         r"software|\bswe\b|\bsde\b|developer|engineer|full.?stack|backend|back.?end|"
-        r"front.?end|platform|infrastructure|mobile|\bios\b|android|security|cloud", re.I)),
+        r"front.?end|platform|infrastructure|mobile|\bios\b|android|security|cloud|"
+        r"technology (summer )?(analyst|intern)|\btech intern|application development", re.I)),
 ]
 TIER_POINTS = {"S": 35, "A": 22, "B": 8}
 PRODUCT_BONUS = re.compile(r"product|experiment|a/b|growth|consumer|user|ads|marketplace", re.I)
@@ -921,10 +922,11 @@ def main():
                 continue
             state["keys"][key] = NOW
             state["titles"][tkey] = NOW
-            # A config or filter change can expose old roles on a company board;
-            # only treat a direct-source role as new if it was posted recently.
-            age = age_days(it) if comp else None
-            if age is not None and age > 3:
+            # A config or filter change can expose old roles; only treat a role as
+            # new if it was posted recently (trackers get a longer window, since
+            # they can add a role a few days after the company posts it).
+            age = age_days(it)
+            if age is not None and age > (3 if comp else 7):
                 continue
             if not silent:
                 new_roles.append(role)

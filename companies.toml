@@ -36,13 +36,18 @@ google = true
 [[company]]
 name = "Meta"
 tier = "S"
-names = ["Meta", "Facebook", "Instagram", "WhatsApp"]
+names = ["Meta", "Meta Platforms", "Facebook", "Instagram", "WhatsApp"]
 meta = true
+# exact: "Meta" is a prefix of Metasys, Metalenz, Metamorphic, ...
+exact = true
 
 [[company]]
 name = "Apple"
 tier = "S"
+names = ["Apple", "Apple Inc."]
 apple = true
+# exact: keeps it from matching Apple Bank
+exact = true
 
 [[company]]
 name = "Amazon"
@@ -156,8 +161,10 @@ greenhouse = "instacart"
 [[company]]
 name = "Snap"
 tier = "A"
-names = ["Snap", "Snapchat"]
+names = ["Snap", "Snap Inc.", "Snapchat"]
 workday = ["snapchat", "wd1", "snap"]
+# exact: keeps it from matching Snap Finance
+exact = true
 
 [[company]]
 name = "Roblox"
@@ -208,6 +215,7 @@ greenhouse = "scaleai"
 name = "Ramp"
 tier = "A"
 ashby = "ramp"
+exact = true
 
 [[company]]
 name = "Palantir"
@@ -274,10 +282,12 @@ greenhouse = "brex"
 name = "Schonfeld"
 tier = "A"
 names = ["Schonfeld", "Schonfeld Strategic Advisors"]
+greenhouse = "schonfeld"
 
 [[company]]
 name = "Micron Technology"
 tier = "A"
+workday = ["micron", "wd1", "External"]
 
 # ------------------------------------------------- Tier A: hot startups --
 
@@ -296,7 +306,9 @@ ashby = "cursor"
 [[company]]
 name = "Notion"
 tier = "A"
+names = ["Notion", "Notion Labs"]
 ashby = "notion"
+exact = true
 
 [[company]]
 name = "Plaid"
@@ -351,6 +363,8 @@ ashby = "replit"
 name = "xAI"
 tier = "A"
 greenhouse = "xai"
+# exact: keeps it from matching Xaira Therapeutics
+exact = true
 
 [[company]]
 name = "CoreWeave"
@@ -365,7 +379,9 @@ tier = "A"
 [[company]]
 name = "Chime"
 tier = "A"
+names = ["Chime", "Chime Financial"]
 greenhouse = "chime"
+exact = true
 
 [[company]]
 name = "Cohere AI"
@@ -408,6 +424,7 @@ exact = true
 name = "Sierra"
 tier = "A"
 names = ["Sierra AI"]
+ashby = "sierra"
 # exact: plain prefix would match Sierra Nevada Corporation / Sierra Space
 exact = true
 
@@ -415,6 +432,7 @@ exact = true
 name = "Decagon"
 tier = "A"
 names = ["Decagon AI"]
+ashby = "decagon"
 
 [[company]]
 name = "Mistral AI"
@@ -426,17 +444,20 @@ names = ["Mistral"]
 name = "Modal"
 tier = "A"
 names = ["Modal Labs"]
+ashby = "modal"
 exact = true
 
 [[company]]
 name = "Thinking Machines Lab"
 tier = "A"
 names = ["Thinking Machines"]
+ashby = "thinkingmachines"
 
 [[company]]
 name = "Cognition"
 tier = "A"
 names = ["Cognition AI", "Cognition Labs"]
+ashby = "cognition"
 exact = true
 
 # ------------------------------------------ added Nov 18, 2026 (Tier A) --
@@ -565,7 +586,7 @@ names = ["D. E. Shaw", "D.E. Shaw", "DE Shaw", "The D. E. Shaw Group"]
 [[company]]
 name = "Susquehanna International Group"
 tier = "A"
-names = ["Susquehanna International Group", "Susquehanna", "SIG"]
+names = ["Susquehanna International Group", "Susquehanna International Group (SIG)", "Susquehanna", "SIG"]
 exact = true
 
 [[company]]
