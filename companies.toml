@@ -12,6 +12,7 @@
 #   greenhouse = "<board token>"      lever = "<company>"      ashby = "<org>"
 #   workday    = ["<tenant>", "<wdN>", "<Site>"]
 #   eightfold  = ["<host>", "<domain>"]
+#   oracle     = ["<host>", "<site number>"]   (Oracle Recruiting Cloud)
 #   amazon / google / tiktok / janestreet / apple / ibm / bloomberg / microsoft / meta / twosigma = true (custom feeds)
 #
 # To add a company: copy a block, set name + tier, add names and a direct source if it has one.
@@ -498,6 +499,7 @@ names = ["Disney", "The Walt Disney Company", "Disney Entertainment", "ESPN", "H
 [[company]]
 name = "Visa"
 tier = "A"
+# no direct source: its SmartRecruiters board hides postings from the public API
 exact = true
 
 [[company]]
@@ -509,6 +511,7 @@ names = ["American Express", "Amex"]
 name = "JPMorgan Chase"
 tier = "A"
 names = ["JPMorgan Chase", "JPMorganChase", "JPMorgan", "JP Morgan", "J.P. Morgan"]
+oracle = ["jpmc.fa.oraclecloud.com", "CX_1001"]
 
 [[company]]
 name = "NBCUniversal"

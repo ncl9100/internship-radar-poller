@@ -660,29 +660,6 @@ def src_oracle(host, site, keywords=("summer internship", "summer analyst", "int
     return out
 
 
-def src_smartrecruiters(company, keyword="intern", pages=4):
-    """SmartRecruiters public postings API (e.g. Visa)."""
-    out = []
-    for page in range(pages):
-        data = http_json(f"https://api.smartrecruiters.com/v1/companies/{company}/postings"
-                         f"?q={keyword}&limit=100&offset={page * 100}")
-        posts = data.get("content") or []
-        for j in posts:
-            loc = j.get("location") or {}
-            where = ", ".join(x for x in (loc.get("city"), loc.get("region"), loc.get("country")) if x)
-            if loc.get("remote"):
-                where = (where + "; Remote").strip("; ")
-            out.append({
-                "id": j.get("id"), "title": j.get("name", ""), "location": where,
-                "url": f"https://jobs.smartrecruiters.com/{company}/{j.get('id')}",
-                "posted_ts": iso_ts(j.get("releasedDate")),
-            })
-        if len(posts) < 100 or (page + 1) * 100 >= (data.get("totalFound") or 0):
-            break
-        time.sleep(1)
-    return out
-
-
 def src_tracker(url):
     data = http_json(url, timeout=60)
     out = []
@@ -827,9 +804,6 @@ def build_jobs(cfg):
             jobs.append((f"workday:{name}", c, lambda w=c["workday"]: src_workday(*w)))
         if c.get("oracle"):
             jobs.append((f"oracle:{name}", c, lambda o=c["oracle"]: src_oracle(*o)))
-        if c.get("smartrecruiters"):
-            jobs.append((f"smartrecruiters:{c['smartrecruiters']}", c,
-                         lambda t=c["smartrecruiters"]: src_smartrecruiters(t)))
         if c.get("eightfold"):
             jobs.append((f"eightfold:{name}", c, lambda e=c["eightfold"]: src_eightfold(*e)))
         if c.get("amazon"):
