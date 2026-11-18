@@ -692,3 +692,288 @@ name = "Old Mission"
 tier = "B"
 names = ["Old Mission", "Old Mission Capital"]
 promote = ["Data Science", "ML/AI", "Analytics/Data", "Quant"]
+
+# ------------------------- added Nov 18, 2026 (overnight research, Tier A) --
+
+[[company]]
+name = "Nextdoor"
+tier = "A"
+greenhouse = "nextdoorcampus"
+
+[[company]]
+name = "Whatnot"
+tier = "A"
+names = ["Whatnot", "WhatNot"]
+
+[[company]]
+name = "Klaviyo"
+tier = "A"
+greenhouse = "klaviyocampus"
+
+[[company]]
+name = "SoFi"
+tier = "A"
+names = ["SoFi", "SoFi Technologies", "SoFi University"]
+greenhouse = "sofi"
+exact = true
+
+[[company]]
+name = "Upstart"
+tier = "A"
+greenhouse = "upstart"
+
+[[company]]
+name = "Warner Bros. Discovery"
+tier = "A"
+names = ["Warner Bros. Discovery", "Warner Bros.", "Warner Bros", "WBD"]
+workday = ["warnerbros", "wd5", "global"]
+
+[[company]]
+name = "Paramount"
+tier = "A"
+names = ["Paramount", "Paramount Global", "Paramount Skydance"]
+
+[[company]]
+name = "FanDuel"
+tier = "A"
+greenhouse = "fanduel"
+
+[[company]]
+name = "Oscar Health"
+tier = "A"
+greenhouse = "oscar"
+
+[[company]]
+name = "Flatiron Health"
+tier = "A"
+greenhouse = "flatironhealth"
+
+[[company]]
+name = "Peloton"
+tier = "A"
+names = ["Peloton", "Peloton Interactive"]
+greenhouse = "peloton"
+
+[[company]]
+name = "Squarespace"
+tier = "A"
+greenhouse = "squarespace"
+
+[[company]]
+name = "Grammarly"
+tier = "A"
+
+[[company]]
+name = "Quora"
+tier = "A"
+ashby = "quora"
+
+[[company]]
+name = "Roku"
+tier = "A"
+greenhouse = "roku"
+
+[[company]]
+name = "Yelp"
+tier = "A"
+
+[[company]]
+name = "Hex"
+tier = "A"
+names = ["Hex", "Hex Technologies"]
+exact = true
+
+[[company]]
+name = "Amplitude"
+tier = "A"
+exact = true
+
+[[company]]
+name = "Coupang"
+tier = "A"
+greenhouse = "coupang"
+
+[[company]]
+name = "Nuro"
+tier = "A"
+greenhouse = "nuro"
+exact = true
+
+[[company]]
+name = "Wealthfront"
+tier = "A"
+lever = "wealthfront"
+
+[[company]]
+name = "Oracle"
+tier = "A"
+oracle = ["eeho.fa.us2.oraclecloud.com", "CX_45001"]
+
+[[company]]
+name = "Palo Alto Networks"
+tier = "A"
+
+[[company]]
+name = "Atlassian"
+tier = "A"
+
+[[company]]
+name = "Boston Consulting Group"
+tier = "A"
+names = ["Boston Consulting Group", "BCG", "BCG X"]
+exact = true
+
+[[company]]
+name = "Jump Trading"
+tier = "A"
+names = ["Jump Trading", "Jump Trading Group"]
+greenhouse = "jumptrading"
+
+[[company]]
+name = "DRW"
+tier = "A"
+greenhouse = "drweng"
+exact = true
+
+[[company]]
+name = "Millennium"
+tier = "A"
+names = ["Millennium", "Millennium Management"]
+exact = true
+
+[[company]]
+name = "Bridgewater Associates"
+tier = "A"
+names = ["Bridgewater Associates", "Bridgewater"]
+greenhouse = "bridgewater89"
+exact = true
+
+[[company]]
+name = "OpenEvidence"
+tier = "A"
+ashby = "openevidence"
+
+[[company]]
+name = "Mercor"
+tier = "A"
+ashby = "mercor"
+exact = true
+
+[[company]]
+name = "Physical Intelligence"
+tier = "A"
+ashby = "physicalintelligence"
+
+# ------------------------- added Nov 18, 2026 (overnight research, Tier B) --
+# Data roles at these alert as Tier A; everything else is digest-only.
+
+[[company]]
+name = "DraftKings"
+tier = "B"
+promote = ["Data Science", "ML/AI", "Analytics/Data"]
+
+[[company]]
+name = "Zocdoc"
+tier = "B"
+promote = ["Data Science", "ML/AI", "Analytics/Data"]
+greenhouse = "zocdoc"
+
+[[company]]
+name = "Chewy"
+tier = "B"
+promote = ["Data Science", "ML/AI", "Analytics/Data"]
+
+[[company]]
+name = "HelloFresh"
+tier = "B"
+names = ["HelloFresh", "Hello Fresh"]
+promote = ["Data Science", "ML/AI", "Analytics/Data"]
+greenhouse = "hellofresh"
+
+[[company]]
+name = "Tatari"
+tier = "B"
+promote = ["Data Science", "ML/AI", "Analytics/Data"]
+greenhouse = "tatari"
+
+[[company]]
+name = "MoneyLion"
+tier = "B"
+promote = ["Data Science", "ML/AI", "Analytics/Data"]
+
+[[company]]
+name = "Ro"
+tier = "B"
+names = ["Ro"]
+promote = ["Data Science", "ML/AI", "Analytics/Data"]
+lever = "ro"
+exact = true
+
+[[company]]
+name = "PIMCO"
+tier = "B"
+promote = ["Data Science", "ML/AI", "Analytics/Data", "Quant"]
+workday = ["pimco", "wd1", "pimco-careers"]
+
+[[company]]
+name = "Prudential Financial"
+tier = "B"
+names = ["Prudential Financial", "Prudential", "PGIM"]
+promote = ["Data Science", "ML/AI", "Analytics/Data"]
+workday = ["pru", "wd5", "Careers"]
+
+[[company]]
+name = "T. Rowe Price"
+tier = "B"
+promote = ["Data Science", "ML/AI", "Analytics/Data"]
+workday = ["troweprice", "wd5", "TRowePrice"]
+
+[[company]]
+name = "Comcast"
+tier = "B"
+promote = ["Data Science", "ML/AI", "Analytics/Data"]
+
+[[company]]
+name = "Live Nation"
+tier = "B"
+names = ["Live Nation", "Live Nation Entertainment"]
+promote = ["Data Science", "ML/AI", "Analytics/Data"]
+
+[[company]]
+name = "Ripple"
+tier = "B"
+promote = ["Data Science", "ML/AI", "Analytics/Data"]
+greenhouse = "ripple"
+exact = true
+
+[[company]]
+name = "Chicago Trading Company"
+tier = "B"
+promote = ["Data Science", "ML/AI", "Analytics/Data", "Quant"]
+greenhouse = "chicagotrading"
+
+[[company]]
+name = "Virtu Financial"
+tier = "B"
+names = ["Virtu Financial", "Virtu"]
+promote = ["Data Science", "ML/AI", "Analytics/Data", "Quant"]
+greenhouse = "virtu"
+exact = true
+
+[[company]]
+name = "Squarepoint Capital"
+tier = "B"
+names = ["Squarepoint Capital", "Squarepoint"]
+promote = ["Data Science", "ML/AI", "Analytics/Data", "Quant"]
+greenhouse = "squarepointcapital"
+
+[[company]]
+name = "BNY"
+tier = "B"
+names = ["BNY", "BNY Mellon"]
+promote = ["Data Science", "ML/AI", "Analytics/Data"]
+
+[[company]]
+name = "Fireworks AI"
+tier = "B"
+promote = ["Data Science", "ML/AI", "Analytics/Data"]
