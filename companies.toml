@@ -1240,3 +1240,90 @@ greenhouse = "moloco"
 name = "Yahoo"
 tier = "B"
 promote = ["Data Science", "ML/AI", "Analytics/Data"]
+
+# ---------------------------------------- Added Nov 19, 2026 (from CDS list) --
+
+[[company]]
+name = "The New York Times"
+tier = "A"
+names = ["The New York Times", "New York Times", "NYT"]
+greenhouse = "thenewyorktimes"
+
+[[company]]
+name = "McKinsey QuantumBlack"
+tier = "A"
+names = ["McKinsey", "McKinsey & Company", "QuantumBlack"]
+
+[[company]]
+name = "Moody's"
+tier = "A"
+names = ["Moody's", "Moodys", "Moody's Analytics"]
+
+[[company]]
+name = "S&P Global"
+tier = "A"
+names = ["S&P Global", "S&P"]
+workday = ["spgi", "wd5", "SPGI_Careers"]
+
+[[company]]
+name = "Verisk"
+tier = "A"
+names = ["Verisk"]
+
+[[company]]
+name = "Swiss Re"
+tier = "A"
+names = ["Swiss Re"]
+
+[[company]]
+name = "Munich Re"
+tier = "A"
+names = ["Munich Re", "Munich Reinsurance"]
+
+[[company]]
+name = "Guardian Life"
+tier = "A"
+names = ["Guardian Life", "Guardian Life Insurance"]
+
+[[company]]
+name = "Northwestern Mutual"
+tier = "A"
+names = ["Northwestern Mutual"]
+
+[[company]]
+name = "Tripadvisor"
+tier = "B"
+promote = ["Data Science", "ML/AI", "Analytics/Data"]
+names = ["Tripadvisor", "TripAdvisor"]
+greenhouse = "tripadvisor"
+
+[[company]]
+name = "Qualtrics"
+tier = "B"
+promote = ["Data Science", "ML/AI", "Analytics/Data"]
+names = ["Qualtrics"]
+greenhouse = "qualtrics"
+
+[[company]]
+name = "Nielsen"
+tier = "B"
+promote = ["Data Science", "ML/AI", "Analytics/Data"]
+names = ["Nielsen", "NielsenIQ"]
+
+[[company]]
+name = "T-Mobile"
+tier = "B"
+promote = ["Data Science", "ML/AI", "Analytics/Data"]
+names = ["T-Mobile", "TMobile"]
+
+[[company]]
+name = "Samsung Research America"
+tier = "B"
+promote = ["Data Science", "ML/AI", "Analytics/Data"]
+names = ["Samsung Research America", "Samsung Research"]
+
+[[company]]
+name = "PDT Partners"
+tier = "B"
+promote = ["Data Science", "ML/AI", "Analytics/Data"]
+names = ["PDT Partners"]
