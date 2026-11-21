@@ -1,8 +1,8 @@
 {
- "written_at": "Nov 21, 02:36 AM ET",
- "written_ts": 1795246586,
- "event": "workflow_dispatch",
- "new_roles": 1,
+ "written_at": "Nov 21, 03:36 AM ET",
+ "written_ts": 1795250186,
+ "event": "schedule",
+ "new_roles": 0,
  "alerted": 0,
  "grad_only_skipped": 0,
  "alert_failures": [],
@@ -30,37 +30,37 @@
    "ok": true,
    "fetched": 17,
    "matched": 1,
-   "secs": 0.3
+   "secs": 0.4
   },
   "meta": {
    "ok": true,
-   "fetched": 135,
+   "fetched": 136,
    "matched": 3,
-   "secs": 1.2
+   "secs": 1.0
   },
   "apple": {
    "ok": true,
    "fetched": 65,
    "matched": 4,
-   "secs": 3.8
+   "secs": 4.0
   },
   "amazon": {
    "ok": true,
    "fetched": 101,
    "matched": 29,
-   "secs": 1.7
+   "secs": 2.3
   },
   "microsoft": {
    "ok": true,
    "fetched": 50,
    "matched": 25,
-   "secs": 8.2
+   "secs": 6.5
   },
   "eightfold:netflix": {
    "ok": true,
    "fetched": 6,
    "matched": 1,
-   "secs": 0.4
+   "secs": 0.3
   },
   "ashby:openai": {
    "ok": true,
@@ -72,13 +72,13 @@
    "ok": true,
    "fetched": 633,
    "matched": 0,
-   "secs": 0.2
+   "secs": 0.3
   },
   "lever:spotify": {
    "ok": true,
    "fetched": 91,
    "matched": 0,
-   "secs": 0.2
+   "secs": 3.7
   },
   "greenhouse:airbnb": {
    "ok": true,
@@ -96,7 +96,7 @@
    "ok": true,
    "fetched": 1161,
    "matched": 100,
-   "secs": 15.2
+   "secs": 11.1
   },
   "greenhouse:databricks": {
    "ok": true,
@@ -108,13 +108,13 @@
    "ok": true,
    "fetched": 42,
    "matched": 11,
-   "secs": 0.7
+   "secs": 0.8
   },
   "twosigma": {
    "ok": true,
    "fetched": 18,
    "matched": 3,
-   "secs": 5.1
+   "secs": 6.2
   },
   "greenhouse:pinterest": {
    "ok": true,
@@ -126,7 +126,7 @@
    "ok": true,
    "fetched": 148,
    "matched": 3,
-   "secs": 0.1
+   "secs": 0.2
   },
   "greenhouse:doordashusa": {
    "ok": true,
@@ -138,7 +138,7 @@
    "ok": true,
    "fetched": 92,
    "matched": 0,
-   "secs": 0.2
+   "secs": 0.1
   },
   "greenhouse:roblox": {
    "ok": true,
@@ -186,7 +186,7 @@
    "ok": true,
    "fetched": 382,
    "matched": 0,
-   "secs": 0.2
+   "secs": 0.1
   },
   "greenhouse:scaleai": {
    "ok": true,
@@ -204,7 +204,7 @@
    "ok": true,
    "fetched": 308,
    "matched": 31,
-   "secs": 1.0
+   "secs": 12.7
   },
   "bloomberg": {
    "ok": true,
@@ -216,13 +216,13 @@
    "ok": true,
    "fetched": 100,
    "matched": 47,
-   "secs": 0.4
+   "secs": 0.6
   },
   "greenhouse:wehrtyou": {
    "ok": true,
    "fetched": 86,
    "matched": 2,
-   "secs": 0.1
+   "secs": 0.2
   },
   "greenhouse:dropbox": {
    "ok": true,
@@ -276,7 +276,7 @@
    "ok": true,
    "fetched": 129,
    "matched": 0,
-   "secs": 0.2
+   "secs": 0.1
   },
   "greenhouse:vercel": {
    "ok": true,
@@ -360,7 +360,7 @@
    "ok": true,
    "fetched": 52,
    "matched": 1,
-   "secs": 0.1
+   "secs": 0.0
   },
   "ashby:thinkingmachines": {
    "ok": true,
@@ -384,7 +384,7 @@
    "ok": true,
    "fetched": 72,
    "matched": 5,
-   "secs": 0.2
+   "secs": 0.3
   },
   "ashby:snowflake": {
    "ok": true,
@@ -396,37 +396,37 @@
    "ok": true,
    "fetched": 89,
    "matched": 2,
-   "secs": 10.5
+   "secs": 10.3
   },
   "greenhouse:mongodb": {
    "ok": true,
    "fetched": 417,
    "matched": 2,
-   "secs": 0.3
+   "secs": 0.2
   },
   "greenhouse:riotgames": {
    "ok": true,
    "fetched": 202,
    "matched": 2,
-   "secs": 0.3
+   "secs": 0.1
   },
   "greenhouse:optiverus": {
    "ok": true,
    "fetched": 149,
    "matched": 0,
-   "secs": 0.3
+   "secs": 0.1
   },
   "greenhouse:imc": {
    "ok": true,
    "fetched": 151,
    "matched": 6,
-   "secs": 0.2
+   "secs": 0.1
   },
   "greenhouse:point72": {
    "ok": true,
    "fetched": 202,
    "matched": 9,
-   "secs": 0.2
+   "secs": 0.1
   },
   "greenhouse:thetradedesk": {
    "ok": true,
@@ -486,7 +486,7 @@
    "ok": true,
    "fetched": 105,
    "matched": 0,
-   "secs": 0.2
+   "secs": 0.1
   },
   "greenhouse:oscar": {
    "ok": true,
@@ -522,13 +522,13 @@
    "ok": true,
    "fetched": 94,
    "matched": 1,
-   "secs": 0.2
+   "secs": 0.1
   },
   "greenhouse:coupang": {
    "ok": true,
    "fetched": 677,
    "matched": 0,
-   "secs": 0.2
+   "secs": 0.1
   },
   "greenhouse:nuro": {
    "ok": true,
@@ -540,13 +540,13 @@
    "ok": true,
    "fetched": 20,
    "matched": 0,
-   "secs": 0.2
+   "secs": 0.4
   },
   "oracle:oracle": {
    "ok": true,
    "fetched": 51,
    "matched": 0,
-   "secs": 5.4
+   "secs": 5.2
   },
   "greenhouse:jumptrading": {
    "ok": true,
@@ -582,7 +582,7 @@
    "ok": true,
    "fetched": 45,
    "matched": 0,
-   "secs": 0.1
+   "secs": 0.0
   },
   "greenhouse:zocdoc": {
    "ok": true,
@@ -636,7 +636,7 @@
    "ok": true,
    "fetched": 244,
    "matched": 6,
-   "secs": 0.2
+   "secs": 0.9
   },
   "greenhouse:affirm": {
    "ok": true,
@@ -702,7 +702,7 @@
    "ok": true,
    "fetched": 372,
    "matched": 0,
-   "secs": 0.1
+   "secs": 0.2
   },
   "greenhouse:coursera": {
    "ok": true,
@@ -738,7 +738,7 @@
    "ok": false,
    "fetched": 0,
    "matched": 0,
-   "secs": 0.4,
+   "secs": 0.3,
    "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
   },
   "workday:salesforce": {
@@ -758,20 +758,20 @@
    "ok": false,
    "fetched": 0,
    "matched": 0,
-   "secs": 0.4,
+   "secs": 0.3,
    "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
   },
   "workday:capitalone": {
    "ok": true,
    "fetched": 5,
    "matched": 0,
-   "secs": 0.2
+   "secs": 0.3
   },
   "workday:microntechnology": {
    "ok": false,
    "fetched": 0,
    "matched": 0,
-   "secs": 0.4,
+   "secs": 0.3,
    "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
   },
   "workday:paypal": {
@@ -785,7 +785,7 @@
    "ok": true,
    "fetched": 4,
    "matched": 0,
-   "secs": 0.4
+   "secs": 0.3
   },
   "workday:ebay": {
    "ok": false,
@@ -805,7 +805,7 @@
    "ok": false,
    "fetched": 0,
    "matched": 0,
-   "secs": 0.2,
+   "secs": 0.3,
    "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
   },
   "workday:mastercard": {
@@ -826,7 +826,7 @@
    "ok": false,
    "fetched": 0,
    "matched": 0,
-   "secs": 0.3,
+   "secs": 0.2,
    "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
   },
   "workday:pimco": {
@@ -854,7 +854,7 @@
    "ok": false,
    "fetched": 0,
    "matched": 0,
-   "secs": 0.2,
+   "secs": 0.3,
    "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
   },
   "workday:vanguard": {
@@ -868,13 +868,13 @@
    "ok": false,
    "fetched": 0,
    "matched": 0,
-   "secs": 0.3,
+   "secs": 0.2,
    "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
   },
   "tracker:simplify": {
    "ok": true,
-   "fetched": 1806,
-   "matched": 1046,
+   "fetched": 1805,
+   "matched": 1045,
    "secs": 0.2
   },
   "tracker:vanshb03": {
