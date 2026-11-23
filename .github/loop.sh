@@ -20,7 +20,7 @@ while :; do
   # Only the first pass counts as a manual/push run (writes snapshot + health).
   if [ "$pass" -gt 0 ]; then export GITHUB_EVENT_NAME=schedule; fi
   echo "::group::pass $pass at $(TZ=America/New_York date '+%b %d %I:%M %p ET')"
-  timeout 300 python3 poller.py || echo "! poller exited with $?"
+  timeout 540 python3 poller.py || echo "! poller exited with $?"
   echo "::endgroup::"
   [ -f .test-alert ] && git rm -q .test-alert
   git add -A data

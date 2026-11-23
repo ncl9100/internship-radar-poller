@@ -11,6 +11,7 @@ State lives in data/ and is committed back to the repo by the workflow.
 """
 import datetime as dt
 import json
+import threading
 import os
 import re
 import smtplib
@@ -398,19 +399,31 @@ def _wd_pick_facets(facets):
     return applied
 
 
+_WD_LOCK = threading.Lock()
+
+
+def _wd_facets_update(tenant, applied):
+    """Workday runs in several lanes at once, so facet cache writes are locked."""
+    with _WD_LOCK:
+        cache = load_json(WD_FACETS, {})
+        if applied is None:
+            cache.pop(tenant, None)
+        else:
+            cache[tenant] = applied
+        WD_FACETS.write_text(json.dumps(cache, indent=1))
+
+
 def src_workday(tenant, wd, site, pages=10):
     host = f"{tenant}.{wd}.myworkdayjobs.com"
     api = f"https://{host}/wday/cxs/{tenant}/{site}/jobs"
     hdr = {"Origin": f"https://{host}", "Referer": f"https://{host}/en-US/{site}",
            "Accept-Language": "en-US"}
-    cache = load_json(WD_FACETS, {})
-    applied = cache.get(tenant)
+    applied = load_json(WD_FACETS, {}).get(tenant)
     if applied is None:
         first = http_json(api, {"appliedFacets": {}, "limit": 20, "offset": 0,
                                 "searchText": "intern"}, hdr)
         applied = _wd_pick_facets(first.get("facets"))
-        cache[tenant] = applied
-        WD_FACETS.write_text(json.dumps(cache, indent=1))
+        _wd_facets_update(tenant, applied)
         time.sleep(2)
     # With an Intern job-type filter we don't need the keyword (it matches loosely).
     has_intern = any(k in applied for k in ("workerSubType", "jobType", "Job_Type"))
@@ -422,8 +435,7 @@ def src_workday(tenant, wd, site, pages=10):
                                    "offset": page * 20, "searchText": search}, hdr)
         except urllib.error.HTTPError as e:
             if page == 0 and e.code in (400, 422) and applied:
-                cache.pop(tenant, None)  # facet ids changed; relearn next run
-                WD_FACETS.write_text(json.dumps(cache, indent=1))
+                _wd_facets_update(tenant, None)  # facet ids changed; relearn next run
             raise
         posts = data.get("jobPostings", [])
         for j in posts:
@@ -1015,11 +1027,18 @@ def main():
             out.append(run(j))
         return out
 
+    # Workday tenants are fetched politely (one at a time with a pause), but in
+    # one single line they took ~280s and, with a rate-limited tenant retrying,
+    # pushed whole passes past loop.sh's time limit, so nothing got saved.
+    # Three lanes keep each lane gentle while cutting the total time to ~1/3.
     serial = [j for j in jobs if j[0].startswith("workday:")]
+    lanes = [serial[i::3] for i in range(3)]
     parallel = [j for j in jobs if not j[0].startswith("workday:")]
     with ThreadPoolExecutor(max_workers=16) as pool:
-        wd_future = pool.submit(run_serial, serial)
-        results = list(pool.map(run, parallel)) + wd_future.result()
+        wd_futures = [pool.submit(run_serial, lane) for lane in lanes if lane]
+        results = list(pool.map(run, parallel))
+        for f in wd_futures:
+            results += f.result()
 
     health, new_roles, snapshot, snap_keys, candidates = {}, [], [], set(), []
     for label, comp, items, err, secs in sorted(results, key=lambda r: r[0].startswith("tracker:")):
