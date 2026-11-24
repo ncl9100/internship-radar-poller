@@ -1,12 +1,14 @@
 {
- "written_at": "Nov 23, 11:21 PM ET",
- "written_ts": 1795494092,
- "event": "schedule",
+ "written_at": "Nov 24, 12:03 AM ET",
+ "written_ts": 1795496607,
+ "event": "workflow_dispatch",
  "new_roles": 0,
  "alerted": 0,
  "grad_only_skipped": 0,
  "alert_failures": [],
- "failing_sources": [],
+ "failing_sources": [
+  "greenhouse:andurilindustries"
+ ],
  "sources": {
   "google": {
    "ok": true,
@@ -16,27 +18,27 @@
   },
   "meta": {
    "ok": true,
-   "fetched": 150,
+   "fetched": 151,
    "matched": 2,
-   "secs": 0.7
+   "secs": 0.8
   },
   "apple": {
    "ok": true,
    "fetched": 62,
    "matched": 4,
-   "secs": 4.9
+   "secs": 4.2
   },
   "amazon": {
    "ok": true,
    "fetched": 103,
    "matched": 30,
-   "secs": 1.7
+   "secs": 2.1
   },
   "microsoft": {
    "ok": true,
    "fetched": 50,
    "matched": 25,
-   "secs": 8.2
+   "secs": 8.0
   },
   "eightfold:netflix": {
    "ok": true,
@@ -54,7 +56,7 @@
    "ok": true,
    "fetched": 630,
    "matched": 0,
-   "secs": 0.2
+   "secs": 0.3
   },
   "lever:spotify": {
    "ok": true,
@@ -72,31 +74,31 @@
    "ok": true,
    "fetched": 771,
    "matched": 2,
-   "secs": 0.2
+   "secs": 0.3
   },
   "tiktok": {
    "ok": true,
    "fetched": 1165,
    "matched": 101,
-   "secs": 13.0
+   "secs": 13.9
   },
   "greenhouse:databricks": {
    "ok": true,
    "fetched": 884,
    "matched": 2,
-   "secs": 0.2
+   "secs": 0.3
   },
   "janestreet": {
    "ok": true,
    "fetched": 42,
    "matched": 11,
-   "secs": 0.2
+   "secs": 0.3
   },
   "twosigma": {
    "ok": true,
    "fetched": 18,
    "matched": 3,
-   "secs": 4.6
+   "secs": 4.9
   },
   "greenhouse:pinterest": {
    "ok": true,
@@ -108,13 +110,13 @@
    "ok": true,
    "fetched": 144,
    "matched": 3,
-   "secs": 0.1
+   "secs": 0.2
   },
   "greenhouse:doordashusa": {
    "ok": true,
    "fetched": 406,
    "matched": 2,
-   "secs": 0.1
+   "secs": 0.3
   },
   "greenhouse:instacart": {
    "ok": true,
@@ -126,7 +128,7 @@
    "ok": true,
    "fetched": 256,
    "matched": 0,
-   "secs": 0.1
+   "secs": 0.2
   },
   "greenhouse:figma": {
    "ok": true,
@@ -144,13 +146,13 @@
    "ok": true,
    "fetched": 159,
    "matched": 0,
-   "secs": 0.1
+   "secs": 0.2
   },
   "greenhouse:coinbase": {
    "ok": true,
    "fetched": 249,
    "matched": 5,
-   "secs": 0.1
+   "secs": 0.2
   },
   "greenhouse:reddit": {
    "ok": true,
@@ -168,11 +170,11 @@
    "ok": true,
    "fetched": 383,
    "matched": 0,
-   "secs": 0.1
+   "secs": 0.2
   },
   "greenhouse:scaleai": {
    "ok": true,
-   "fetched": 160,
+   "fetched": 159,
    "matched": 2,
    "secs": 0.1
   },
@@ -186,13 +188,13 @@
    "ok": true,
    "fetched": 306,
    "matched": 29,
-   "secs": 0.9
+   "secs": 0.8
   },
   "bloomberg": {
    "ok": true,
    "fetched": 12,
    "matched": 0,
-   "secs": 2.6
+   "secs": 1.6
   },
   "ibm": {
    "ok": true,
@@ -210,7 +212,7 @@
    "ok": true,
    "fetched": 54,
    "matched": 0,
-   "secs": 0.0
+   "secs": 0.1
   },
   "greenhouse:brex": {
    "ok": true,
@@ -228,31 +230,32 @@
    "ok": true,
    "fetched": 151,
    "matched": 0,
-   "secs": 0.0
+   "secs": 0.1
   },
   "ashby:cursor": {
    "ok": true,
    "fetched": 87,
    "matched": 0,
-   "secs": 0.0
+   "secs": 0.1
   },
   "ashby:notion": {
    "ok": true,
    "fetched": 172,
    "matched": 3,
-   "secs": 0.0
+   "secs": 0.1
   },
   "ashby:plaid": {
    "ok": true,
-   "fetched": 145,
+   "fetched": 144,
    "matched": 0,
    "secs": 0.1
   },
   "greenhouse:andurilindustries": {
-   "ok": true,
-   "fetched": 2605,
-   "matched": 19,
-   "secs": 0.1
+   "ok": false,
+   "fetched": 0,
+   "matched": 0,
+   "secs": 121.3,
+   "error": "TimeoutError: The read operation timed out"
   },
   "greenhouse:gleanwork": {
    "ok": true,
@@ -264,7 +267,7 @@
    "ok": true,
    "fetched": 85,
    "matched": 0,
-   "secs": 0.0
+   "secs": 0.2
   },
   "greenhouse:mercury": {
    "ok": true,
@@ -288,7 +291,7 @@
    "ok": true,
    "fetched": 38,
    "matched": 0,
-   "secs": 0.0
+   "secs": 0.1
   },
   "greenhouse:xai": {
    "ok": true,
@@ -300,7 +303,7 @@
    "ok": true,
    "fetched": 321,
    "matched": 0,
-   "secs": 0.1
+   "secs": 0.2
   },
   "greenhouse:chime": {
    "ok": true,
@@ -342,7 +345,7 @@
    "ok": true,
    "fetched": 52,
    "matched": 1,
-   "secs": 0.0
+   "secs": 0.1
   },
   "ashby:thinkingmachines": {
    "ok": true,
@@ -354,7 +357,7 @@
    "ok": true,
    "fetched": 110,
    "matched": 0,
-   "secs": 0.0
+   "secs": 0.1
   },
   "greenhouse:block": {
    "ok": true,
@@ -366,37 +369,37 @@
    "ok": true,
    "fetched": 73,
    "matched": 5,
-   "secs": 0.8
+   "secs": 4.9
   },
   "ashby:snowflake": {
    "ok": true,
    "fetched": 373,
    "matched": 0,
-   "secs": 0.0
+   "secs": 0.1
   },
   "oracle:jpmorganchase": {
    "ok": true,
-   "fetched": 93,
+   "fetched": 91,
    "matched": 2,
-   "secs": 10.3
+   "secs": 10.9
   },
   "greenhouse:mongodb": {
    "ok": true,
    "fetched": 421,
    "matched": 2,
-   "secs": 0.1
+   "secs": 0.2
   },
   "greenhouse:riotgames": {
    "ok": true,
-   "fetched": 199,
+   "fetched": 200,
    "matched": 2,
-   "secs": 0.1
+   "secs": 0.2
   },
   "greenhouse:optiverus": {
    "ok": true,
    "fetched": 147,
    "matched": 0,
-   "secs": 0.1
+   "secs": 0.2
   },
   "greenhouse:imc": {
    "ok": true,
@@ -408,7 +411,7 @@
    "ok": true,
    "fetched": 201,
    "matched": 9,
-   "secs": 0.1
+   "secs": 0.2
   },
   "greenhouse:thetradedesk": {
    "ok": true,
@@ -432,7 +435,7 @@
    "ok": true,
    "fetched": 93,
    "matched": 2,
-   "secs": 0.1
+   "secs": 0.2
   },
   "greenhouse:aqr": {
    "ok": true,
@@ -456,7 +459,7 @@
    "ok": true,
    "fetched": 54,
    "matched": 0,
-   "secs": 0.0
+   "secs": 0.1
   },
   "greenhouse:upstart": {
    "ok": true,
@@ -468,25 +471,25 @@
    "ok": true,
    "fetched": 106,
    "matched": 0,
-   "secs": 0.1
+   "secs": 0.2
   },
   "greenhouse:oscar": {
    "ok": true,
    "fetched": 178,
    "matched": 1,
-   "secs": 0.1
+   "secs": 0.2
   },
   "greenhouse:flatironhealth": {
    "ok": true,
    "fetched": 22,
    "matched": 0,
-   "secs": 0.0
+   "secs": 0.2
   },
   "greenhouse:peloton": {
    "ok": true,
    "fetched": 44,
    "matched": 0,
-   "secs": 0.0
+   "secs": 0.1
   },
   "greenhouse:squarespace": {
    "ok": true,
@@ -516,19 +519,19 @@
    "ok": true,
    "fetched": 108,
    "matched": 1,
-   "secs": 0.1
+   "secs": 0.2
   },
   "lever:wealthfront": {
    "ok": true,
    "fetched": 20,
    "matched": 0,
-   "secs": 0.7
+   "secs": 1.3
   },
   "oracle:oracle": {
    "ok": true,
    "fetched": 51,
    "matched": 0,
-   "secs": 5.7
+   "secs": 5.6
   },
   "greenhouse:jumptrading": {
    "ok": true,
@@ -552,19 +555,19 @@
    "ok": true,
    "fetched": 7,
    "matched": 0,
-   "secs": 0.0
+   "secs": 0.1
   },
   "ashby:mercor": {
    "ok": true,
    "fetched": 109,
    "matched": 4,
-   "secs": 0.0
+   "secs": 0.1
   },
   "ashby:physicalintelligence": {
    "ok": true,
    "fetched": 45,
    "matched": 0,
-   "secs": 0.0
+   "secs": 0.1
   },
   "greenhouse:zocdoc": {
    "ok": true,
@@ -582,13 +585,13 @@
    "ok": true,
    "fetched": 33,
    "matched": 0,
-   "secs": 0.0
+   "secs": 0.1
   },
   "lever:ro": {
    "ok": true,
    "fetched": 55,
    "matched": 0,
-   "secs": 0.8
+   "secs": 20.1
   },
   "greenhouse:ripple": {
    "ok": true,
@@ -618,13 +621,13 @@
    "ok": true,
    "fetched": 243,
    "matched": 5,
-   "secs": 5.7
+   "secs": 0.9
   },
   "greenhouse:affirm": {
    "ok": true,
    "fetched": 221,
    "matched": 2,
-   "secs": 0.0
+   "secs": 0.1
   },
   "greenhouse:mixpanel": {
    "ok": true,
@@ -642,13 +645,13 @@
    "ok": true,
    "fetched": 109,
    "matched": 0,
-   "secs": 0.1
+   "secs": 0.2
   },
   "greenhouse:samsara": {
    "ok": true,
    "fetched": 287,
    "matched": 1,
-   "secs": 0.1
+   "secs": 1.2
   },
   "greenhouse:verkada": {
    "ok": true,
@@ -666,11 +669,11 @@
    "ok": true,
    "fetched": 79,
    "matched": 0,
-   "secs": 0.1
+   "secs": 0.2
   },
   "greenhouse:toast": {
    "ok": true,
-   "fetched": 312,
+   "fetched": 311,
    "matched": 0,
    "secs": 0.1
   },
@@ -720,13 +723,13 @@
    "ok": true,
    "fetched": 71,
    "matched": 11,
-   "secs": 8.9
+   "secs": 9.0
   },
   "workday:snap": {
    "ok": true,
    "fetched": 107,
    "matched": 1,
-   "secs": 13.8
+   "secs": 13.9
   },
   "workday:paypal": {
    "ok": true,
@@ -744,37 +747,37 @@
    "ok": true,
    "fetched": 200,
    "matched": 0,
-   "secs": 26.8
+   "secs": 27.1
   },
   "workday:prudentialfinancial": {
    "ok": true,
    "fetched": 77,
    "matched": 0,
-   "secs": 8.5
+   "secs": 8.8
   },
   "workday:vanguard": {
    "ok": true,
-   "fetched": 170,
+   "fetched": 169,
    "matched": 9,
-   "secs": 23.8
+   "secs": 23.9
   },
   "workday:salesforce": {
    "ok": true,
    "fetched": 12,
    "matched": 5,
-   "secs": 0.5
+   "secs": 0.7
   },
   "workday:capitalone": {
    "ok": true,
    "fetched": 6,
    "matched": 1,
-   "secs": 0.3
+   "secs": 0.4
   },
   "workday:expediagroup": {
    "ok": true,
    "fetched": 4,
    "matched": 0,
-   "secs": 0.3
+   "secs": 0.4
   },
   "workday:citi": {
    "ok": true,
@@ -784,33 +787,33 @@
   },
   "workday:warnerbrosdiscovery": {
    "ok": true,
-   "fetched": 3,
-   "matched": 1,
-   "secs": 0.7
+   "fetched": 0,
+   "matched": 0,
+   "secs": 0.8
   },
   "workday:troweprice": {
    "ok": true,
    "fetched": 71,
    "matched": 0,
-   "secs": 9.5
+   "secs": 9.8
   },
   "workday:spglobal": {
    "ok": true,
    "fetched": 137,
    "matched": 1,
-   "secs": 16.6
+   "secs": 16.4
   },
   "workday:adobe": {
    "ok": true,
    "fetched": 23,
    "matched": 6,
-   "secs": 3.1
+   "secs": 3.2
   },
   "workday:microntechnology": {
    "ok": true,
    "fetched": 150,
    "matched": 34,
-   "secs": 17.2
+   "secs": 17.0
   },
   "workday:ebay": {
    "ok": true,
@@ -828,7 +831,7 @@
    "ok": true,
    "fetched": 99,
    "matched": 1,
-   "secs": 10.8
+   "secs": 11.3
   },
   "workday:crowdstrike": {
    "ok": true,
@@ -840,13 +843,13 @@
    "ok": true,
    "fetched": 1785,
    "matched": 1041,
-   "secs": 0.2
+   "secs": 0.3
   },
   "tracker:vanshb03": {
    "ok": true,
    "fetched": 2021,
    "matched": 1524,
-   "secs": 0.2
+   "secs": 0.1
   }
  }
 }
