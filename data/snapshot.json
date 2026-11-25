@@ -9,7 +9,7 @@
   "category": "Data Science",
   "source": "tiktok",
   "posted_ts": null,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "time not listed"
  },
  {
@@ -22,9 +22,9 @@
   "category": "Data Science",
   "source": "tracker:simplify",
   "posted_ts": 1785893052,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Aug 04, 09:24 PM ET",
-  "lag_min": 161973
+  "lag_min": 162296
  },
  {
   "company": "Meta",
@@ -36,9 +36,9 @@
   "category": "Data Science",
   "source": "tracker:simplify",
   "posted_ts": 1791325529,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Oct 06, 06:25 PM ET",
-  "lag_min": 71432
+  "lag_min": 71754
  },
  {
   "company": "TikTok",
@@ -50,9 +50,9 @@
   "category": "ML/AI",
   "source": "tracker:simplify",
   "posted_ts": 1785835212,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Aug 04, 05:20 AM ET",
-  "lag_min": 162937
+  "lag_min": 163260
  },
  {
   "company": "TikTok",
@@ -64,7 +64,7 @@
   "category": "Data Science",
   "source": "tiktok",
   "posted_ts": null,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "time not listed"
  },
  {
@@ -77,9 +77,9 @@
   "category": "Data Science",
   "source": "greenhouse:databricks",
   "posted_ts": 1692308494.0,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Aug 17, 05:41 PM ET",
-  "lag_min": 1721716
+  "lag_min": 1722038
  },
  {
   "company": "TikTok",
@@ -91,9 +91,9 @@
   "category": "Data Science",
   "source": "tracker:simplify",
   "posted_ts": 1785835210,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Aug 04, 05:20 AM ET",
-  "lag_min": 162937
+  "lag_min": 163260
  },
  {
   "company": "TikTok",
@@ -105,9 +105,9 @@
   "category": "Data Science",
   "source": "tracker:simplify",
   "posted_ts": 1785835211,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Aug 04, 05:20 AM ET",
-  "lag_min": 162937
+  "lag_min": 163260
  },
  {
   "company": "TikTok",
@@ -119,9 +119,9 @@
   "category": "Data Science",
   "source": "tracker:simplify",
   "posted_ts": 1785921474,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Aug 05, 05:17 AM ET",
-  "lag_min": 161500
+  "lag_min": 161822
  },
  {
   "company": "Citadel",
@@ -133,9 +133,9 @@
   "category": "Data Science",
   "source": "tracker:simplify",
   "posted_ts": 1786401263,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Aug 10, 06:34 PM ET",
-  "lag_min": 153503
+  "lag_min": 153825
  },
  {
   "company": "TikTok",
@@ -147,9 +147,9 @@
   "category": "Data Science",
   "source": "tracker:vanshb03",
   "posted_ts": 1793525855,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Nov 01, 04:37 AM ET",
-  "lag_min": 34760
+  "lag_min": 35082
  },
  {
   "company": "TikTok",
@@ -161,9 +161,9 @@
   "category": "Data Science",
   "source": "tracker:vanshb03",
   "posted_ts": 1793525855,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Nov 01, 04:37 AM ET",
-  "lag_min": 34760
+  "lag_min": 35082
  },
  {
   "company": "TikTok",
@@ -175,9 +175,9 @@
   "category": "Data Science",
   "source": "tracker:vanshb03",
   "posted_ts": 1793525855,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Nov 01, 04:37 AM ET",
-  "lag_min": 34760
+  "lag_min": 35082
  },
  {
   "company": "Amazon",
@@ -189,7 +189,7 @@
   "category": "ML/AI",
   "source": "amazon",
   "posted_ts": null,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "posted September 30, 2026"
  },
  {
@@ -202,7 +202,7 @@
   "category": "ML/AI",
   "source": "tiktok",
   "posted_ts": null,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "time not listed"
  },
  {
@@ -215,7 +215,7 @@
   "category": "ML/AI",
   "source": "tiktok",
   "posted_ts": null,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "time not listed"
  },
  {
@@ -228,86 +228,8 @@
   "category": "ML/AI",
   "source": "tiktok",
   "posted_ts": null,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "time not listed"
- },
- {
-  "company": "NVIDIA",
-  "title": "AI and Quant DevTech Engineering Intern \u2013 Summer 2027",
-  "location": "US, CA, Santa Clara",
-  "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/AI-and-Quant-DevTech-Engineering-Intern---Summer-2027_JR2030517",
-  "tier": "S",
-  "score": 82,
-  "category": "ML/AI",
-  "source": "workday:nvidia",
-  "posted_ts": null,
-  "detected_ts": 1795611447.9883254,
-  "opened": "Posted Yesterday"
- },
- {
-  "company": "NVIDIA",
-  "title": "Developer Technology Intern, AI - Summer 2027",
-  "location": "US, CA, Santa Clara",
-  "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Developer-Technology-Intern--AI---Summer-2027_JR2030178",
-  "tier": "S",
-  "score": 82,
-  "category": "ML/AI",
-  "source": "workday:nvidia",
-  "posted_ts": null,
-  "detected_ts": 1795611447.9883254,
-  "opened": "Posted Yesterday"
- },
- {
-  "company": "NVIDIA",
-  "title": "Finance AI Engineering Intern - Summer 2027",
-  "location": "US, CA, Santa Clara",
-  "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Finance-AI-Engineering-Intern---Summer-2027_JR2029131",
-  "tier": "S",
-  "score": 82,
-  "category": "ML/AI",
-  "source": "workday:nvidia",
-  "posted_ts": null,
-  "detected_ts": 1795611447.9883254,
-  "opened": "Posted 6 Days Ago"
- },
- {
-  "company": "NVIDIA",
-  "title": "Applied Research Scientist Intern, Agentic Biology - Summer 2027",
-  "location": "US, CA, Santa Clara",
-  "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Applied-Research-Scientist-Intern--Agentic-Biology---Summer-2027_JR2029307",
-  "tier": "S",
-  "score": 82,
-  "category": "ML/AI",
-  "source": "workday:nvidia",
-  "posted_ts": null,
-  "detected_ts": 1795611447.9883254,
-  "opened": "Posted 6 Days Ago"
- },
- {
-  "company": "NVIDIA",
-  "title": "Deep Learning Scientist Intern, LLM, Multimodal and Agentic AI - Summer 2027",
-  "location": "US, CA, Santa Clara",
-  "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Deep-Learning-Scientist-Intern--LLM--Multimodal-and-Agentic-AI---Summer-2027_JR2027548",
-  "tier": "S",
-  "score": 82,
-  "category": "ML/AI",
-  "source": "workday:nvidia",
-  "posted_ts": null,
-  "detected_ts": 1795611447.9883254,
-  "opened": "Posted 6 Days Ago"
- },
- {
-  "company": "NVIDIA",
-  "title": "VLSI CAD Timing Intern, Applied AI - Summer 2027",
-  "location": "US, CA, Santa Clara",
-  "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/VLSI-CAD-Timing-Intern--Applied-AI---Summer-2027_JR2026799",
-  "tier": "S",
-  "score": 82,
-  "category": "ML/AI",
-  "source": "workday:nvidia",
-  "posted_ts": null,
-  "detected_ts": 1795611447.9883254,
-  "opened": "Posted 6 Days Ago"
  },
  {
   "company": "Salesforce",
@@ -319,7 +241,7 @@
   "category": "ML/AI",
   "source": "workday:salesforce",
   "posted_ts": null,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Posted 30+ Days Ago"
  },
  {
@@ -332,9 +254,9 @@
   "category": "ML/AI",
   "source": "tracker:simplify",
   "posted_ts": 1785824410,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Aug 04, 02:20 AM ET",
-  "lag_min": 163117
+  "lag_min": 163440
  },
  {
   "company": "TikTok",
@@ -346,9 +268,9 @@
   "category": "ML/AI",
   "source": "tracker:simplify",
   "posted_ts": 1785835211,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Aug 04, 05:20 AM ET",
-  "lag_min": 162937
+  "lag_min": 163260
  },
  {
   "company": "TikTok",
@@ -360,9 +282,9 @@
   "category": "ML/AI",
   "source": "tracker:simplify",
   "posted_ts": 1785835207,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Aug 04, 05:20 AM ET",
-  "lag_min": 162937
+  "lag_min": 163260
  },
  {
   "company": "TikTok",
@@ -374,9 +296,9 @@
   "category": "ML/AI",
   "source": "tracker:simplify",
   "posted_ts": 1785835209,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Aug 04, 05:20 AM ET",
-  "lag_min": 162937
+  "lag_min": 163260
  },
  {
   "company": "TikTok",
@@ -388,9 +310,9 @@
   "category": "ML/AI",
   "source": "tracker:simplify",
   "posted_ts": 1785835208,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Aug 04, 05:20 AM ET",
-  "lag_min": 162937
+  "lag_min": 163260
  },
  {
   "company": "TikTok",
@@ -402,9 +324,9 @@
   "category": "ML/AI",
   "source": "tracker:simplify",
   "posted_ts": 1785979104,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Aug 05, 09:18 PM ET",
-  "lag_min": 160539
+  "lag_min": 160861
  },
  {
   "company": "TikTok",
@@ -416,9 +338,9 @@
   "category": "ML/AI",
   "source": "tracker:simplify",
   "posted_ts": 1785824409,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Aug 04, 02:20 AM ET",
-  "lag_min": 163117
+  "lag_min": 163440
  },
  {
   "company": "TikTok",
@@ -430,9 +352,9 @@
   "category": "ML/AI",
   "source": "tracker:simplify",
   "posted_ts": 1791450861,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Oct 08, 05:14 AM ET",
-  "lag_min": 69343
+  "lag_min": 69665
  },
  {
   "company": "ByteDance",
@@ -444,9 +366,9 @@
   "category": "ML/AI",
   "source": "tracker:vanshb03",
   "posted_ts": 1786024264,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Aug 06, 09:51 AM ET",
-  "lag_min": 159786
+  "lag_min": 160109
  },
  {
   "company": "ByteDance",
@@ -458,9 +380,9 @@
   "category": "ML/AI",
   "source": "tracker:vanshb03",
   "posted_ts": 1793519707,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Nov 01, 02:55 AM ET",
-  "lag_min": 34862
+  "lag_min": 35185
  },
  {
   "company": "ByteDance",
@@ -472,9 +394,9 @@
   "category": "ML/AI",
   "source": "tracker:vanshb03",
   "posted_ts": 1793519707,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Nov 01, 02:55 AM ET",
-  "lag_min": 34862
+  "lag_min": 35185
  },
  {
   "company": "TikTok",
@@ -486,9 +408,9 @@
   "category": "ML/AI",
   "source": "tracker:vanshb03",
   "posted_ts": 1793525855,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Nov 01, 04:37 AM ET",
-  "lag_min": 34760
+  "lag_min": 35082
  },
  {
   "company": "Microsoft",
@@ -500,9 +422,9 @@
   "category": "Data Science",
   "source": "microsoft",
   "posted_ts": 1791935104,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Oct 13, 07:45 PM ET",
-  "lag_min": 61272
+  "lag_min": 61595
  },
  {
   "company": "Microsoft",
@@ -514,9 +436,9 @@
   "category": "Data Science",
   "source": "tracker:vanshb03",
   "posted_ts": 1794478846,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Nov 12, 05:20 AM ET",
-  "lag_min": 18877
+  "lag_min": 19199
  },
  {
   "company": "TikTok",
@@ -528,7 +450,7 @@
   "category": "Analytics/Data",
   "source": "tiktok",
   "posted_ts": null,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "time not listed"
  },
  {
@@ -541,9 +463,9 @@
   "category": "Analytics/Data",
   "source": "tracker:simplify",
   "posted_ts": 1785921432,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Aug 05, 05:17 AM ET",
-  "lag_min": 161500
+  "lag_min": 161823
  },
  {
   "company": "TikTok",
@@ -555,9 +477,9 @@
   "category": "Analytics/Data",
   "source": "tracker:vanshb03",
   "posted_ts": 1793525855,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Nov 01, 04:37 AM ET",
-  "lag_min": 34760
+  "lag_min": 35082
  },
  {
   "company": "Microsoft",
@@ -569,9 +491,9 @@
   "category": "ML/AI",
   "source": "microsoft",
   "posted_ts": 1795204734,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Nov 20, 02:58 PM ET",
-  "lag_min": 6779
+  "lag_min": 7101
  },
  {
   "company": "Microsoft",
@@ -583,9 +505,9 @@
   "category": "ML/AI",
   "source": "microsoft",
   "posted_ts": 1795120089,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Nov 19, 03:28 PM ET",
-  "lag_min": 8189
+  "lag_min": 8512
  },
  {
   "company": "Microsoft",
@@ -597,9 +519,9 @@
   "category": "ML/AI",
   "source": "microsoft",
   "posted_ts": 1795037416,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Nov 18, 04:30 PM ET",
-  "lag_min": 9567
+  "lag_min": 9889
  },
  {
   "company": "Microsoft",
@@ -611,9 +533,9 @@
   "category": "ML/AI",
   "source": "microsoft",
   "posted_ts": 1794005901,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Nov 06, 05:58 PM ET",
-  "lag_min": 26759
+  "lag_min": 27081
  },
  {
   "company": "Microsoft",
@@ -625,9 +547,9 @@
   "category": "ML/AI",
   "source": "microsoft",
   "posted_ts": 1792172135,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Oct 16, 01:35 PM ET",
-  "lag_min": 57322
+  "lag_min": 57644
  },
  {
   "company": "Microsoft",
@@ -639,9 +561,9 @@
   "category": "ML/AI",
   "source": "microsoft",
   "posted_ts": 1792172059,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Oct 16, 01:34 PM ET",
-  "lag_min": 57323
+  "lag_min": 57645
  },
  {
   "company": "TikTok",
@@ -653,20 +575,7 @@
   "category": "ML/AI",
   "source": "tiktok",
   "posted_ts": null,
-  "detected_ts": 1795611447.9883254,
-  "opened": "time not listed"
- },
- {
-  "company": "TikTok",
-  "title": "AI Infra Engineer Intern (Recommendation & LLM) - 2027 Summer",
-  "location": "San Jose, California, United States of America",
-  "url": "https://lifeattiktok.com/search/7672671220798818613",
-  "tier": "S",
-  "score": 77,
-  "category": "ML/AI",
-  "source": "tiktok",
-  "posted_ts": null,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "time not listed"
  },
  {
@@ -679,7 +588,7 @@
   "category": "ML/AI",
   "source": "tiktok",
   "posted_ts": null,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "time not listed"
  },
  {
@@ -692,7 +601,20 @@
   "category": "ML/AI",
   "source": "tiktok",
   "posted_ts": null,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
+  "opened": "time not listed"
+ },
+ {
+  "company": "TikTok",
+  "title": "AI Infra Engineer Intern (Recommendation & LLM) - 2027 Summer",
+  "location": "San Jose, California, United States of America",
+  "url": "https://lifeattiktok.com/search/7672671220798818613",
+  "tier": "S",
+  "score": 77,
+  "category": "ML/AI",
+  "source": "tiktok",
+  "posted_ts": null,
+  "detected_ts": 1795630784.8862572,
   "opened": "time not listed"
  },
  {
@@ -705,7 +627,7 @@
   "category": "ML/AI",
   "source": "tiktok",
   "posted_ts": null,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "time not listed"
  },
  {
@@ -718,7 +640,7 @@
   "category": "ML/AI",
   "source": "tiktok",
   "posted_ts": null,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "time not listed"
  },
  {
@@ -731,7 +653,7 @@
   "category": "ML/AI",
   "source": "janestreet",
   "posted_ts": null,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "time not listed"
  },
  {
@@ -744,7 +666,7 @@
   "category": "ML/AI",
   "source": "janestreet",
   "posted_ts": null,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "time not listed"
  },
  {
@@ -757,7 +679,7 @@
   "category": "ML/AI",
   "source": "twosigma",
   "posted_ts": null,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "time not listed"
  },
  {
@@ -770,35 +692,9 @@
   "category": "Data Science",
   "source": "greenhouse:lyft",
   "posted_ts": 1789145227.0,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Sep 11, 12:47 PM ET",
-  "lag_min": 107770
- },
- {
-  "company": "NVIDIA",
-  "title": "NVIDIA 2027 Internships: Deep Learning",
-  "location": "US, CA, Santa Clara",
-  "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/NVIDIA-2027-Internships--Deep-Learning_JR2023497-1",
-  "tier": "S",
-  "score": 77,
-  "category": "ML/AI",
-  "source": "workday:nvidia",
-  "posted_ts": null,
-  "detected_ts": 1795611447.9883254,
-  "opened": "Posted 6 Days Ago"
- },
- {
-  "company": "NVIDIA",
-  "title": "NVIDIA 2027 Internships: Deep Learning Computer Architecture",
-  "location": "US, CA, Santa Clara",
-  "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/NVIDIA-2027-Internships--Deep-Learning-Computer-Architecture_JR2023491",
-  "tier": "S",
-  "score": 77,
-  "category": "ML/AI",
-  "source": "workday:nvidia",
-  "posted_ts": null,
-  "detected_ts": 1795611447.9883254,
-  "opened": "Posted 6 Days Ago"
+  "lag_min": 108093
  },
  {
   "company": "PayPal",
@@ -810,7 +706,7 @@
   "category": "Data Science",
   "source": "workday:paypal",
   "posted_ts": null,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Posted 20 Days Ago"
  },
  {
@@ -823,7 +719,7 @@
   "category": "ML/AI",
   "source": "workday:adobe",
   "posted_ts": null,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Posted 30+ Days Ago"
  },
  {
@@ -836,9 +732,9 @@
   "category": "ML/AI",
   "source": "tracker:simplify",
   "posted_ts": 1785737710,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Aug 03, 02:15 AM ET",
-  "lag_min": 164562
+  "lag_min": 164885
  },
  {
   "company": "TikTok",
@@ -850,9 +746,9 @@
   "category": "ML/AI",
   "source": "tracker:simplify",
   "posted_ts": 1785766813,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Aug 03, 10:20 AM ET",
-  "lag_min": 164077
+  "lag_min": 164400
  },
  {
   "company": "TikTok",
@@ -864,9 +760,9 @@
   "category": "ML/AI",
   "source": "tracker:simplify",
   "posted_ts": 1785835206,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Aug 04, 05:20 AM ET",
-  "lag_min": 162937
+  "lag_min": 163260
  },
  {
   "company": "ByteDance",
@@ -878,9 +774,9 @@
   "category": "ML/AI",
   "source": "tracker:simplify",
   "posted_ts": 1785834865,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Aug 04, 05:14 AM ET",
-  "lag_min": 162943
+  "lag_min": 163265
  },
  {
   "company": "ByteDance",
@@ -892,9 +788,9 @@
   "category": "ML/AI",
   "source": "tracker:simplify",
   "posted_ts": 1785978875,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Aug 05, 09:14 PM ET",
-  "lag_min": 160543
+  "lag_min": 160865
  },
  {
   "company": "ByteDance",
@@ -906,9 +802,9 @@
   "category": "ML/AI",
   "source": "tracker:simplify",
   "posted_ts": 1786388387,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Aug 10, 02:59 PM ET",
-  "lag_min": 153718
+  "lag_min": 154040
  },
  {
   "company": "ByteDance",
@@ -920,9 +816,9 @@
   "category": "ML/AI",
   "source": "tracker:simplify",
   "posted_ts": 1786388381,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Aug 10, 02:59 PM ET",
-  "lag_min": 153718
+  "lag_min": 154040
  },
  {
   "company": "NVIDIA",
@@ -934,9 +830,9 @@
   "category": "ML/AI",
   "source": "tracker:simplify",
   "posted_ts": 1787097600,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Aug 18, 08:00 PM ET",
-  "lag_min": 141897
+  "lag_min": 142220
  },
  {
   "company": "TikTok",
@@ -948,9 +844,9 @@
   "category": "ML/AI",
   "source": "tracker:simplify",
   "posted_ts": 1787172423,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Aug 19, 04:47 PM ET",
-  "lag_min": 140650
+  "lag_min": 140973
  },
  {
   "company": "TikTok",
@@ -962,9 +858,9 @@
   "category": "ML/AI",
   "source": "tracker:simplify",
   "posted_ts": 1787704451,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Aug 25, 08:34 PM ET",
-  "lag_min": 131783
+  "lag_min": 132106
  },
  {
   "company": "TikTok",
@@ -976,9 +872,9 @@
   "category": "ML/AI",
   "source": "tracker:simplify",
   "posted_ts": 1786112667,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Aug 07, 10:24 AM ET",
-  "lag_min": 158313
+  "lag_min": 158635
  },
  {
   "company": "Amazon",
@@ -990,9 +886,9 @@
   "category": "ML/AI",
   "source": "tracker:simplify",
   "posted_ts": 1793399217,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Oct 30, 06:26 PM ET",
-  "lag_min": 36871
+  "lag_min": 37193
  },
  {
   "company": "TikTok",
@@ -1004,9 +900,9 @@
   "category": "ML/AI",
   "source": "tracker:vanshb03",
   "posted_ts": 1785853222,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Aug 04, 10:20 AM ET",
-  "lag_min": 162637
+  "lag_min": 162959
  },
  {
   "company": "ByteDance",
@@ -1018,9 +914,9 @@
   "category": "ML/AI",
   "source": "tracker:vanshb03",
   "posted_ts": 1786024261,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Aug 06, 09:51 AM ET",
-  "lag_min": 159786
+  "lag_min": 160109
  },
  {
   "company": "Adobe",
@@ -1032,9 +928,9 @@
   "category": "ML/AI",
   "source": "tracker:vanshb03",
   "posted_ts": 1792439494,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Oct 19, 03:51 PM ET",
-  "lag_min": 52866
+  "lag_min": 53188
  },
  {
   "company": "Amazon",
@@ -1046,9 +942,9 @@
   "category": "ML/AI",
   "source": "tracker:vanshb03",
   "posted_ts": 1792652400,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Oct 22, 03:00 AM ET",
-  "lag_min": 49317
+  "lag_min": 49640
  },
  {
   "company": "NVIDIA",
@@ -1060,9 +956,9 @@
   "category": "ML/AI",
   "source": "tracker:vanshb03",
   "posted_ts": 1793448359,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Oct 31, 08:05 AM ET",
-  "lag_min": 36051
+  "lag_min": 36374
  },
  {
   "company": "ByteDance",
@@ -1074,9 +970,9 @@
   "category": "ML/AI",
   "source": "tracker:vanshb03",
   "posted_ts": 1793519707,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Nov 01, 02:55 AM ET",
-  "lag_min": 34862
+  "lag_min": 35185
  },
  {
   "company": "ByteDance",
@@ -1088,9 +984,9 @@
   "category": "ML/AI",
   "source": "tracker:vanshb03",
   "posted_ts": 1793519707,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Nov 01, 02:55 AM ET",
-  "lag_min": 34862
+  "lag_min": 35185
  },
  {
   "company": "TikTok",
@@ -1102,9 +998,9 @@
   "category": "ML/AI",
   "source": "tracker:vanshb03",
   "posted_ts": 1793525855,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Nov 01, 04:37 AM ET",
-  "lag_min": 34760
+  "lag_min": 35082
  },
  {
   "company": "TikTok",
@@ -1116,9 +1012,9 @@
   "category": "ML/AI",
   "source": "tracker:vanshb03",
   "posted_ts": 1793525855,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Nov 01, 04:37 AM ET",
-  "lag_min": 34760
+  "lag_min": 35082
  },
  {
   "company": "TikTok",
@@ -1130,9 +1026,9 @@
   "category": "ML/AI",
   "source": "tracker:vanshb03",
   "posted_ts": 1793525855,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Nov 01, 04:37 AM ET",
-  "lag_min": 34760
+  "lag_min": 35082
  },
  {
   "company": "TikTok",
@@ -1144,9 +1040,9 @@
   "category": "ML/AI",
   "source": "tracker:vanshb03",
   "posted_ts": 1793525855,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Nov 01, 04:37 AM ET",
-  "lag_min": 34760
+  "lag_min": 35082
  },
  {
   "company": "TikTok",
@@ -1158,9 +1054,9 @@
   "category": "ML/AI",
   "source": "tracker:vanshb03",
   "posted_ts": 1793525855,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Nov 01, 04:37 AM ET",
-  "lag_min": 34760
+  "lag_min": 35082
  },
  {
   "company": "TikTok",
@@ -1172,9 +1068,9 @@
   "category": "ML/AI",
   "source": "tracker:vanshb03",
   "posted_ts": 1793525855,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Nov 01, 04:37 AM ET",
-  "lag_min": 34760
+  "lag_min": 35082
  },
  {
   "company": "TikTok",
@@ -1186,9 +1082,37 @@
   "category": "ML/AI",
   "source": "tracker:vanshb03",
   "posted_ts": 1794530238,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Nov 12, 07:37 PM ET",
-  "lag_min": 18020
+  "lag_min": 18342
+ },
+ {
+  "company": "NVIDIA",
+  "title": "Finance AI Engineering Intern",
+  "location": "Santa Clara, CA",
+  "url": "https://go.vansh.nyc/1Eh",
+  "tier": "S",
+  "score": 77,
+  "category": "ML/AI",
+  "source": "tracker:vanshb03",
+  "posted_ts": 1795079469,
+  "detected_ts": 1795630784.8862572,
+  "opened": "Nov 19, 04:11 AM ET",
+  "lag_min": 9189
+ },
+ {
+  "company": "NVIDIA",
+  "title": "Developer Technology Intern, AI",
+  "location": "Santa Clara, CA",
+  "url": "https://go.vansh.nyc/1Im",
+  "tier": "S",
+  "score": 77,
+  "category": "ML/AI",
+  "source": "tracker:vanshb03",
+  "posted_ts": 1795545561,
+  "detected_ts": 1795630784.8862572,
+  "opened": "Nov 24, 01:39 PM ET",
+  "lag_min": 1420
  },
  {
   "company": "Apple",
@@ -1200,9 +1124,9 @@
   "category": "ML/AI",
   "source": "apple",
   "posted_ts": 1779396848.38,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "May 21, 04:54 PM ET",
-  "lag_min": 270243
+  "lag_min": 270566
  },
  {
   "company": "Amazon",
@@ -1214,21 +1138,8 @@
   "category": "ML/AI",
   "source": "amazon",
   "posted_ts": null,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "posted October 30, 2026"
- },
- {
-  "company": "NVIDIA",
-  "title": "AI Compiler and Kernel Intern \u2013 Summer 2027",
-  "location": "US, TX, Austin",
-  "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-TX-Austin/AI-Compiler-and-Kernel-Intern---Summer-2027_JR2029220-1",
-  "tier": "S",
-  "score": 76,
-  "category": "ML/AI",
-  "source": "workday:nvidia",
-  "posted_ts": null,
-  "detected_ts": 1795611447.9883254,
-  "opened": "Posted 6 Days Ago"
  },
  {
   "company": "Salesforce",
@@ -1240,7 +1151,7 @@
   "category": "ML/AI",
   "source": "workday:salesforce",
   "posted_ts": null,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Posted 15 Days Ago"
  },
  {
@@ -1253,9 +1164,9 @@
   "category": "ML/AI",
   "source": "tracker:simplify",
   "posted_ts": 1791942515,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Oct 13, 09:48 PM ET",
-  "lag_min": 61149
+  "lag_min": 61471
  },
  {
   "company": "Meta",
@@ -1267,7 +1178,7 @@
   "category": "Quant",
   "source": "meta",
   "posted_ts": null,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "time not listed"
  },
  {
@@ -1280,9 +1191,9 @@
   "category": "Analytics/Data",
   "source": "greenhouse:stripe",
   "posted_ts": 1790867129.0,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Oct 01, 11:05 AM ET",
-  "lag_min": 79072
+  "lag_min": 79394
  },
  {
   "company": "TikTok",
@@ -1294,7 +1205,7 @@
   "category": "Analytics/Data",
   "source": "tiktok",
   "posted_ts": null,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "time not listed"
  },
  {
@@ -1307,7 +1218,7 @@
   "category": "Analytics/Data",
   "source": "janestreet",
   "posted_ts": null,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "time not listed"
  },
  {
@@ -1320,9 +1231,9 @@
   "category": "Analytics/Data",
   "source": "tracker:simplify",
   "posted_ts": 1786371585,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Aug 10, 10:19 AM ET",
-  "lag_min": 153998
+  "lag_min": 154320
  },
  {
   "company": "TikTok",
@@ -1334,9 +1245,9 @@
   "category": "Analytics/Data",
   "source": "tracker:simplify",
   "posted_ts": 1786972909,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Aug 17, 09:21 AM ET",
-  "lag_min": 143976
+  "lag_min": 144298
  },
  {
   "company": "TikTok",
@@ -1348,9 +1259,9 @@
   "category": "Analytics/Data",
   "source": "tracker:vanshb03",
   "posted_ts": 1793525855,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Nov 01, 04:37 AM ET",
-  "lag_min": 34760
+  "lag_min": 35082
  },
  {
   "company": "ByteDance",
@@ -1362,9 +1273,9 @@
   "category": "Analytics/Data",
   "source": "tracker:vanshb03",
   "posted_ts": 1794348356,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Nov 10, 05:05 PM ET",
-  "lag_min": 21052
+  "lag_min": 21374
  },
  {
   "company": "Apple",
@@ -1376,9 +1287,9 @@
   "category": "Analytics/Data",
   "source": "apple",
   "posted_ts": 1787863284.044,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Aug 27, 04:41 PM ET",
-  "lag_min": 129136
+  "lag_min": 129458
  },
  {
   "company": "Amazon",
@@ -1390,7 +1301,7 @@
   "category": "Analytics/Data",
   "source": "amazon",
   "posted_ts": null,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "posted October  9, 2026"
  },
  {
@@ -1403,7 +1314,7 @@
   "category": "Analytics/Data",
   "source": "tiktok",
   "posted_ts": null,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "time not listed"
  },
  {
@@ -1416,9 +1327,9 @@
   "category": "Data Science",
   "source": "greenhouse:wehrtyou",
   "posted_ts": 1791235570.0,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Oct 05, 05:26 PM ET",
-  "lag_min": 72931
+  "lag_min": 73254
  },
  {
   "company": "Schonfeld",
@@ -1430,9 +1341,9 @@
   "category": "Data Science",
   "source": "greenhouse:schonfeld",
   "posted_ts": 1788540177.0,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Sep 04, 12:42 PM ET",
-  "lag_min": 117855
+  "lag_min": 118177
  },
  {
   "company": "Match Group",
@@ -1444,9 +1355,9 @@
   "category": "Data Science",
   "source": "lever:matchgroup",
   "posted_ts": 1793938956.868,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Nov 05, 11:22 PM ET",
-  "lag_min": 27875
+  "lag_min": 28197
  },
  {
   "company": "Mercor",
@@ -1458,9 +1369,9 @@
   "category": "Data Science",
   "source": "ashby:mercor",
   "posted_ts": 1787119755.593,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Aug 19, 02:09 AM ET",
-  "lag_min": 141528
+  "lag_min": 141850
  },
  {
   "company": "BNY",
@@ -1472,9 +1383,9 @@
   "category": "Data Science",
   "source": "tracker:simplify",
   "posted_ts": 1787581513,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Aug 24, 10:25 AM ET",
-  "lag_min": 133832
+  "lag_min": 134155
  },
  {
   "company": "NBCUniversal",
@@ -1486,9 +1397,9 @@
   "category": "Data Science",
   "source": "tracker:vanshb03",
   "posted_ts": 1794245934,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Nov 09, 12:38 PM ET",
-  "lag_min": 22759
+  "lag_min": 23081
  },
  {
   "company": "Cisco",
@@ -1500,9 +1411,9 @@
   "category": "Data Science",
   "source": "tracker:vanshb03",
   "posted_ts": 1795132800,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Nov 19, 07:00 PM ET",
-  "lag_min": 7977
+  "lag_min": 8300
  },
  {
   "company": "Meta",
@@ -1514,7 +1425,7 @@
   "category": "ML/AI",
   "source": "meta",
   "posted_ts": null,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "time not listed"
  },
  {
@@ -1527,7 +1438,7 @@
   "category": "ML/AI",
   "source": "amazon",
   "posted_ts": null,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "posted November 13, 2026"
  },
  {
@@ -1540,9 +1451,9 @@
   "category": "ML/AI",
   "source": "microsoft",
   "posted_ts": 1795562619,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Nov 24, 06:23 PM ET",
-  "lag_min": 814
+  "lag_min": 1136
  },
  {
   "company": "Microsoft",
@@ -1554,9 +1465,9 @@
   "category": "ML/AI",
   "source": "microsoft",
   "posted_ts": 1795217232,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Nov 20, 06:27 PM ET",
-  "lag_min": 6570
+  "lag_min": 6893
  },
  {
   "company": "Microsoft",
@@ -1568,9 +1479,9 @@
   "category": "ML/AI",
   "source": "microsoft",
   "posted_ts": 1795114323,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Nov 19, 01:52 PM ET",
-  "lag_min": 8285
+  "lag_min": 8608
  },
  {
   "company": "Microsoft",
@@ -1582,9 +1493,9 @@
   "category": "ML/AI",
   "source": "microsoft",
   "posted_ts": 1795041470,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Nov 18, 05:37 PM ET",
-  "lag_min": 9500
+  "lag_min": 9822
  },
  {
   "company": "Microsoft",
@@ -1596,9 +1507,9 @@
   "category": "ML/AI",
   "source": "microsoft",
   "posted_ts": 1795040511,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Nov 18, 05:21 PM ET",
-  "lag_min": 9516
+  "lag_min": 9838
  },
  {
   "company": "Microsoft",
@@ -1610,9 +1521,9 @@
   "category": "ML/AI",
   "source": "microsoft",
   "posted_ts": 1795023247,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Nov 18, 12:34 PM ET",
-  "lag_min": 9803
+  "lag_min": 10126
  },
  {
   "company": "Microsoft",
@@ -1624,9 +1535,9 @@
   "category": "ML/AI",
   "source": "microsoft",
   "posted_ts": 1794602023,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Nov 13, 03:33 PM ET",
-  "lag_min": 16824
+  "lag_min": 17146
  },
  {
   "company": "Microsoft",
@@ -1638,9 +1549,9 @@
   "category": "ML/AI",
   "source": "microsoft",
   "posted_ts": 1794509177,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Nov 12, 01:46 PM ET",
-  "lag_min": 18371
+  "lag_min": 18693
  },
  {
   "company": "Microsoft",
@@ -1652,9 +1563,9 @@
   "category": "ML/AI",
   "source": "microsoft",
   "posted_ts": 1794258949,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Nov 09, 04:15 PM ET",
-  "lag_min": 22542
+  "lag_min": 22864
  },
  {
   "company": "Microsoft",
@@ -1666,9 +1577,9 @@
   "category": "ML/AI",
   "source": "microsoft",
   "posted_ts": 1793838059,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Nov 04, 07:20 PM ET",
-  "lag_min": 29556
+  "lag_min": 29879
  },
  {
   "company": "Microsoft",
@@ -1680,9 +1591,9 @@
   "category": "ML/AI",
   "source": "microsoft",
   "posted_ts": 1793279443,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Oct 29, 09:10 AM ET",
-  "lag_min": 38867
+  "lag_min": 39189
  },
  {
   "company": "Microsoft",
@@ -1694,9 +1605,9 @@
   "category": "ML/AI",
   "source": "microsoft",
   "posted_ts": 1793201011,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Oct 28, 11:23 AM ET",
-  "lag_min": 40174
+  "lag_min": 40496
  },
  {
   "company": "Microsoft",
@@ -1708,9 +1619,9 @@
   "category": "ML/AI",
   "source": "microsoft",
   "posted_ts": 1792446696,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Oct 19, 05:51 PM ET",
-  "lag_min": 52746
+  "lag_min": 53068
  },
  {
   "company": "Microsoft",
@@ -1722,9 +1633,9 @@
   "category": "ML/AI",
   "source": "microsoft",
   "posted_ts": 1792108023,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Oct 15, 07:47 PM ET",
-  "lag_min": 58390
+  "lag_min": 58713
  },
  {
   "company": "Microsoft",
@@ -1736,9 +1647,9 @@
   "category": "ML/AI",
   "source": "microsoft",
   "posted_ts": 1791917916,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Oct 13, 02:58 PM ET",
-  "lag_min": 61559
+  "lag_min": 61881
  },
  {
   "company": "TikTok",
@@ -1750,7 +1661,7 @@
   "category": "ML/AI",
   "source": "tiktok",
   "posted_ts": null,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "time not listed"
  },
  {
@@ -1763,7 +1674,7 @@
   "category": "ML/AI",
   "source": "tiktok",
   "posted_ts": null,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "time not listed"
  },
  {
@@ -1776,9 +1687,9 @@
   "category": "Data Science",
   "source": "greenhouse:riotgames",
   "posted_ts": 1794426572.0,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Nov 11, 02:49 PM ET",
-  "lag_min": 19748
+  "lag_min": 20070
  },
  {
   "company": "Zoox",
@@ -1790,9 +1701,9 @@
   "category": "Data Science",
   "source": "lever:zoox",
   "posted_ts": 1794006857.184,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Nov 06, 06:14 PM ET",
-  "lag_min": 26743
+  "lag_min": 27065
  },
  {
   "company": "Zoox",
@@ -1804,9 +1715,9 @@
   "category": "Data Science",
   "source": "lever:zoox",
   "posted_ts": 1794516348.041,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Nov 12, 03:45 PM ET",
-  "lag_min": 18252
+  "lag_min": 18574
  },
  {
   "company": "Salesforce",
@@ -1818,7 +1729,7 @@
   "category": "ML/AI",
   "source": "workday:salesforce",
   "posted_ts": null,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Posted 26 Days Ago"
  },
  {
@@ -1831,7 +1742,7 @@
   "category": "ML/AI",
   "source": "workday:adobe",
   "posted_ts": null,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Posted 2 Days Ago"
  },
  {
@@ -1844,7 +1755,7 @@
   "category": "ML/AI",
   "source": "workday:adobe",
   "posted_ts": null,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Posted 30+ Days Ago"
  },
  {
@@ -1857,9 +1768,9 @@
   "category": "ML/AI",
   "source": "tracker:simplify",
   "posted_ts": 1785835211,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Aug 04, 05:20 AM ET",
-  "lag_min": 162937
+  "lag_min": 163260
  },
  {
   "company": "TikTok",
@@ -1871,9 +1782,9 @@
   "category": "ML/AI",
   "source": "tracker:simplify",
   "posted_ts": 1785737703,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Aug 03, 02:15 AM ET",
-  "lag_min": 164562
+  "lag_min": 164885
  },
  {
   "company": "TikTok",
@@ -1885,9 +1796,9 @@
   "category": "ML/AI",
   "source": "tracker:simplify",
   "posted_ts": 1785921479,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Aug 05, 05:17 AM ET",
-  "lag_min": 161499
+  "lag_min": 161822
  },
  {
   "company": "TikTok",
@@ -1899,9 +1810,9 @@
   "category": "ML/AI",
   "source": "tracker:simplify",
   "posted_ts": 1792018295,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Oct 14, 06:51 PM ET",
-  "lag_min": 59886
+  "lag_min": 60208
  },
  {
   "company": "TikTok",
@@ -1913,9 +1824,9 @@
   "category": "ML/AI",
   "source": "tracker:simplify",
   "posted_ts": 1792017957,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Oct 14, 06:45 PM ET",
-  "lag_min": 59892
+  "lag_min": 60214
  },
  {
   "company": "TikTok",
@@ -1927,9 +1838,9 @@
   "category": "ML/AI",
   "source": "tracker:simplify",
   "posted_ts": 1792017649,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Oct 14, 06:40 PM ET",
-  "lag_min": 59897
+  "lag_min": 60219
  },
  {
   "company": "TikTok",
@@ -1941,9 +1852,9 @@
   "category": "ML/AI",
   "source": "tracker:simplify",
   "posted_ts": 1792017648,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Oct 14, 06:40 PM ET",
-  "lag_min": 59897
+  "lag_min": 60219
  },
  {
   "company": "TikTok",
@@ -1955,9 +1866,9 @@
   "category": "ML/AI",
   "source": "tracker:simplify",
   "posted_ts": 1792017648,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Oct 14, 06:40 PM ET",
-  "lag_min": 59897
+  "lag_min": 60219
  },
  {
   "company": "TikTok",
@@ -1969,9 +1880,9 @@
   "category": "ML/AI",
   "source": "tracker:simplify",
   "posted_ts": 1792017648,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Oct 14, 06:40 PM ET",
-  "lag_min": 59897
+  "lag_min": 60219
  },
  {
   "company": "Microsoft",
@@ -1983,9 +1894,9 @@
   "category": "ML/AI",
   "source": "tracker:vanshb03",
   "posted_ts": 1785852648,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Aug 04, 10:10 AM ET",
-  "lag_min": 162647
+  "lag_min": 162969
  },
  {
   "company": "Microsoft",
@@ -1997,9 +1908,9 @@
   "category": "ML/AI",
   "source": "tracker:vanshb03",
   "posted_ts": 1791411145,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Oct 07, 06:12 PM ET",
-  "lag_min": 70005
+  "lag_min": 70327
  },
  {
   "company": "Microsoft",
@@ -2011,9 +1922,9 @@
   "category": "ML/AI",
   "source": "tracker:vanshb03",
   "posted_ts": 1793282793,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Oct 29, 10:06 AM ET",
-  "lag_min": 38811
+  "lag_min": 39133
  },
  {
   "company": "NVIDIA",
@@ -2025,9 +1936,9 @@
   "category": "ML/AI",
   "source": "tracker:vanshb03",
   "posted_ts": 1793329555,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Oct 29, 11:05 PM ET",
-  "lag_min": 38032
+  "lag_min": 38354
  },
  {
   "company": "ByteDance",
@@ -2039,9 +1950,9 @@
   "category": "ML/AI",
   "source": "tracker:vanshb03",
   "posted_ts": 1793519707,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Nov 01, 02:55 AM ET",
-  "lag_min": 34862
+  "lag_min": 35185
  },
  {
   "company": "ByteDance",
@@ -2053,8 +1964,104 @@
   "category": "ML/AI",
   "source": "tracker:vanshb03",
   "posted_ts": 1793519707,
-  "detected_ts": 1795611447.9883254,
+  "detected_ts": 1795630784.8862572,
   "opened": "Nov 01, 02:55 AM ET",
-  "lag_min": 34862
+  "lag_min": 35185
+ },
+ {
+  "company": "ByteDance",
+  "title": "AI Infrastructure Engineer Intern, Compute Efficiency & Scheduling",
+  "location": "Seattle, WA",
+  "url": "https://go.vansh.nyc/14o",
+  "tier": "S",
+  "score": 71,
+  "category": "ML/AI",
+  "source": "tracker:vanshb03",
+  "posted_ts": 1793519707,
+  "detected_ts": 1795630784.8862572,
+  "opened": "Nov 01, 02:55 AM ET",
+  "lag_min": 35185
+ },
+ {
+  "company": "TikTok",
+  "title": "Research Engineer Intern, Agentic Systems & AI Infrastructure - TikTok-Generalized Arch",
+  "location": "Seattle, WA",
+  "url": "https://go.vansh.nyc/17U",
+  "tier": "S",
+  "score": 71,
+  "category": "ML/AI",
+  "source": "tracker:vanshb03",
+  "posted_ts": 1793525855,
+  "detected_ts": 1795630784.8862572,
+  "opened": "Nov 01, 04:37 AM ET",
+  "lag_min": 35082
+ },
+ {
+  "company": "TikTok",
+  "title": "Machine Learning Engineer Intern, Recommendation Global E-Commerce",
+  "location": "Seattle, WA",
+  "url": "https://go.vansh.nyc/18l",
+  "tier": "S",
+  "score": 71,
+  "category": "ML/AI",
+  "source": "tracker:vanshb03",
+  "posted_ts": 1793525855,
+  "detected_ts": 1795630784.8862572,
+  "opened": "Nov 01, 04:37 AM ET",
+  "lag_min": 35082
+ },
+ {
+  "company": "TikTok",
+  "title": "Machine Learning Engineer Intern, Global E-Commerce Search",
+  "location": "Seattle, WA",
+  "url": "https://go.vansh.nyc/18r",
+  "tier": "S",
+  "score": 71,
+  "category": "ML/AI",
+  "source": "tracker:vanshb03",
+  "posted_ts": 1793525855,
+  "detected_ts": 1795630784.8862572,
+  "opened": "Nov 01, 04:37 AM ET",
+  "lag_min": 35082
+ },
+ {
+  "company": "NVIDIA",
+  "title": "AI Compiler and Kernel Intern",
+  "location": "Austin, TX",
+  "url": "https://go.vansh.nyc/1bR",
+  "tier": "S",
+  "score": 71,
+  "category": "ML/AI",
+  "source": "tracker:vanshb03",
+  "posted_ts": 1793678150,
+  "detected_ts": 1795630784.8862572,
+  "opened": "Nov 02, 10:55 PM ET",
+  "lag_min": 32544
+ },
+ {
+  "company": "Jane Street",
+  "title": "Quantitative Researcher Intern",
+  "location": "New York, NY",
+  "url": "https://www.janestreet.com/join-jane-street/position/8498547002/",
+  "tier": "S",
+  "score": 69,
+  "category": "Quant",
+  "source": "janestreet",
+  "posted_ts": null,
+  "detected_ts": 1795630784.8862572,
+  "opened": "time not listed"
+ },
+ {
+  "company": "Jane Street",
+  "title": "Quantitative Trader Intern",
+  "location": "New York, NY",
+  "url": "https://www.janestreet.com/join-jane-street/position/8617344002/",
+  "tier": "S",
+  "score": 69,
+  "category": "Quant",
+  "source": "janestreet",
+  "posted_ts": null,
+  "detected_ts": 1795630784.8862572,
+  "opened": "time not listed"
  }
 ]
